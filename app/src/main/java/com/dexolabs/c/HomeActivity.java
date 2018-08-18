@@ -14,6 +14,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         initID();
         setBottomNavigation();
+        setFragment();
     }
 
     private void initID() {
@@ -23,4 +24,9 @@ public class HomeActivity extends AppCompatActivity {
     private void setBottomNavigation() {
 
     }
+
+    private void setFragment() {
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_home_layout, TutorialFragment.newInstance()).commit();
+    }
+
 }
