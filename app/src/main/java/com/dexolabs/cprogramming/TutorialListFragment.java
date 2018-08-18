@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dexolabs.cprogramming.adapter.TutorialListAdapter;
+import com.dexolabs.cprogramming.appdata.Keys;
+import com.dexolabs.cprogramming.model.TutorialModel;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 
 import java.util.TreeMap;
@@ -19,12 +21,12 @@ public class TutorialListFragment extends BaseFragment {
     private Context                 mContext;
     private RecyclerView            rvTutorialList;
     private TutorialListAdapter     tutorialListAdapter;
-    private TreeMap<String, String> tutorialList;
+    private TutorialModel tutorialModel;
 
-    public static TutorialListFragment newInstance(TreeMap<String, String> tutorialList) {
+    public static TutorialListFragment newInstance(TutorialModel tutorialModel) {
         TutorialListFragment tutorialListFragment = new TutorialListFragment();
         Bundle bundle = new Bundle();
-        bundle.putSerializable("tutorial_list", tutorialList);
+        bundle.putParcelable(Keys.Extras.TUTORIAL_LIST, tutorialModel);
         tutorialListFragment.setArguments(bundle);
         return tutorialListFragment;
     }
@@ -46,13 +48,15 @@ public class TutorialListFragment extends BaseFragment {
 
     private void getData() {
         Bundle bundle = getArguments();
-        tutorialList = (TreeMap<String, String>) bundle.getSerializable("tutorial_list");
+        if (bundle != null) {
+            tutorialModel = bundle.getParcelable(Keys.Extras.TUTORIAL_LIST);
+        }
     }
 
     private void initFragment(ViewGroup rootView) {
         rvTutorialList = rootView.findViewById(R.id.rvTutorialList);
         rvTutorialList.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
-        tutorialListAdapter = new TutorialListAdapter(tutorialList);
+        tutorialListAdapter = new TutorialListAdapter(mContext, tutorialModel);
         rvTutorialList.setAdapter(tutorialListAdapter);
     }
 }

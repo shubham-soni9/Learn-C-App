@@ -501,4 +501,5 @@
     <color name="button_background">#CC4CAF50</color>
     <color name="transparent">#0000</color>
     <color name="orange_75">#ffd480</color>
+    <color name="translucent_white">#8FFF</color>
 </resources>

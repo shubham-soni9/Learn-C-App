@@ -11,10 +11,10 @@ public class TutorialData {
         ArrayList<TutorialModel> tutorialModelList = new ArrayList<>();
         TreeMap<String, String> options = new TreeMap<>();
 
-        options.put("Introduction", "");
-        options.put("Problem Solving", "");
-        options.put("Algorithm", "");
-        options.put("Flowcharts", "");
+        options.put("Introduction", "http://www.facebook.com");
+        options.put("Problem Solving", "http://www.yahoo.com");
+        options.put("Algorithm", "http://www.youtube.com");
+        options.put("Flowcharts", "http://www.alphabet.com");
         options.put("Before C", "");
         tutorialModelList.add(new TutorialModel("Introduction", options));
 

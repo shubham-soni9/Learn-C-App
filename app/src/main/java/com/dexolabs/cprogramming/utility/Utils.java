@@ -1,9 +1,11 @@
 package com.dexolabs.cprogramming.utility;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
+import android.util.TypedValue;
 import android.view.View;
 
 import java.lang.reflect.Field;
@@ -46,6 +48,21 @@ public class Utils {
         for (View view : views)
             view.setOnClickListener(listener);
     }
+    /**
+     * Method to convert the value from
+     * density pixels to pixels
+     *
+     * @param dpValue
+     * @return
+     */
+    public static int dpToPx(Context context, float dpValue) {
+
+        return (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, dpValue,
+                context.getResources().getDisplayMetrics()
+        );
+    }
+
 
 
 }

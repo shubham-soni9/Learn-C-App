@@ -23,7 +23,7 @@ public class TutorialPagerAdapter extends FragmentStatePagerAdapter {
         super(fragmentManager);
         for (TutorialModel tutorialModel : tutorialData) {
             mFragmentTitleList.add(tutorialModel.getHeading());
-            mFragmentList.add(TutorialListFragment.newInstance(tutorialModel.getTutorialOptions()));
+            mFragmentList.add(TutorialListFragment.newInstance(tutorialModel));
         }
     }
 
