@@ -11,8 +11,6 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
-import com.dexolabs.cprogramming.data.CommonData;
-
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     private BottomNavigationView bottomNavigationView;
     private ProgressBar          pbFragmentLoader;
@@ -50,15 +48,17 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
                 setFragment(TutorialFragment.newInstance(CommonData.getProgramData()));
                 break;
             case R.id.action_test:
+                setFragment(QuizFragment.newInstance(CommonData.getQuizData()));
                 break;
             case R.id.action_question:
+                setFragment(QuestionFragment.newInstance(CommonData.getQuestionData()));
                 break;
             default:
+                setFragment(MoreFragment.newInstance());
                 break;
         }
         return true;
     }
-
 
 
     private void setFragment(final Fragment fragment) {
@@ -71,6 +71,6 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
                 pbFragmentLoader.setVisibility(View.GONE);
                 frameHome.setVisibility(View.VISIBLE);
             }
-        }, 250);
+        }, 500);
     }
 }
