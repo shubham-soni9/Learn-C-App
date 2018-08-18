@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dexolabs.cprogramming.adapter.TutorialListAdapter;
+import com.dexolabs.cprogramming.structure.BaseFragment;
+
 import java.util.TreeMap;
 
 public class TutorialListFragment extends BaseFragment {

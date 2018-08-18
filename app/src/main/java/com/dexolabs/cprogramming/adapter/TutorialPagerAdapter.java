@@ -1,8 +1,11 @@
-package com.dexolabs.cprogramming;
+package com.dexolabs.cprogramming.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.dexolabs.cprogramming.TutorialListFragment;
+import com.dexolabs.cprogramming.model.TutorialModel;
 
 import java.util.ArrayList;
 

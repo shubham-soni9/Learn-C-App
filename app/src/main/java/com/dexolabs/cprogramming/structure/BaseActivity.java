@@ -1,4 +1,4 @@
-package com.dexolabs.cprogramming;
+package com.dexolabs.cprogramming.structure;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

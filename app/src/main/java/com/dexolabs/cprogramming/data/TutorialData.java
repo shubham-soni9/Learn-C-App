@@ -1,4 +1,6 @@
-package com.dexolabs.cprogramming;
+package com.dexolabs.cprogramming.data;
+
+import com.dexolabs.cprogramming.model.TutorialModel;
 
 import java.util.ArrayList;
 import java.util.TreeMap;

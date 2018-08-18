@@ -12,6 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dexolabs.cprogramming.adapter.TutorialPagerAdapter;
+import com.dexolabs.cprogramming.data.TutorialData;
+import com.dexolabs.cprogramming.model.TutorialModel;
+
 import java.util.ArrayList;
 
 public class TutorialFragment extends Fragment {

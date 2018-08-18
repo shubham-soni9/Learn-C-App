@@ -1,4 +1,4 @@
-package com.dexolabs.cprogramming;
+package com.dexolabs.cprogramming.model;
 
 import java.util.HashMap;
 import java.util.TreeMap;
