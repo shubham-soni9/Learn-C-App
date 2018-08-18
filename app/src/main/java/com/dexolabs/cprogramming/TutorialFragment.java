@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dexolabs.cprogramming.adapter.TutorialPagerAdapter;
-import com.dexolabs.cprogramming.data.TutorialData;
 import com.dexolabs.cprogramming.model.TutorialModel;
 
 import java.util.ArrayList;
@@ -25,8 +24,12 @@ public class TutorialFragment extends Fragment {
     private ArrayList<TutorialModel> tutorialModelList;
     private TutorialPagerAdapter     tutorialPagerAdapter;
 
-    public static TutorialFragment newInstance() {
-        return new TutorialFragment();
+    public static TutorialFragment newInstance(ArrayList<TutorialModel> tutorialModelList) {
+        Bundle bundle = new Bundle();
+        TutorialFragment tutorialFragment = new TutorialFragment();
+        bundle.putSerializable("tutorial_model_list", tutorialModelList);
+        tutorialFragment.setArguments(bundle);
+        return tutorialFragment;
     }
 
     @Override
@@ -45,7 +48,7 @@ public class TutorialFragment extends Fragment {
     }
 
     private void getBundle() {
-        tutorialModelList = TutorialData.getTutorialData();
+        tutorialModelList = (ArrayList<TutorialModel>) getArguments().getSerializable("tutorial_model_list");
         FragmentManager fragmentManager = getFragmentManager();
         tutorialPagerAdapter = new TutorialPagerAdapter(fragmentManager, tutorialModelList);
         viewPager.setAdapter(tutorialPagerAdapter);
