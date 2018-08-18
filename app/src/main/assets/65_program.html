@@ -29,22 +29,23 @@
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
 
-//Main Function
 int main()
 {
-    int number;
+     int marks[10], i, n, sum = 0, average;
+     printf("Enter n: ");
+     scanf("%d", &n);
+     for(i=0; i<n; ++i)
+     {
+          printf("Enter number%d: ",i+1);
+          scanf("%d", &marks[i]);
+          sum += marks[i];
+     }
+     average = sum/n;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+     printf("Average = %d", average);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+     return 0;
 }
-
 </code>
 </pre>
         </span>
@@ -58,8 +59,13 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter n: 5
+Enter number1: 45
+Enter number2: 35
+Enter number3: 38
+Enter number4: 31
+Enter number5: 49
+Average = 39
 </code>
 </pre>
         </span>

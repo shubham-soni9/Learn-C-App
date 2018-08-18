@@ -29,20 +29,30 @@
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
 
-//Main Function
-int main()
-{
-    int number;
+int main() {
+   int array[10] = {101, 11, 3, 4, 50, 69, 7, 8, 9, 0};
+   int loop, largest, second;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+   if(array[0] > array[1]) {
+      largest = array[0];
+      second  = array[1];
+   } else {
+      largest = array[1];
+      second  = array[0];
+   }
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+   for(loop = 2; loop < 10; loop++) {
+      if( largest < array[loop] ) {
+         second = largest;
+         largest = array[loop];
+      } else if( second < array[loop] ) {
+         second =  array[loop];
+      }
+   }
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+   printf("Largest - %d \nSecond - %d \n", largest, second);
+
+   return 0;
 }
 
 </code>
@@ -58,8 +68,8 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Largest - 101
+Second - 69
 </code>
 </pre>
         </span>

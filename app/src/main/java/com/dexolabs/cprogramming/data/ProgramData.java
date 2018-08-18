@@ -62,16 +62,19 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Characters", options));
 
         options = new TreeMap<>();
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
+        options.put("Basic C Array", "65_program.html");
+        options.put("Program for one dimensional array", "66_program.html");
+        options.put("Program for two dimensional array", "67_program.html");
+        options.put("Print reverse array", "68_program.html");
+        options.put("Calculate sum of array", "69_program.html");
+        options.put("Calculate average of array", "70_program.html");
+        options.put("Find largest array element", "71_program.html");
+        options.put("Second largest array element", "72_program.html");
+        options.put("Find smallest array element ", "73_program.html");
+        options.put("Copy array", "74_program.html");
+        options.put("Reverse copy array", "75_program.html");
+        options.put("Program to divide array", "76_program.html");
+        options.put("Array concatenation program", "77_program.html");
         programModelList.add(new TutorialModel("Arrays", options));
 
 

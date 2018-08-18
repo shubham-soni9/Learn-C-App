@@ -29,22 +29,26 @@
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
 
-//Main Function
-int main()
-{
-    int number;
+int main() {
+   int original[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+   int copied[10];
+   int loop, count;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+   count = 9;
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+   for(loop = 0; loop < 10; loop++) {
+      copied[count] = original[loop];
+      count--;
+   }
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+   printf("original -> copied \n");
+
+   for(loop = 0; loop < 10; loop++) {
+      printf("   %2d        %2d\n", original[loop], copied[loop]);
+   }
+
+   return 0;
 }
-
 </code>
 </pre>
         </span>
@@ -58,8 +62,17 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+original -> copied
+    1         0
+    2         9
+    3         8
+    4         7
+    5         6
+    6         5
+    7         4
+    8         3
+    9         2
+    0         1
 </code>
 </pre>
         </span>

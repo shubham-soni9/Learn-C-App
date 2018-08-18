@@ -30,20 +30,21 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-int main()
-{
-    int number;
+int main() {
+   int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+   int sum, loop;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+   sum = 0;
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+   for(loop = 9; loop >= 0; loop--) {
+      sum = sum + array[loop];
+   }
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+   printf("Sum of array is %d.", sum);
+
+   return 0;
 }
+
 
 </code>
 </pre>
@@ -58,8 +59,7 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Sum of array is 45.
 </code>
 </pre>
         </span>

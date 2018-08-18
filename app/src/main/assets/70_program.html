@@ -29,20 +29,21 @@
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
 
-//Main Function
-int main()
-{
-    int number;
+int main() {
+   int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+   int sum, loop;
+   float avg;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+   sum = avg = 0;
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+   for(loop = 0; loop < 10; loop++) {
+      sum = sum + array[loop];
+   }
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+   avg = (float)sum / loop;
+   printf("Average of array values is %.2f", avg);
+
+   return 0;
 }
 
 </code>
@@ -58,8 +59,7 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Average of array values is 4.50
 </code>
 </pre>
         </span>

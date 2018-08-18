@@ -29,20 +29,24 @@
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
 
-//Main Function
 int main()
 {
-    int number;
-
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+   int i,j;
+   // declaring and Initializing array
+   int arr[2][2] = {10,20,30,40};
+   /* Above array can be initialized as below also
+      arr[0][0] = 10; // Initializing array
+      arr[0][1] = 20;
+      arr[1][0] = 30;
+      arr[1][1] = 40; */
+   for (i=0;i<2;i++)
+   {
+      for (j=0;j<2;j++)
+      {
+         // Accessing variables
+         printf("value of arr[%d] [%d] : %d\n",i,j,arr[i][j]);
+      }
+   }
 }
 
 </code>
@@ -58,8 +62,10 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+value of arr[0] [0] is 10
+value of arr[0] [1] is 20
+value of arr[1] [0] is 30
+value of arr[1] [1] is 40
 </code>
 </pre>
         </span>
