@@ -10,24 +10,24 @@ public class ProgramData {
         ArrayList<TutorialModel> programModelList = new ArrayList<>();
         TreeMap<String, String> options = new TreeMap<>();
 
-        options.put("Hello world Program", "program/1_program.html");
-        options.put("Program to find even/odd from a number", "");
-        options.put("Program to find armstrong number", "");
-        options.put("Flowcharts", "");
-        options.put("Before C", "");
-        programModelList.add(new TutorialModel("Introduction", options));
+        options.put("Hello world Program", "1_program.html");
+        options.put("Print an Integer (Entered by the User)", "2_program.html");
+        options.put("Program to find armstrong number", "2_program.html");
+        options.put("Flowcharts", "2_program.html");
+        options.put("Before C", "2_program.html");
+        programModelList.add(new TutorialModel("Basic Programs", options));
 
 
         options = new TreeMap<>();
-        options.put("What is C?", "");
-        options.put("Structure of C", "");
-        options.put("Compilation", "");
-        options.put("Nomenclature", "");
-        options.put("DataTypes", "");
-        options.put("Operators", "");
-        options.put("Qualifiers", "");
-        options.put("Output", "");
-        options.put("Input", "");
+        options.put("What is C?", "2_program.html");
+        options.put("Structure of C", "2_program.html");
+        options.put("Compilation", "2_program.html");
+        options.put("Nomenclature", "2_program.html");
+        options.put("DataTypes", "2_program.html");
+        options.put("Operators", "2_program.html");
+        options.put("Qualifiers", "2_program.html");
+        options.put("Output", "2_program.html");
+        options.put("Input", "2_program.html");
         programModelList.add(new TutorialModel("Overview", options));
 
         return programModelList;
