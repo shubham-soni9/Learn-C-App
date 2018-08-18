@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Import Google Icon Font-->
+<link href="mt/fonts/material-icons.css" rel="stylesheet">
+<title>Bootstrap Case</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bt/css/bootstrap.min.css">
+<script src="bt/js/jquery-1.4.2.min.js"></script>
+<script src="bt/js/bootstrap.min.js"></script>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="mt/css/materialize.min.css">
+<link rel="stylesheet" href="css/prism.css">
+<script src="js/prism.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!--Import jQuery before materialize.js--> 
+<script type="text/javascript" src="mt/js/jquery-3.2.1.min.js"></script> 
+<script src="mt/js/materialize.min.js"></script>
+<div class="panel-group  ">
+  <div class="panel panel-info">
+    <div class="panel-heading">Problem 6: Variable</div>
+    <div class="panel-body">
+      <p>Take three integer variables a, b and c. Assign values to the variables- a = 10, b = 20 and c = 30; Now print the sum of these three variables.</p>
+    </div>
+    
+    <!--Collapsable UI-->
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header "><i class="material-icons">visibility</i>Code:</div>
+        <div class="collapsible-body">
+        <span>
+        
+          <pre class="line-numbers"> 
+      <code class="language-c">
+
+#include&lt;stdio.h&gt; 
+ 
+int main()
+{
+
+    int a;
+    /*
+    int a means, a is a integer type variable and
+    used to define numeric variables holding whole numbers
+    */
+    int b;
+    int c;
+
+    a=10;
+    b=20;
+    c=30;
+    printf("%d\n",a+b+c); //'%d' is  a format specifier(place holder) and take integer type value in memory
+
+
+
+    return 0;
+}
+	
+
+</code></pre>
+          </span></div>
+      </li>
+    </ul>
+    <!--    Collapsable UI Close--> 
+  </div>
+</div>
+<div class="panel-group  ">
+  <div class="panel panel-info">
+    <div class="panel-heading">Problem 7: ASCII Values</div>
+    <div class="panel-body">
+      <p>Write a program to print the following output:</p>
+      <p>Ascii value of ‘A’ is: ____</p>
+      <p>Ascii value of ‘@’ is: ____</p>
+      <p>In the blank space you should show the ascii code of the given characters.</p>
+    </div>
+    
+    <!--Collapsable UI-->
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header "><i class="material-icons">visibility</i>Code:</div>
+        <div class="collapsible-body">
+        <span>
+        
+          <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+
+    printf("Ascii value of 'A' is: %d\n",'A');
+    printf("Ascii value of '@' is: %d\n",'@');
+
+    return 0;
+}
+		</code></pre>
+          </span></div>
+      </li>
+    </ul>
+    <!--    Collapsable UI Close--> 
+  </div>
+</div>
+<div class="panel-group  ">
+  <div class="panel panel-info">
+    <div class="panel-heading">Problem 8: Average</div>
+    <div class="panel-body">
+      <p>Take four double variables x, y, z and avg. Assign values to x, y and z as you want. Now calculate the average of x, y and z and assign it to avg. Finally print the average value like-
+      <p>Average of x, y and z is: —– .</p>
+      </p>
+    </div>
+    <!--Collapsable UI-->
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header "><i class="material-icons">visibility</i>Code:</div>
+        <div class="collapsible-body">
+        <span>
+    
+          <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+
+   double x,y,z,avg; //double can contain up to 15 digits total
+
+   x=10;
+   y=20;
+   z=30;
+   avg=(x+y+z)/3;
+   printf("Average of x, y and z is: %lf\n",avg); //'%lf' for define double type data
+
+    return 0;
+}
+		</code></pre>
+          </span></div>
+      </li>
+    </ul>
+    <!--    Collapsable UI Close--> 
+  </div>
+</div>
+<div class="panel-group  ">
+  <div class="panel panel-info">
+    <div class="panel-heading">Problem 9: Bangladesh</div>
+    <div class="panel-body">
+      <p>Print “Bangladesh” without quotation sign by using ascii values.</p>
+      <p>[Use the given ascii values- B=66, a=97, n=110, g=103, l=108, a=97, d=100, e=101, s=115, h=104.] </p>
+    </div>
+    
+    <!--Collapsable UI-->
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header "><i class="material-icons">visibility</i>Code:</div>
+        <div class="collapsible-body">
+        <span>
+    
+          <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+
+    printf("%c%c%c%c%c%c%c%c%c%c\n",66,97,110,103,108,97,100,101,115,104); //'%c' used for define character type data
+
+
+    return 0;
+}
+			</code></pre>
+          </span></div>
+      </li>
+    </ul>
+    <!--    Collapsable UI Close--> 
+  </div>
+</div>
+<div class="panel-group  ">
+  <div class="panel panel-info">
+    <div class="panel-heading">Problem 10: Precession</div>
+    <div class="panel-body">
+      <p>Rahul got 65.00 on physics, 83.50 on mathematics, 85.75 on C programming and 67.50 on English. Now write a program to calculate the average of his marks on 4 subjects and print it up to 2 digit after the decimal point. [The result should look like: XX.XX]</p>
+    </div>
+    
+    <!--Collapsable UI-->
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header "><i class="material-icons">visibility</i>Code:</div>
+        <div class="collapsible-body">
+        <span>
+     
+          <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+
+   double marksInPhysics,marksInMath,marksInC,marksInEng,avarage;
+
+   marksInPhysics = 65.00;
+   marksInMath = 83.50;
+   marksInC = 85.50;
+   marksInEng = 67.50;
+   avarage=(marksInPhysics + marksInMath + marksInC + marksInEng)/4;
+
+   printf("%.2lf\n",avarage); //.2lf after % means it will take only 2 number after decimal point
+
+    return 0;
+}
+		</code></pre>
+          </span></div>
+      </li>
+    </ul>
+    <!--    Collapsable UI Close--> 
+  </div>
+</div>
+<div class="panel-group  ">
+  <div class="panel panel-info">
+    <div class="panel-heading">Problem 11: Area Of Circle</div>
+    <div class="panel-body">
+      <p>You are given the radius of a circle, r = 5.5. We know that, pi=3.1416. Now write a program to calculate the area of the given circle and print it up to 2 digit after the decimal point. [The result should look like: XX.XX]</p>
+    </div>
+    
+    <!--Collapsable UI-->
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header "><i class="material-icons">visibility</i>Code:</div>
+        <div class="collapsible-body">
+        <span>
+       
+          <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main()
+{
+
+    double r=5.5;
+    double pi=3.1416;
+    double area=pi*r*r;
+
+    printf("%.2lf\n",area);
+
+    return 0;
+}			</code></pre>
+          </span></div>
+      </li>
+    </ul>
+    <!--    Collapsable UI Close--> 
+  </div>
+</div>
+<div class="panel-group  ">
+  <div class="panel panel-info">
+    <div class="panel-heading">Problem 12: Output</div>
+    <div class="panel-body">
+      <p>Take two integer variables i = 0 and j = 0. Now write the output of the following program without running the code.</p>
+      <p>int main()</p>
+      <p>int i = 0;</p>
+      <p>int j = 0;</p>
+      <p>j = i++ + ++i;</p>
+      <p>printf(“%d %d”,i,j);</p>
+      <p>}</p>
+    </div>
+    
+    <!--Collapsable UI-->
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header "><i class="material-icons">visibility</i>Code:</div>
+        <div class="collapsible-body">
+        <span>
+        
+          <pre class="line-numbers"> <code class="language-c">
+
+    #include&lt;stdio.h&gt; 
+ 
+int main(){
+	int i = 0;
+	int j = 0;
+	j = i++ + ++i; //'++i' means pre-increment and 'i++' means post-increment
+    printf("%d %d",i,j);//Output : 2 2
+
+    return 0;
+}		</code></pre>
+          </span></div>
+      </li>
+    </ul>
+    <!--    Collapsable UI Close--> 
+  </div>
+</div>
+</body>
+</html>

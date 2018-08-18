@@ -20,15 +20,19 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
-        WebView webViewInvoice = findViewById(R.id.webViewInvoice);
-        webViewInvoice.getSettings().setJavaScriptEnabled(true);
-        webViewInvoice.setWebViewClient(new WebViewClient());
+        WebView webView = findViewById(R.id.webViewInvoice);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setUseWideViewPort(true);
         Bundle mBundle = getIntent().getExtras();
         if (mBundle != null) {
             title = mBundle.getString(Keys.Extras.WEB_TITLE);
             webUrl = mBundle.getString(Keys.Extras.WEB_URL);
         }
-        webViewInvoice.loadUrl(webUrl);
+        webView.loadUrl(webUrl);
         Utils.setOnClickListener(this, findViewById(iBack));
         TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText(title);
