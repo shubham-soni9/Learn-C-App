@@ -1,13 +1,12 @@
 package com.dexolabs.cprogramming;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatTextView;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
@@ -15,6 +14,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     private BottomNavigationView bottomNavigationView;
     private ProgressBar          pbFragmentLoader;
     private FrameLayout          frameHome;
+    private AppCompatTextView    tvHomeHeader;
 
 
     @Override
@@ -22,6 +22,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         initID();
+        tvHomeHeader.setText(R.string.start_learning);
         setFragment(TutorialFragment.newInstance(CommonData.getTutorialData()));
     }
 
@@ -29,6 +30,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         pbFragmentLoader = findViewById(R.id.home_fragment_loader);
         frameHome = findViewById(R.id.frame_home_layout);
+        tvHomeHeader = findViewById(R.id.tvHomeHeader);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
@@ -43,18 +45,23 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         switch (menuItem.getItemId()) {
             case R.id.action_tutorial:
                 setFragment(TutorialFragment.newInstance(CommonData.getTutorialData()));
+                tvHomeHeader.setText(R.string.start_learning);
                 break;
             case R.id.action_program:
                 setFragment(TutorialFragment.newInstance(CommonData.getProgramData()));
+                tvHomeHeader.setText(R.string.practcie_programs);
                 break;
             case R.id.action_test:
                 setFragment(QuizFragment.newInstance(CommonData.getQuizData()));
+                tvHomeHeader.setText(R.string.test_your_talent);
                 break;
             case R.id.action_question:
                 setFragment(QuestionFragment.newInstance(CommonData.getQuestionData()));
+                tvHomeHeader.setText(R.string.important_questions);
                 break;
             default:
                 setFragment(MoreFragment.newInstance());
+                tvHomeHeader.setText(R.string.more_options);
                 break;
         }
         return true;
@@ -63,14 +70,5 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
     private void setFragment(final Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_home_layout, fragment).commit();
-        pbFragmentLoader.setVisibility(View.VISIBLE);
-        frameHome.setVisibility(View.GONE);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                pbFragmentLoader.setVisibility(View.GONE);
-                frameHome.setVisibility(View.VISIBLE);
-            }
-        }, 500);
     }
 }
