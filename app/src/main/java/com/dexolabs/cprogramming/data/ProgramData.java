@@ -10,7 +10,7 @@ public class ProgramData {
         ArrayList<TutorialModel> programModelList = new ArrayList<>();
         TreeMap<String, String> options = new TreeMap<>();
 
-        options.put("Hello world Program", "file:///android_asset/program/1_program.html");
+        options.put("Hello world Program", "program/1_program.html");
         options.put("Program to find even/odd from a number", "");
         options.put("Program to find armstrong number", "");
         options.put("Flowcharts", "");

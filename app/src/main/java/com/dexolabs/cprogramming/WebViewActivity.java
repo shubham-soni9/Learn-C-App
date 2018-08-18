@@ -32,7 +32,7 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
             title = mBundle.getString(Keys.Extras.WEB_TITLE);
             webUrl = mBundle.getString(Keys.Extras.WEB_URL);
         }
-        webView.loadUrl(webUrl);
+        webView.loadUrl("file:///android_asset/" + webUrl);
         Utils.setOnClickListener(this, findViewById(iBack));
         TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText(title);
