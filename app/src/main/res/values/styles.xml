@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CustomTextAppearance.Bold" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/font_bold</item>
+    </style>
+
+    <style name="CustomTextAppearance.Regular" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/font_regular</item>
+    </style>
 </resources>

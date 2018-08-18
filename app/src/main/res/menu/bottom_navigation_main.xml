@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_tutorial"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_tutorial"
+        android:title="@string/tab_1"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_program"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_program"
+        android:title="@string/tab_2"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_test"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_test"
+        android:title="@string/tab_3"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_question"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_question"
+        android:title="@string/tab_4"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_more"
+        android:enabled="true"
+        android:icon="@drawable/ic_navigation_more"
+        android:title="@string/tab_5"
+        app:showAsAction="always" />
+
+</menu>
