@@ -1,4 +1,4 @@
-package com.dexolabs.c;
+package com.dexolabs.cprogramming;
 
 import android.content.Intent;
 import android.os.Bundle;

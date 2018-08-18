@@ -1,4 +1,4 @@
-package com.dexolabs.c;
+package com.dexolabs.cprogramming;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

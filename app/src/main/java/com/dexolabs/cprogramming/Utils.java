@@ -1,4 +1,4 @@
-package com.dexolabs.c;
+package com.dexolabs.cprogramming;
 
 import android.annotation.SuppressLint;
 import android.support.design.internal.BottomNavigationItemView;

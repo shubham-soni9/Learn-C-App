@@ -1,4 +1,4 @@
-package com.dexolabs.c;
+package com.dexolabs.cprogramming;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

@@ -1,4 +1,4 @@
-package com.dexolabs.c;
+package com.dexolabs.cprogramming;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
