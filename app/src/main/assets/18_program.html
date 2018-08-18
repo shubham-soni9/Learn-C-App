@@ -32,18 +32,23 @@
 //Main Function
 int main()
 {
-    int number;
+    double n1, n2, n3;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    printf("Enter three numbers: ");
+    scanf("%lf %lf %lf", &n1, &n2, &n3);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    if( n1>=n2 && n1>=n3)
+        printf("%.2lf is the largest number.", n1);
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    else if (n2>=n1 && n2>=n3)
+        printf("%.2lf is the largest number.", n2);
+
+    else
+        printf("%.2lf is the largest number.", n3);
+
     return 0;
 }
+
 
 </code>
 </pre>
@@ -58,8 +63,10 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter three numbers: -4.5
+3.9
+5.6
+5.60 is the largest number.
 </code>
 </pre>
         </span>

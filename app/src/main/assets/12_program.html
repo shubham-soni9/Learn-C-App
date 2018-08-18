@@ -32,16 +32,16 @@
 //Main Function
 int main()
 {
-    int number;
+    int n, i;
 
-    // printf() dislpays the formatted output
     printf("Enter an integer: ");
+    scanf("%d",&n);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    for(i=1; i<=10; ++i)
+    {
+        printf("%d * %d = %d \n", n, i, n*i);
+    }
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
     return 0;
 }
 
@@ -58,8 +58,17 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter an integer: 9
+9 * 1 = 9
+9 * 2 = 18
+9 * 3 = 27
+9 * 4 = 36
+9 * 5 = 45
+9 * 6 = 54
+9 * 7 = 63
+9 * 8 = 72
+9 * 9 = 81
+9 * 10 = 90
 </code>
 </pre>
         </span>

@@ -32,17 +32,24 @@
 //Main Function
 int main()
 {
-    int number;
+   char str[1000], ch;
+   int i, frequency = 0;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+   printf("Enter a string: ");
+   gets(str);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+   printf("Enter a character to find the frequency: ");
+   scanf("%c",&ch);
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+   for(i = 0; str[i] != '\0'; ++i)
+   {
+       if(ch == str[i])
+           ++frequency;
+   }
+
+   printf("Frequency of %c = %d", ch, frequency);
+
+   return 0;
 }
 
 </code>
@@ -58,8 +65,9 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter a string: This website is awesome.
+Enter a character to find the frequency: e
+Frequency of e = 4
 </code>
 </pre>
         </span>

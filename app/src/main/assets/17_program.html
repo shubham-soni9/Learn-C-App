@@ -32,16 +32,27 @@
 //Main Function
 int main()
 {
-    int number;
+    int year;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    printf("Enter a year: ");
+    scanf("%d",&year);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    if(year%4 == 0)
+    {
+        if( year%100 == 0)
+        {
+            // year is divisible by 400, hence the year is a leap year
+            if ( year%400 == 0)
+                printf("%d is a leap year.", year);
+            else
+                printf("%d is not a leap year.", year);
+        }
+        else
+            printf("%d is a leap year.", year );
+    }
+    else
+        printf("%d is not a leap year.", year);
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
     return 0;
 }
 
@@ -58,8 +69,8 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter a year: 2012
+2012 is a leap year.
 </code>
 </pre>
         </span>

@@ -32,19 +32,20 @@
 //Main Function
 int main()
 {
-    int number;
+    double firstNumber, secondNumber, product;
+    printf("Enter two numbers: ");
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    // Stores two floating point numbers in variable firstNumber and secondNumber respectively
+    scanf("%lf %lf", &firstNumber, &secondNumber);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    // Performs multiplication and stores the result in variable productOfTwoNumbers
+    product = firstNumber * secondNumber;
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    // Result up to 2 decimal point is displayed using %.2lf
+    printf("Product = %.2lf", product);
+
     return 0;
 }
-
 </code>
 </pre>
         </span>
@@ -58,8 +59,9 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter two numbers: 2.4
+1.12
+Product = 2.69
 </code>
 </pre>
         </span>

@@ -32,16 +32,20 @@
 //Main Function
 int main()
 {
-    int number;
+    double number;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    printf("Enter a number: ");
+    scanf("%lf", &number);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    if (number <= 0.0)
+    {
+        if (number == 0.0)
+            printf("You entered 0.");
+        else
+            printf("You entered a negative number.");
+    }
+    else
+        printf("You entered a positive number.");
     return 0;
 }
 
@@ -58,8 +62,8 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter a number: 12.3
+You entered a positive number.
 </code>
 </pre>
         </span>

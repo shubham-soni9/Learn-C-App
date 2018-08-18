@@ -32,16 +32,19 @@
 //Main Function
 int main()
 {
-    int number;
+    int first, second, sumOfTwoNumbers;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    printf("Enter two integers: ");
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    // Two integers entered by user is stored using scanf() function
+    scanf("%d %d", &first, &second);
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    // sum of two numbers in stored in variable sumOfTwoNumbers
+    sumOfTwoNumbers = first + second;
+
+    // Displays sum
+    printf("%d + %d = %d", first, second, sumOfTwoNumbers);
+
     return 0;
 }
 
@@ -58,8 +61,9 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter two integers: 12
+11
+12 + 11 = 23
 </code>
 </pre>
         </span>

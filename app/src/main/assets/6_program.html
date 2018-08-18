@@ -30,19 +30,17 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-int main()
+void main()
 {
-    int number;
+    int ival, remainder;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+    printf("Enter an integer : ");
+    scanf("%d", &ival);
+    remainder = ival % 2;
+    if (remainder == 0)
+        printf("%d is an even integer\n", ival);
+    else
+        printf("%d is an odd integer\n", ival);
 }
 
 </code>
@@ -58,8 +56,19 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+
+Case 1:
+Enter an integer : 75
+75 is an odd integer
+
+Case 2:
+Enter an integer : 24
+24 is an even integer
+
+Case 3:
+Enter an integer : 0
+0 is an even integer
+
 </code>
 </pre>
         </span>

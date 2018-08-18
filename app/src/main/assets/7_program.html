@@ -32,16 +32,15 @@
 //Main Function
 int main()
 {
-    int number;
+    char c;
+    printf("Enter a character: ");
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    // Reads character input from the user
+    scanf("%c", &c);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    // %d displays the integer value of a character
+    // %c displays the actual character
+    printf("ASCII value of %c = %d", c, c);
     return 0;
 }
 
@@ -58,8 +57,8 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter a character: G
+ASCII value of G = 71
 </code>
 </pre>
         </span>

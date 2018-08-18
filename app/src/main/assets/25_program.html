@@ -32,16 +32,19 @@
 //Main Function
 int main()
 {
-    int number;
+    char s1[100], s2[100], i;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    printf("Enter string s1: ");
+    scanf("%s",s1);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    for(i = 0; s1[i] != '\0'; ++i)
+    {
+        s2[i] = s1[i];
+    }
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    s2[i] = '\0';
+    printf("String s2: %s", s2);
+
     return 0;
 }
 
@@ -57,9 +60,8 @@ int main()
         <div class="panel-heading">Output:</div>
         <!--Collapsable UI-->
         <pre> <code class="language-c">
-
-Enter a integer: 25
-You entered: 25
+Enter String s1: programiz
+String s2: programiz
 </code>
 </pre>
         </span>

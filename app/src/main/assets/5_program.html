@@ -32,19 +32,24 @@
 //Main Function
 int main()
 {
-    int number;
+   int first, second, add, subtract, multiply;
+   float divide;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+   printf("Enter two integers\n");
+   scanf("%d%d", &first, &second);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+   add = first + second;
+   subtract = first - second;
+   multiply = first * second;
+   divide = first / (float)second;   //typecasting
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+   printf("Sum = %d\n", add);
+   printf("Difference = %d\n", subtract);
+   printf("Multiplication = %d\n", multiply);
+   printf("Division = %.2f\n", divide);
+
+   return 0;
 }
-
 </code>
 </pre>
         </span>
@@ -58,8 +63,12 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter two integers
+7 3
+Sum  = 10
+Difference = 4
+Multiplication = 21
+Division = 2.33
 </code>
 </pre>
         </span>

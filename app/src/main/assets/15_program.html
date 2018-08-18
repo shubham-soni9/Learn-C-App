@@ -32,16 +32,15 @@
 //Main Function
 int main()
 {
-    int number;
+    char c;
+    printf("Enter a character: ");
+    scanf("%c",&c);
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    if( (c>='a' && c<='z') || (c>='A' && c<='Z'))
+        printf("%c is an alphabet.",c);
+    else
+        printf("%c is not an alphabet.",c);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
     return 0;
 }
 
@@ -58,8 +57,8 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter a character: a
+a is an alphabet
 </code>
 </pre>
         </span>

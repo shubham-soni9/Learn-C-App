@@ -32,16 +32,26 @@
 //Main Function
 int main()
 {
-    int number;
+    int n, i;
+    unsigned long long factorial = 1;
 
-    // printf() dislpays the formatted output
     printf("Enter an integer: ");
+    scanf("%d",&n);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    // show error if the user enters a negative integer
+    if (n < 0)
+        printf("Error! Factorial of a negative number doesn't exist.");
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    else
+    {
+        for(i=1; i<=n; ++i)
+        {
+            factorial *= i;
+            // factorial = factorial*i;
+        }
+        printf("Factorial of %d = %llu", n, factorial);
+    }
+
     return 0;
 }
 
@@ -58,8 +68,8 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter an integer: 10
+Factorial of 10 = 3628800
 </code>
 </pre>
         </span>
