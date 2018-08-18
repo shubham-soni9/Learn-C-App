@@ -84,7 +84,32 @@ public class ProgramData {
         options.put("Copy String Without Using strcpy()", "25_program.html");
         options.put("Sort Elements in Dictionary Order", "26_program.html");
         options.put("", "27_program.html");
-        options.put("", "2_program.html");
+        options.put("", "28_program.html");
+        options.put("", "29_program.html");
+        options.put("", "30_program.html");
+        options.put("", "31_program.html");
+        options.put("", "32_program.html");
+        options.put("", "33_program.html");
+        options.put("", "34_program.html");
+        options.put("", "35_program.html");
+        options.put("", "36_program.html");
+        options.put("", "37_program.html");
+        options.put("", "38_program.html");
+        options.put("", "39_program.html");
+        options.put("", "40_program.html");
+        options.put("", "41_program.html");
+        options.put("", "42_program.html");
+        options.put("", "43_program.html");
+        options.put("", "44_program.html");
+        options.put("", "45_program.html");
+        options.put("", "46_program.html");
+        options.put("", "47_program.html");
+        options.put("", "48_program.html");
+        options.put("", "49_program.html");
+        options.put("", "50_program.html");
+        options.put("", "51_program.html");
+        options.put("", "52_program.html");
+
         programModelList.add(new TutorialModel("Strings", options));
 
 
@@ -131,16 +156,18 @@ public class ProgramData {
 
 
         options = new TreeMap<>();
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
+        options.put("Program to create, declare and initialize structure", "60_program.html");
+        options.put("Program to declare, initialize an union, example of union", "63_program.html");
+        options.put("Store Information of a Student Using Structure", "53_program.html");
+        options.put("Add Two Complex Numbers by Passing Structure to a Function", "54_program.html");
+        options.put("Store Information Using Structures with Dynamically Memory Allocation", "55_program.html");
+        options.put("Add Two Distances (in inch-feet) System Using Structur", "56_program.html");
+        options.put("Store Information of Students Using Structure", "57_program.html");
+        options.put("Calculate Difference Between Two Time Periods\n", "58_program.html");
+        options.put("Difference between union and structure\n", "59_program.html");
+        options.put("C program to demonstrate example of Nested Structure", "61_program.html");
+        options.put("Structure with pointer", "62_program.html");
+        options.put("Structure of array", "64_program.html");
         programModelList.add(new TutorialModel("Structure and Union", options));
 
 

@@ -30,21 +30,22 @@
 #include&lt;conio.h&gt;
 
 //Main Function
+struct employee{
+	char name[30];
+	int empId;
+	float salary;
+};
+
 int main()
 {
-    int number;
+	/*declare and initialization of structure variable*/
+	struct employee emp={"Mike",1120,76909.00f};
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+	printf("\n Name: %s"	,emp.name);
+	printf("\n Id: %d"		,emp.empId);
+	printf("\n Salary: %f\n",emp.salary);
+	return 0;
 }
-
 </code>
 </pre>
         </span>
@@ -58,8 +59,9 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Name: Mike
+Id: 1120
+Salary: 76909.000000
 </code>
 </pre>
         </span>

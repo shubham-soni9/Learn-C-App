@@ -29,22 +29,27 @@
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
 
-//Main Function
+union unionJob
+{
+   //defining a union
+   char name[32];
+   float salary;
+   int workerNo;
+} uJob;
+
+struct structJob
+{
+   char name[32];
+   float salary;
+   int workerNo;
+} sJob;
+
 int main()
 {
-    int number;
-
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+   printf("size of union = %d", sizeof(uJob));
+   printf("\nsize of structure = %d", sizeof(sJob));
+   return 0;
 }
-
 </code>
 </pre>
         </span>
@@ -58,8 +63,8 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+size of union = 32
+size of structure = 40
 </code>
 </pre>
         </span>
