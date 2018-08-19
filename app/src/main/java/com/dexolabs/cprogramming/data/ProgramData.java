@@ -43,6 +43,7 @@ public class ProgramData {
         options.put("Strong number", "37_program.html");
         options.put("Find power of a number using recursion", "40_program.html");
         options.put("Perfect number", "42_program.html");
+        options.put("Guess random number using C program", "105_program.html");
         programModelList.add(new TutorialModel("Numbers", options));
 
 
@@ -67,6 +68,7 @@ public class ProgramData {
         options.put("Reverse copy array", "75_program.html");
         options.put("Program to divide array", "76_program.html");
         options.put("Array concatenation program", "77_program.html");
+        options.put("Program to Insert an Element in a Specified Position in a given Array", "106_program.html");
         programModelList.add(new TutorialModel("Arrays", options));
 
 
@@ -145,16 +147,12 @@ public class ProgramData {
 
 
         options = new TreeMap<>();
-        options.put("Convert number from Decimal to Binary", "99_program.html");
-        options.put("Convert number from Binary to Decimal", "100_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
+        options.put("Decimal to Binary", "99_program.html");
+        options.put("Binary to Decimal", "100_program.html");
+        options.put("Decimal to Octal", "101_program.html");
+        options.put("Octal to Decimal", "102_program.html");
+        options.put("Decimal to Hexadecimal", "103_program.html");
+        options.put("Hexadecimal to Decimal", "104_program.html");
         programModelList.add(new TutorialModel("Conversations", options));
 
 
@@ -166,6 +164,23 @@ public class ProgramData {
         options.put("", "2_program.html");
         options.put("", "2_program.html");
         programModelList.add(new TutorialModel("System", options));
+
+
+        options = new TreeMap<>();
+        options.put("Linear Search", "107_program.html");
+        options.put("Binary Search", "108_program.html");
+        options.put("Bubble Sorting", "109_program.html");
+        options.put("Insertion Sort", "110_program.html");
+        options.put("Selection Sort", "111_program.html");
+        options.put("Merge Sort", "112_program.html");
+        options.put("Quick Sort", "113_program.html");
+        options.put("Heap Sort", "114_program.html");
+        options.put("Counting Sort", "115_program.html");
+        options.put("Shell Sort", "116_program.html");
+        options.put("Recursive Bubble Sort", "117_program.html");
+        options.put("Bucket Sort", "118_program.html");
+        programModelList.add(new TutorialModel("Searching/Sorting", options));
+
 
         options = new TreeMap<>();
         options.put("Use gets() function", "2_program.html");

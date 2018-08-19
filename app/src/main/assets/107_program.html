@@ -30,7 +30,30 @@
 #include&lt;conio.h&gt;
 
 //Main Function
+int main()
+{
+    int a[20],i,x,n;
+    printf("How many elements?");
+    scanf("%d",&n);
 
+    printf("Enter array elements:\n");
+    for(i=0;i < n;++i)
+        scanf("%d",&a[i]);
+
+    printf("\nEnter element to search:");
+    scanf("%d",&x);
+
+    for(i=0;i < n;++i)
+        if(a[i]==x)
+            break;
+
+    if(i < n)
+        printf("Element found at index %d",i);
+    else
+        printf("Element not found");
+
+    return 0;
+}
 
 </code>
 </pre>
@@ -43,8 +66,12 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+How many elements?4
+Enter array elements:
+6 8 9 1
+
+Enter element to search:9
+Element found at index 2
 </code>
 </pre>
     </div>

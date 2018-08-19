@@ -28,9 +28,31 @@
 
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;math.h&gt;
 
 //Main Function
+int main()
+{
+    char oct[32]={0};
+    int  dec,i;
+    int  cnt;   /*for power index*/
 
+    printf("Enter octal value: ");
+    gets(oct);
+
+    cnt=0;
+    dec=0;
+    for(i=(strlen(oct)-1);i>=0;i--)
+    {
+        dec= dec+ (oct[i]-0x30)*pow((double)8,(double)cnt);
+        cnt++;
+    }
+
+    printf("DECIMAL value is: %d",dec);
+
+    return 0;
+}
 
 </code>
 </pre>
@@ -43,8 +65,8 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+    Enter octal value: 1041
+    DECIMAL value is: 545
 </code>
 </pre>
     </div>
