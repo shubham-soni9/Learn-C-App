@@ -30,7 +30,27 @@
 #include&lt;conio.h&gt;
 
 //Main Function
+int main()
+{
+   /* Pointer of integer type, this can hold the
+    * address of a integer type variable.
+    */
+   int *p;
 
+   int var = 10;
+
+   /* Assigning the address of variable var to the pointer
+    * p. The p can hold the address of var because var is
+    * an integer type variable.
+    */
+   p= &amp;var;
+
+   printf("Value of variable var is: %d", var);
+   printf("\nValue of variable var is: %d", *p);
+   printf("\nAddress of variable var is: %p", &var);
+   printf("\nAddress of variable var is: %p", p);
+   printf("\nAddress of pointer p is: %p", &p);
+   return 0;
 
 </code>
 </pre>
@@ -43,8 +63,11 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+Value of variable var is: 10
+Value of variable var is: 10
+Address of variable var is: 0x7fff5ed98c4c
+Address of variable var is: 0x7fff5ed98c4c
+Address of pointer p is: 0x7fff5ed98c50
 </code>
 </pre>
     </div>

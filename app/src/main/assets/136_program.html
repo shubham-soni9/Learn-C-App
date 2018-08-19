@@ -28,9 +28,47 @@
 
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
+#include&lt;sys/types.h&gt;
+#include&lt;dirent.h&gt;
 
-//Main Function
 
+void listFiles(const char *path);
+
+int main()
+{
+    // Directory path to list files
+    char path[100];
+
+    // Input path from user
+    printf("Enter path to list files: ");
+    scanf("%s", path);
+
+    listFiles(path);
+
+    return 0;
+}
+
+
+/**
+ * Lists all files and sub-directories at given path.
+ */
+void listFiles(const char *path)
+{
+    struct dirent *dp;
+    DIR *dir = opendir(path);
+
+    // Unable to open directory stream
+    if (!dir)
+        return;
+
+    while ((dp = readdir(dir)) != NULL)
+    {
+        printf("%s\n", dp->d_name);
+    }
+
+    // Close directory stream
+    closedir(dir);
+}
 
 </code>
 </pre>
@@ -43,8 +81,18 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+Enter path to list files: .
+.git
+COMMIT_EDITMSG
+config
+master
+.gitignore
+.vscode
+bin
+a.exe
+file2.txt
+strtoul.c
+strtoull.c
 </code>
 </pre>
     </div>

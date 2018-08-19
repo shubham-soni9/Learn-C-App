@@ -30,6 +30,18 @@
 #include&lt;conio.h&gt;
 
 //Main Function
+int main() {
+   int *ptr1, *ptr2;
+   int num;
+
+   printf("\nEnter two numbers : ");
+   scanf("%d %d", ptr1, ptr2);
+
+   num = *ptr1 + *ptr2;
+
+   printf("Sum = %d", num);
+   return (0);
+}
 
 
 </code>
@@ -43,8 +55,8 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+Enter two numbers : 2 3
+Sum = 5
 </code>
 </pre>
     </div>

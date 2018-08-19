@@ -27,9 +27,49 @@
         <pre> <code class="language-c">
 
 #include&lt;stdio.h&gt;
-#include&lt;conio.h&gt;
 
-//Main Function
+#define MAX_SIZE 100 // Maximum string size
+
+
+int main()
+{
+    char str[MAX_SIZE];
+    int alphabets, digits, others, i;
+
+    alphabets = digits = others = i = 0;
+
+
+    /* Input string from user */
+    printf("Enter any string : ");
+    gets(str);
+
+    /*
+     * Check each character of string for alphabet, digit or special character
+     */
+    while(str[i]!='\0')
+    {
+        if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))
+        {
+            alphabets++;
+        }
+        else if(str[i]>='0' && str[i]<='9')
+        {
+            digits++;
+        }
+        else
+        {
+            others++;
+        }
+
+        i++;
+    }
+
+    printf("Alphabets = %d\n", alphabets);
+    printf("Digits = %d\n", digits);
+    printf("Special characters = %d", others);
+
+    return 0;
+}
 
 
 </code>
@@ -43,8 +83,10 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+Enter any string : Today is 12 November.
+Alphabets = 15
+Digits = 2
+Special characters = 4
 </code>
 </pre>
     </div>

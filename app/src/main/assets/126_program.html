@@ -29,8 +29,23 @@
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
 
-//Main Function
+void main()
+{
+     int a,b,c;
+     printf(" Enter values of a, b and c \n");
+     scanf("%d %d %d",&a,&b,&c);
 
+     a=a+b+c;
+     b=a-b-c;
+     c=a-b-c;
+     a=a-b-c;
+
+     printf("\n After swapping their values are as below -");
+     printf("\n a = %d",a);
+     printf("\n b = %d",b);
+     printf("\n c = %d",c);
+     getch();
+}
 
 </code>
 </pre>
@@ -43,8 +58,14 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+Enter values of a, b and c
+14
+45
+12
+After swapping their values are as below -
+12
+14
+45
 </code>
 </pre>
     </div>

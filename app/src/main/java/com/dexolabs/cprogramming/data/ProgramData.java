@@ -27,6 +27,7 @@ public class ProgramData {
         options.put("Check if a given Integer is Odd or Even", "6_program.html");
         options.put("Swap Two Numbers", "10_program.html");
         options.put("Swap Number Without Using Temporary Variables", "11_program.html");
+        options.put("Swapping values of three Variables without using forth variable", "126_program.html");
         options.put("Generate Multiplication Table", "12_program.html");
         options.put("Find Factorial of a Number", "13_program.html");
         options.put("Calculate the Sum of Natural Numbers", "14_program.html");
@@ -87,10 +88,10 @@ public class ProgramData {
         options.put("Find a substring within a string", "123_program.html");
         options.put("Remove given Word from a String", "124_program.html");
         options.put("Find the Frequency of the Word ‘the’ in a given Sentence", "125_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
+        options.put("Compare two strings", "137_program.html");
+        options.put("Convert lowercase string to uppercase", "138_program.html");
+        options.put("Find total number of alphabets, digits or special characters in a string", "139_program.html");
+        options.put("Trim leading white spaces from a string", "140_program.html");
         programModelList.add(new TutorialModel("Strings", options));
 
 
@@ -104,6 +105,9 @@ public class ProgramData {
         options.put("Check whether a matrix is an identity matrix or not", "88_program.html");
         options.put("Sum of Diagonal Elements of a Matrix\n", "89_program.html");
         options.put("Swap rows and columns of matrix", "90_program.html");
+        options.put("Display Upper Triangular Matrix", "141_program.html");
+        options.put("Display Lower Triangular Matrix", "142_program.html");
+        options.put("Print a given matrix in spiral form", "143_program.html");
         programModelList.add(new TutorialModel("Matrix", options));
 
 
@@ -126,6 +130,11 @@ public class ProgramData {
         options.put("Print sizes of different type of pointers", "96_program.html");
         options.put("Array of pointers", "97_program.html");
         options.put("Double pointer (pointer to pointer)", "98_program.html");
+        options.put("Compute sum of the array elements using pointers", "146_program.html");
+        options.put("Find Length of the String using Pointer", "147_program.html");
+        options.put("Read integers into an array and Reversing them using Pointers", "148_program.html");
+        options.put("Add Two Numbers Using Pointer", "149_program.html");
+        options.put("Pointer demonstrating the use of & and *", "150_program.html");
         programModelList.add(new TutorialModel("Pointers I/O", options));
 
 
@@ -145,6 +154,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Structure and Union", options));
 
 
+       // https://codeforwin.org/2018/04/file-handling-programming-exercises-and-solutions-in-c.html
         options = new TreeMap<>();
         options.put("Write a file", "79_program.html");
         options.put("Read string from a file", "49_program.html");
@@ -154,6 +164,14 @@ public class ProgramData {
         options.put("Copies one file contents to another file\n", "80_program.html");
         options.put("Merge two files", "81_program.html");
         options.put("Program which produces its own source code as its output", "51_program.html");
+        options.put("Program to append data into a file", "129_program.html");
+        options.put("Program to compare two files", "130_program.html");
+        options.put("Count characters, words and lines in a text file", "131_program.html");
+        options.put("Remove a word from text file", "132_program.html");
+        options.put("Find and replace a word in file", "133_program.html");
+        options.put("Find file properties using stat() function", "134_program.html");
+        options.put("Check whether a file or directory exists or not", "135_program.html");
+        options.put("List all files in a directory", "136_program.html");
         programModelList.add(new TutorialModel("File I/O", options));
 
 
@@ -164,17 +182,9 @@ public class ProgramData {
         options.put("Octal to Decimal", "102_program.html");
         options.put("Decimal to Hexadecimal", "103_program.html");
         options.put("Hexadecimal to Decimal", "104_program.html");
+        options.put("Convert temperature from degree celsius to fahrenheit", "127_program.html");
+        options.put("Convert days to years weeks and days", "128_program.html");
         programModelList.add(new TutorialModel("Conversations", options));
-
-
-
-        options = new TreeMap<>();
-        options.put("Use gets() function", "2_program.html");
-        options.put("Program to shutdown or turn off computer", "38_program.html");
-        options.put("Program to get IP address", "39_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        programModelList.add(new TutorialModel("System", options));
 
 
         options = new TreeMap<>();
@@ -195,14 +205,10 @@ public class ProgramData {
 
         options = new TreeMap<>();
         options.put("Use gets() function", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
+        options.put("Program to shutdown or turn off computer", "38_program.html");
+        options.put("Program to get IP address", "39_program.html");
+        options.put("Calculate Area of Circle", "144_program.html");
+        options.put("Print all Arguments passed using Command Line", "145_program.html");
         programModelList.add(new TutorialModel("Extras", options));
 
         return programModelList;

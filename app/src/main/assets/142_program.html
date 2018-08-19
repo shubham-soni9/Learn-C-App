@@ -27,10 +27,34 @@
         <pre> <code class="language-c">
 
 #include&lt;stdio.h&gt;
-#include&lt;conio.h&gt;
 
-//Main Function
 
+void main()
+{
+    int array[3][3], i, j, flag = 0 ;
+    printf("\n\t Enter the value of Matrix : ");
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            scanf("%d", &array[i][j]);
+        }
+    }
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            if (array[i] < array[j] && array[i][j] == 0)
+            {
+                flag = flag + 1;
+            }
+        }
+    }
+    if (flag == 3)
+        printf("\n\n Matrix is a Lower triangular matrix");
+    else
+        printf("\n\n Matrix is not a lower triangular matrix");
+}
 
 </code>
 </pre>
@@ -43,8 +67,17 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+
+Enter the value of Matrix : 1 0 0
+1 1 0
+1 1 1
+Matrix is a Lower triangular matrix
+
+
+Enter the value of Matrix : 1 2 0
+1 0 0
+0 0 0
+Matrix is not a lower triangular matrix
 </code>
 </pre>
     </div>
