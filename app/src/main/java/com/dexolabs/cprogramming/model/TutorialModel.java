@@ -3,16 +3,16 @@ package com.dexolabs.cprogramming.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
 
 public class TutorialModel implements Parcelable {
-    private String                  heading;
-    private TreeMap<String, String> tutorialOptions;
+    private String                        heading;
+    private LinkedHashMap<String, String> tutorialOptions;
 
     public TutorialModel() {
     }
 
-    public TutorialModel(String heading, TreeMap<String, String> tutorialOptions) {
+    public TutorialModel(String heading, LinkedHashMap<String, String> tutorialOptions) {
         this.heading = heading;
         this.tutorialOptions = tutorialOptions;
     }
@@ -37,7 +37,7 @@ public class TutorialModel implements Parcelable {
         return heading;
     }
 
-    public TreeMap<String, String> getTutorialOptions() {
+    public LinkedHashMap<String, String> getTutorialOptions() {
         return tutorialOptions;
     }
 
@@ -45,7 +45,7 @@ public class TutorialModel implements Parcelable {
         this.heading = heading;
     }
 
-    public void setTutorialOptions(TreeMap<String, String> tutorialOptions) {
+    public void setTutorialOptions(LinkedHashMap<String, String> tutorialOptions) {
         this.tutorialOptions = tutorialOptions;
     }
 

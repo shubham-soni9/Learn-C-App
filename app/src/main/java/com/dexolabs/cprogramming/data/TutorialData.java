@@ -3,13 +3,13 @@ package com.dexolabs.cprogramming.data;
 import com.dexolabs.cprogramming.model.TutorialModel;
 
 import java.util.ArrayList;
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
 
 public class TutorialData {
 
     public static ArrayList<TutorialModel> getTutorialData() {
         ArrayList<TutorialModel> tutorialModelList = new ArrayList<>();
-        TreeMap<String, String> options = new TreeMap<>();
+        LinkedHashMap<String, String> options = new LinkedHashMap<>();
 
         options.put("Introduction", "http://www.facebook.com");
         options.put("Problem Solving", "http://www.yahoo.com");
@@ -19,7 +19,7 @@ public class TutorialData {
         tutorialModelList.add(new TutorialModel("Introduction", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("What is C?", "");
         options.put("Structure of C", "");
         options.put("Compilation", "");

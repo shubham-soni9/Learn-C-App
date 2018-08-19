@@ -13,15 +13,15 @@ import android.view.ViewGroup;
 
 import com.dexolabs.cprogramming.structure.BaseFragment;
 
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
 
 public class QuestionFragment extends BaseFragment {
-    private Context                 mContext;
-    private RecyclerView            rvQuestionList;
-    private QuestionListAdapter         questionListAdapter;
-    private TreeMap<String, String> questionList;
+    private Context                       mContext;
+    private RecyclerView                  rvQuestionList;
+    private QuestionListAdapter           questionListAdapter;
+    private LinkedHashMap<String, String> questionList;
 
-    public static QuestionFragment newInstance(TreeMap<String, String> questionList) {
+    public static QuestionFragment newInstance(LinkedHashMap<String, String> questionList) {
         QuestionFragment quizFragment = new QuestionFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable("tutorial_list", questionList);
@@ -46,7 +46,7 @@ public class QuestionFragment extends BaseFragment {
 
     private void getData() {
         Bundle bundle = getArguments();
-        questionList = (TreeMap<String, String>) bundle.getSerializable("tutorial_list");
+        questionList = (LinkedHashMap<String, String>) bundle.getSerializable("tutorial_list");
     }
 
     private void initFragment(ViewGroup rootView) {

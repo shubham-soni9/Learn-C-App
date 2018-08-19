@@ -18,13 +18,13 @@ import com.dexolabs.cprogramming.model.TutorialModel;
 import com.dexolabs.cprogramming.utility.Log;
 import com.dexolabs.cprogramming.utility.Transition;
 
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
 
 public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapter.ViewHolder> {
-    private TreeMap<String, String> webUrlList;
-    private String[]                tutorialTitleList;
+    private LinkedHashMap<String, String> webUrlList;
+    private String[]                      tutorialTitleList;
     private String TAG = TutorialListAdapter.class.getName();
-    private Context       mContext;
+    private Context mContext;
 
     public TutorialListAdapter(Context mContext, TutorialModel tutorialModel) {
         this.webUrlList = tutorialModel.getTutorialOptions();
@@ -46,7 +46,7 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
         viewHolder.tvTutorialTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openWebView(webUrlList.get(tutorialTitleList[position]),tutorialTitleList[position]);
+                openWebView(webUrlList.get(tutorialTitleList[position]), tutorialTitleList[position]);
             }
         });
         Log.e(TAG, tutorialTitleList[pos]);
@@ -66,9 +66,9 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
         }
     }
 
-    private void openWebView(String webUrl,String title) {
+    private void openWebView(String webUrl, String title) {
         Bundle bundle = new Bundle();
-        bundle.putString(Keys.Extras.WEB_TITLE,title );
+        bundle.putString(Keys.Extras.WEB_TITLE, title);
         bundle.putString(Keys.Extras.WEB_URL, webUrl);
         Transition.transitForResult((Activity) mContext, WebViewActivity.class, Codes.RequestCode.OPEN_WEB_VIEW, bundle);
     }

@@ -1,11 +1,11 @@
 package com.dexolabs.cprogramming.data;
 
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
 
 public class QuizData {
 
-    public static TreeMap<String, String> getQuizData() {
-        TreeMap<String, String> options = new TreeMap<>();
+    public static LinkedHashMap<String, String> getQuizData() {
+        LinkedHashMap<String, String> options = new LinkedHashMap<>();
 
         options.put("Data type - 1", "");
         options.put("Data type - 2", "");

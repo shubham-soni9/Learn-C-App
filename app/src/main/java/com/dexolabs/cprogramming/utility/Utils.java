@@ -50,6 +50,7 @@ public class Utils {
         for (View view : views)
             view.setOnClickListener(listener);
     }
+
     /**
      * Method to convert the value from
      * density pixels to pixels

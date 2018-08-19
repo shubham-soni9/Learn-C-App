@@ -10,21 +10,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dexolabs.cprogramming.adapter.TutorialListAdapter;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
+
+import static com.dexolabs.cprogramming.appdata.Keys.Extras.TUTORIAL_LIST;
 
 public class QuizFragment extends BaseFragment {
-    private Context                 mContext;
-    private    RecyclerView            rvQuizList;
-    private    QuizListAdapter     tutorialListAdapter;
-    private    TreeMap<String, String> tutorialList;
+    private Context                       mContext;
+    private RecyclerView                  rvQuizList;
+    private QuizListAdapter               tutorialListAdapter;
+    private LinkedHashMap<String, String> tutorialList;
 
-    public static QuizFragment newInstance(TreeMap<String, String> tutorialList) {
+    public static QuizFragment newInstance(LinkedHashMap<String, String> tutorialList) {
         QuizFragment quizFragment = new QuizFragment();
         Bundle bundle = new Bundle();
-        bundle.putSerializable("tutorial_list", tutorialList);
+        bundle.putSerializable(TUTORIAL_LIST, tutorialList);
         quizFragment.setArguments(bundle);
         return quizFragment;
     }
@@ -46,7 +47,7 @@ public class QuizFragment extends BaseFragment {
 
     private void getData() {
         Bundle bundle = getArguments();
-        tutorialList = (TreeMap<String, String>) bundle.getSerializable("tutorial_list");
+        tutorialList = (LinkedHashMap<String, String>) bundle.getSerializable(TUTORIAL_LIST);
     }
 
     private void initFragment(ViewGroup rootView) {

@@ -3,12 +3,12 @@ package com.dexolabs.cprogramming.data;
 import com.dexolabs.cprogramming.model.TutorialModel;
 
 import java.util.ArrayList;
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
 
 public class ProgramData {
     public static ArrayList<TutorialModel> getProgramData() {
         ArrayList<TutorialModel> programModelList = new ArrayList<>();
-        TreeMap<String, String> options = new TreeMap<>();
+        LinkedHashMap<String, String> options = new LinkedHashMap<>();
 
         options.put("Hello world Program", "1_program.html");
         options.put("Print an Integer (Entered by the User)", "2_program.html");
@@ -23,7 +23,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Basic Programs", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Check if a given Integer is Odd or Even", "6_program.html");
         options.put("Swap Two Numbers", "10_program.html");
         options.put("Swap Number Without Using Temporary Variables", "11_program.html");
@@ -48,14 +48,14 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Numbers", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Find ASCII Value of a Character", "7_program.html");
         options.put("Program to check vowel or consonant using if else", "5_program.html");
         options.put("Whether a Character is an Alphabet or not", "15_program.html");
         options.put("Check Whether a Character is Vowel or Consonant", "19_program.html");
         programModelList.add(new TutorialModel("Characters", options));
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Basic C Array", "65_program.html");
         options.put("Program for one dimensional array", "66_program.html");
         options.put("Program for two dimensional array", "67_program.html");
@@ -73,7 +73,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Arrays", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Frequency of Characters in a String", "20_program.html");
         options.put("Count the number of vowels, consonants", "21_program.html");
         options.put("Remove all Characters in a String Except Alphabet", "22_program.html");
@@ -95,7 +95,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Strings", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Matrix addition", "82_program.html");
         options.put("Matrix subtraction", "83_program.html");
         options.put("Matrix multiplication", "84_program.html");
@@ -113,7 +113,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Matrix", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Floyd's triangle", "43_program.html");
         options.put("Fibonacci Triangle", "44_program.html");
         options.put("Alphabet Triangle", "45_program.html");
@@ -123,7 +123,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Patterns", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Create, initialize, assign and access a pointer variable", "91_program.html");
         options.put("Swap two numbers using pointers", "92_program.html");
         options.put("Access Elements of an Array Using Pointer", "93_program.html");
@@ -140,7 +140,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Pointers I/O", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Program to create, declare and initialize structure", "60_program.html");
         options.put("Program to declare, initialize an union, example of union", "63_program.html");
         options.put("Store Information of a Student Using Structure", "53_program.html");
@@ -157,7 +157,7 @@ public class ProgramData {
 
 
         // https://codeforwin.org/2018/04/file-handling-programming-exercises-and-solutions-in-c.html
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Write a file", "79_program.html");
         options.put("Read string from a file", "49_program.html");
         options.put("Open a File", "50_program.html");
@@ -177,7 +177,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("File I/O", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Decimal to Binary", "99_program.html");
         options.put("Binary to Decimal", "100_program.html");
         options.put("Decimal to Octal", "101_program.html");
@@ -189,7 +189,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Conversations", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Linear Search", "107_program.html");
         options.put("Binary Search", "108_program.html");
         options.put("Bubble Sorting", "109_program.html");
@@ -205,14 +205,14 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Sorting", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Malloc() Function", "151_program.html");
         options.put("Calloc() Function", "152_program.html");
         options.put("Realloc() and Free() Function", "153_program.html");
         programModelList.add(new TutorialModel("Memory Allocation", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("C Output", "154_program.html");
         options.put("gets() and puts() functions", "155_program.html");
         options.put("getc() and putc() funcations", "156_program.html");
@@ -220,8 +220,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Input Type", options));
 
 
-
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Sum of given H.P.", "160_program.html");
         options.put("Sum of given G.P.", "161_program.html");
         options.put("Sum of given A.P.", "162_program.html");
@@ -231,13 +230,13 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Series", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Encrypt & Decrypt Message using Vernam Cipher", "166_program.html");
         options.put("Encrypt & Decrypt Message using Substitution Cipher", "167_program.html");
         programModelList.add(new TutorialModel("Networking", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Find power of a number", "168_program.html");
         options.put("Find gcd of a number", "169_program.html");
         options.put("Tower Of Hanoi", "170_program.html");
@@ -247,7 +246,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Recursion", options));
 
 
-        options = new TreeMap<>();
+        options = new LinkedHashMap<>();
         options.put("Program to shutdown or turn off computer", "38_program.html");
         options.put("Program to get IP address", "39_program.html");
         options.put("Calculate Area of Circle", "144_program.html");

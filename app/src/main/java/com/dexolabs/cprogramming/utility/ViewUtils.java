@@ -66,6 +66,6 @@ public class ViewUtils {
     public static void setPadding(View mView, int left, int top, int right, int bottom) {
         Context mViewContext = mView.getContext();
         mView.setPadding(Utils.dpToPx(mViewContext, left), Utils.dpToPx(mView.getContext(), top),
-                Utils.dpToPx(mViewContext, right), Utils.dpToPx(mViewContext, bottom));
+                         Utils.dpToPx(mViewContext, right), Utils.dpToPx(mViewContext, bottom));
     }
 }

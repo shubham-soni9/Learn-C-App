@@ -15,13 +15,11 @@ import com.dexolabs.cprogramming.appdata.Keys;
 import com.dexolabs.cprogramming.model.TutorialModel;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 
-import java.util.TreeMap;
-
 public class TutorialListFragment extends BaseFragment {
-    private Context                 mContext;
-    private RecyclerView            rvTutorialList;
-    private TutorialListAdapter     tutorialListAdapter;
-    private TutorialModel tutorialModel;
+    private Context             mContext;
+    private RecyclerView        rvTutorialList;
+    private TutorialListAdapter tutorialListAdapter;
+    private TutorialModel       tutorialModel;
 
     public static TutorialListFragment newInstance(TutorialModel tutorialModel) {
         TutorialListFragment tutorialListFragment = new TutorialListFragment();

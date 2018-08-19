@@ -9,15 +9,15 @@ import android.widget.TextView;
 
 import com.dexolabs.cprogramming.utility.Log;
 
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
 
 public class QuizListAdapter extends RecyclerView.Adapter<QuizListAdapter.ViewHolder> {
-    private TreeMap<String, String> tutorialList;
-    private String[]                tutorialTitleList;
+    private LinkedHashMap<String, String> tutorialList;
+    private String[]                      tutorialTitleList;
     private String TAG = QuizListAdapter.class.getName();
 
 
-    public QuizListAdapter(TreeMap<String, String> tutorialList) {
+    public QuizListAdapter(LinkedHashMap<String, String> tutorialList) {
         this.tutorialList = tutorialList;
         tutorialTitleList = tutorialList.keySet().toArray(new String[tutorialList.size()]);
     }

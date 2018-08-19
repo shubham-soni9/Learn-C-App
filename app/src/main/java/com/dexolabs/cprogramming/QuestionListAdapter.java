@@ -12,16 +12,16 @@ import android.widget.TextView;
 import com.dexolabs.AlertDialog;
 import com.dexolabs.cprogramming.utility.Log;
 
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
 
 public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapter.ViewHolder> {
-    private TreeMap<String, String> questionList;
-    private String[]                questionTitleList;
+    private LinkedHashMap<String, String> questionList;
+    private String[]                      questionTitleList;
     private String TAG = QuizListAdapter.class.getName();
     private Activity mContext;
 
 
-    public QuestionListAdapter(TreeMap<String, String> questionList, Activity mContext) {
+    public QuestionListAdapter(LinkedHashMap<String, String> questionList, Activity mContext) {
         this.questionList = questionList;
         this.mContext = mContext;
         questionTitleList = questionList.keySet().toArray(new String[questionList.size()]);

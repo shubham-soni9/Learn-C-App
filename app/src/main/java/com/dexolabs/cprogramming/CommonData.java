@@ -7,7 +7,7 @@ import com.dexolabs.cprogramming.data.TutorialData;
 import com.dexolabs.cprogramming.model.TutorialModel;
 
 import java.util.ArrayList;
-import java.util.TreeMap;
+import java.util.LinkedHashMap;
 
 public class CommonData {
 
@@ -19,10 +19,11 @@ public class CommonData {
         return ProgramData.getProgramData();
     }
 
-    public static TreeMap<String, String> getQuizData() {
+    public static LinkedHashMap<String, String> getQuizData() {
         return QuizData.getQuizData();
     }
-    public static TreeMap<String, String> getQuestionData() {
+
+    public static LinkedHashMap<String, String> getQuestionData() {
         return QuestionData.getQuestionData();
     }
 }
