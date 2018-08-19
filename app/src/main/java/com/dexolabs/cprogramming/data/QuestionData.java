@@ -6,7 +6,7 @@ public class QuestionData {
     public static TreeMap<String, String> getQuestionData() {
         TreeMap<String, String> options = new TreeMap<>();
 
-        options.put("What is C", "");
+        options.put("What is C", "I am C");
         options.put("Why you should learn C", "");
         options.put("What is C/C++", "");
         options.put("What is data type", "");

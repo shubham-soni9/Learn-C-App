@@ -5,6 +5,8 @@ import android.content.Context;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
+import android.text.Html;
+import android.text.Spanned;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -63,6 +65,16 @@ public class Utils {
         );
     }
 
+    @SuppressWarnings("deprecation")
+    public static Spanned fromHtml(String html) {
+        Spanned result;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
+        } else {
+            result = Html.fromHtml(html);
+        }
+        return result;
+    }
 
 
 }

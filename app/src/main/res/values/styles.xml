@@ -15,4 +15,10 @@
     <style name="CustomTextAppearance.Regular" parent="android:TextAppearance">
         <item name="android:fontFamily">@font/font_regular</item>
     </style>
+
+    <style name="CustomDialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_scale_out</item>
+    </style>
+
 </resources>

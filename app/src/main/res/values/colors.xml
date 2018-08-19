@@ -502,4 +502,6 @@
     <color name="transparent">#0000</color>
     <color name="orange_75">#ffd480</color>
     <color name="translucent_white">#8FFF</color>
+    <color name="app_text_color">#000000</color>
+
 </resources>

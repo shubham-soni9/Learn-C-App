@@ -1,5 +1,6 @@
 package com.dexolabs.cprogramming;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -51,7 +52,7 @@ public class QuestionFragment extends BaseFragment {
     private void initFragment(ViewGroup rootView) {
         rvQuestionList = rootView.findViewById(R.id.fragment_question_rv_list);
         rvQuestionList.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
-        questionListAdapter = new QuestionListAdapter(questionList);
+        questionListAdapter = new QuestionListAdapter(questionList, (Activity) mContext);
         rvQuestionList.setAdapter(questionListAdapter);
     }
 }
