@@ -103,13 +103,13 @@ public class ProgramData {
         options.put("Check if 2 Matrices are Equal", "86_program.html");
         options.put("Check if a given Matrix is a Sparse Matrix", "87_program.html");
         options.put("Check whether a matrix is an identity matrix or not", "88_program.html");
-        options.put("Sum of Diagonal Elements of a Matrix\n", "89_program.html");
+        options.put("Sum of Diagonal Elements of a Matrix", "89_program.html");
         options.put("Swap rows and columns of matrix", "90_program.html");
         options.put("Display Upper Triangular Matrix", "141_program.html");
         options.put("Display Lower Triangular Matrix", "142_program.html");
         options.put("Print a given matrix in spiral form", "143_program.html");
         options.put("Check whether entered matrix is magic square or not ?", "158_program.html");
-        options.put("Addition of All Elements in Matrix\n", "159_program.html");
+        options.put("Addition of All Elements in Matrix", "159_program.html");
         programModelList.add(new TutorialModel("Matrix", options));
 
 
@@ -148,8 +148,8 @@ public class ProgramData {
         options.put("Store Information Using Structures with Dynamically Memory Allocation", "55_program.html");
         options.put("Add Two Distances (in inch-feet) System Using Structur", "56_program.html");
         options.put("Store Information of Students Using Structure", "57_program.html");
-        options.put("Calculate Difference Between Two Time Periods\n", "58_program.html");
-        options.put("Difference between union and structure\n", "59_program.html");
+        options.put("Calculate Difference Between Two Time Periods", "58_program.html");
+        options.put("Difference between union and structure", "59_program.html");
         options.put("C program to demonstrate example of Nested Structure", "61_program.html");
         options.put("Structure with pointer", "62_program.html");
         options.put("Structure of array", "64_program.html");
@@ -163,7 +163,7 @@ public class ProgramData {
         options.put("Open a File", "50_program.html");
         options.put("Read a text file print it on the screen", "52_program.html");
         options.put("Count number of characters in the file", "78_program.html");
-        options.put("Copies one file contents to another file\n", "80_program.html");
+        options.put("Copies one file contents to another file", "80_program.html");
         options.put("Merge two files", "81_program.html");
         options.put("Program which produces its own source code as its output", "51_program.html");
         options.put("Program to append data into a file", "129_program.html");
@@ -254,7 +254,6 @@ public class ProgramData {
         options.put("Print all Arguments passed using Command Line", "145_program.html");
         options.put("To check whether a string belongs to a given grammer or not", "174_program.html");
         options.put("Size of the different data types", "175_program.html");
-
         programModelList.add(new TutorialModel("Extras", options));
 
         return programModelList;

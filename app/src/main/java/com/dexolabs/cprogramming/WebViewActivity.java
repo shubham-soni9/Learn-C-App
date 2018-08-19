@@ -36,6 +36,7 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
         Utils.setOnClickListener(this, findViewById(iBack));
         TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText(title);
+        tvTitle.setSelected(true);
     }
 
     @Override

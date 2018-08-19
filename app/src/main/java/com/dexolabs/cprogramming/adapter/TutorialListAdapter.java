@@ -21,18 +21,15 @@ import com.dexolabs.cprogramming.utility.Transition;
 import java.util.TreeMap;
 
 public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapter.ViewHolder> {
-    private TreeMap<String, String> tutorialList;
+    private TreeMap<String, String> webUrlList;
     private String[]                tutorialTitleList;
     private String TAG = TutorialListAdapter.class.getName();
     private Context       mContext;
-    private TutorialModel tutorialModel;
-
 
     public TutorialListAdapter(Context mContext, TutorialModel tutorialModel) {
-        this.tutorialList = tutorialModel.getTutorialOptions();
-        this.tutorialModel = tutorialModel;
+        this.webUrlList = tutorialModel.getTutorialOptions();
         this.mContext = mContext;
-        tutorialTitleList = tutorialList.keySet().toArray(new String[tutorialList.size()]);
+        tutorialTitleList = webUrlList.keySet().toArray(new String[webUrlList.size()]);
     }
 
     @NonNull
@@ -49,7 +46,7 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
         viewHolder.tvTutorialTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openWebView(tutorialList.get(tutorialTitleList[position]));
+                openWebView(webUrlList.get(tutorialTitleList[position]),tutorialTitleList[position]);
             }
         });
         Log.e(TAG, tutorialTitleList[pos]);
@@ -57,7 +54,7 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
 
     @Override
     public int getItemCount() {
-        return tutorialList.size();
+        return webUrlList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -69,9 +66,9 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
         }
     }
 
-    private void openWebView(String webUrl) {
+    private void openWebView(String webUrl,String title) {
         Bundle bundle = new Bundle();
-        bundle.putString(Keys.Extras.WEB_TITLE, tutorialModel.getHeading());
+        bundle.putString(Keys.Extras.WEB_TITLE,title );
         bundle.putString(Keys.Extras.WEB_URL, webUrl);
         Transition.transitForResult((Activity) mContext, WebViewActivity.class, Codes.RequestCode.OPEN_WEB_VIEW, bundle);
     }
