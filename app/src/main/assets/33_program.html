@@ -32,19 +32,18 @@
 //Main Function
 int main()
 {
-    int number;
-
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+int n, reverse=0, rem;
+printf("Enter a number: ");
+  scanf("%d", &n);
+  while(n!=0)
+  {
+     rem=n%10;
+     reverse=reverse*10+rem;
+     n/=10;
+  }
+  printf("Reversed Number: %d",reverse);
+return 0;
 }
-
 </code>
 </pre>
         </span>
@@ -58,8 +57,8 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter a number: 123
+Reversed Number: 321
 </code>
 </pre>
         </span>

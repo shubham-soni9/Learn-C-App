@@ -32,19 +32,19 @@
 //Main Function
 int main()
 {
-    int number;
-
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
-}
-
+ int n1=0,n2=1,n3,c,num;
+ printf("Enter the number of elements:");
+ scanf("%d",&number);
+ printf("\n%d %d",n1,n2);
+  for (c = 2; c < num; ++c)
+ {
+  n3=n1+n2;
+  printf(" %d",n3);
+  n1=n2;
+  n2=n3;
+ }
+  return 0;
+ }
 </code>
 </pre>
         </span>
@@ -58,8 +58,8 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter the number of elements:15
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
 </code>
 </pre>
         </span>

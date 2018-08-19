@@ -32,23 +32,26 @@
 //Main Function
 int main()
 {
-    int number;
+  int n, i,  c, a = 1;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+  printf("Enter the number of rows of Floyd's triangle to print\n");
+  scanf("%d", &n);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+  for (i = 1; i <= n; i++)
+  {
+    for (c = 1; c <= i; c++)
+    {
+      printf("%d ",a);
+      a++;
+    }
+    printf("\n");
+  }
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+  return 0;
 }
 
 </code>
 </pre>
-        </span>
-    </div>
 </div>
 </div>
 
@@ -58,13 +61,16 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter the number of rows of Floyd's triangle to print
+4
+
+1
+2 3
+4 5 6
+7 8 9 10
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 

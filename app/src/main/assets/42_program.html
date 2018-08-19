@@ -32,24 +32,28 @@
 //Main Function
 int main()
 {
-    int number;
+ int i, Number, Sum = 0 ;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+ printf("\n Please Enter any number \n") ;
+ scanf("%d", &Number) ;
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+ for(i = 1 ; i < Number ; i++)
+  {
+   if(Number % i == 0)
+     Sum = Sum + i ;
+  }
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+ if (Sum == Number)
+    printf("\n %d is a Perfect Number", Number) ;
+ else
+    printf("\n%d is not the Perfect Number", Number) ;
+
+return 0 ;
 }
 
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 <div class="panel-group">
@@ -58,8 +62,9 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Please Enter any number
+6
+6 is a perfect number
 </code>
 </pre>
         </span>

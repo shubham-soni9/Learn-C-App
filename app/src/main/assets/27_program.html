@@ -32,17 +32,22 @@
 //Main Function
 int main()
 {
-    int number;
+  int n, sum = 0, c, value;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+  printf("How many numbers you want to add?\n");
+  scanf("%d", &n);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+  printf("Enter %d integers\n", n);
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+  for (c = 1; c <= n; c++)
+  {
+    scanf("%d", &value);
+    sum = sum + value;
+  }
+
+  printf("Sum of the integers = %d\n", sum);
+
+  return 0;
 }
 
 </code>
@@ -58,8 +63,13 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+How many numbers you want to add?
+3
+Enter 3 integers
+1
+2
+3
+Sum of the integers = 6
 </code>
 </pre>
         </span>

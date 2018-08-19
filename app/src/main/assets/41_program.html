@@ -28,23 +28,51 @@
 
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
+#include&lt;math.h&gt;
 
 //Main Function
-int main()
+void main()
 {
-    int number;
+    float a, b, c, root1, root2;
+    float realp, imagp, disc;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+    printf("Enter the values of a, b and c \n");
+    scanf("%f %f %f", &a, &b, &c);
+    /* If a = 0, it is not a quadratic equation */
+    if (a == 0 || b == 0 || c == 0)
+    {
+        printf("Error: Roots cannot be determined \n");
+        exit(1);
+    }
+    else
+    {
+        disc = b * b - 4.0 * a * c;
+        if (disc < 0)
+        {
+            printf("Imaginary Roots\n");
+            realp = -b / (2.0 * a) ;
+            imagp = sqrt(abs(disc)) / (2.0 * a);
+            printf("Root1 = %f  +i %f\n", realp, imagp);
+            printf("Root2 = %f  -i %f\n", realp, imagp);
+        }
+        else if (disc == 0)
+        {
+            printf("Roots are real and equal\n");
+            root1 = -b / (2.0 * a);
+            root2 = root1;
+            printf("Root1 = %f\n", root1);
+            printf("Root2 = %f\n", root2);
+        }
+        else if (disc > 0 )
+        {
+            printf("Roots are real and distinct \n");
+            root1 =(-b + sqrt(disc)) / (2.0 * a);
+            root2 =(-b - sqrt(disc)) / (2.0 * a);
+            printf("Root1 = %f  \n", root1);
+            printf("Root2 = %f  \n", root2);
+        }
+    }
 }
-
 </code>
 </pre>
         </span>
@@ -57,9 +85,12 @@ int main()
         <div class="panel-heading">Output:</div>
         <!--Collapsable UI-->
         <pre> <code class="language-c">
-
-Enter a integer: 25
-You entered: 25
+            
+Enter the values of a, b and c
+45 50 65
+Imaginary Roots
+Root1 = -0.555556  +i 1.065740
+Root2 = -0.555556  -i 1.065740
 </code>
 </pre>
         </span>

@@ -30,19 +30,27 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-int main()
-{
-    int number;
+int main(){
+   int a=0,b=1,i,c,n,j;
+system("cls");
+    printf("Enter the limit:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        a=0;
+        b=1;
+        printf("%d\t",b);
+        for(j=1;j&lt;i;j++)
+        {
+            c=a+b;
+            printf("%d\t",c);
+            a=b;
+            b=c;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+        }
+        printf("\n");
+    }
+return 0;
 }
 
 </code>
@@ -58,13 +66,15 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter the limit:5
+1
+1	1
+1	1	2
+1	1	2	3
+1	1	2	3	5
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 

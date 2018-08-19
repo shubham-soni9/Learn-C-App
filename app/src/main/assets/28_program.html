@@ -30,19 +30,23 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-int main()
+int main(){
+int n,i,m=0,flag=0;
+printf("Enter the number to check prime:");
+scanf("%d",&n);
+m=n/2;
+for(i=2;i<=m;i++)
 {
-    int number;
-
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+if(n%i==0)
+{
+printf("Number is not prime");
+flag=1;
+break;
+}
+}
+if(flag==0)
+printf("Number is prime");
+return 0;
 }
 
 </code>
@@ -58,8 +62,11 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter the number to check prime:56
+Number is not prime
+
+Enter the number to check prime:23
+Number is prime
 </code>
 </pre>
         </span>

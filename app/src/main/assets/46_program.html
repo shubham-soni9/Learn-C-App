@@ -30,19 +30,28 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-int main()
+int main(){
+  int i,j,k,l,n;
+system("cls");
+printf("enter the range=");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
 {
-    int number;
-
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+for(j=1;j<=n-i;j++)
+{
+printf(" ");
+}
+for(k=1;k<=i;k++)
+{
+printf("%d",k);
+}
+for(l=i-1;l>=1;l--)
+{
+printf("%d",l);
+}
+printf("\n");
+}
+return 0;
 }
 
 </code>
@@ -58,8 +67,11 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+enter the range= 4
+   1
+  121
+ 12321
+1234321
 </code>
 </pre>
         </span>

@@ -16,14 +16,10 @@ public class ProgramData {
         options.put("Multiply two Floating Point Numbers", "4_program.html");
         options.put("Perform addition, subtraction, multiplication and division", "5_program.html");
         options.put("Find the Size of int, float, double and char", "9_program.html");
-        options.put("", "10_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
+        options.put("Program to print \"hello\" without semicolon", "34_program.html");
+        options.put("Program without main() function", "35_program.html");
+        options.put("Convert Number in Characters", "36_program.html");
+        options.put("Roots Of Quadratic Equation", "41_program.html");
         programModelList.add(new TutorialModel("Basic Programs", options));
 
 
@@ -37,12 +33,16 @@ public class ProgramData {
         options.put(" Whether a Number is Positive or Negative", "16_program.html");
         options.put("Check Leap Year", "17_program.html");
         options.put("Largest Number Among Three Numbers", "18_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
-        options.put("", "5_program.html");
+        options.put("Program to sum n numbers using for loop", "27_program.html");
+        options.put("Prime Number program", "28_program.html");
+        options.put("Fibonacci Series without recursion", "29_program.html");
+        options.put("Fibonacci Series using recursion", "30_program.html");
+        options.put("Find Palindrome number", "31_program.html");
+        options.put("Armstrong Number", "32_program.html");
+        options.put("Reverse number", "33_program.html");
+        options.put("Strong number", "37_program.html");
+        options.put("Find power of a number using recursion", "40_program.html");
+        options.put("Perfect number", "42_program.html");
         programModelList.add(new TutorialModel("Numbers", options));
 
 
@@ -86,33 +86,6 @@ public class ProgramData {
         options.put("Concatenate Two Strings", "24_program.html");
         options.put("Copy String Without Using strcpy()", "25_program.html");
         options.put("Sort Elements in Dictionary Order", "26_program.html");
-        options.put("", "27_program.html");
-        options.put("", "28_program.html");
-        options.put("", "29_program.html");
-        options.put("", "30_program.html");
-        options.put("", "31_program.html");
-        options.put("", "32_program.html");
-        options.put("", "33_program.html");
-        options.put("", "34_program.html");
-        options.put("", "35_program.html");
-        options.put("", "36_program.html");
-        options.put("", "37_program.html");
-        options.put("", "38_program.html");
-        options.put("", "39_program.html");
-        options.put("", "40_program.html");
-        options.put("", "41_program.html");
-        options.put("", "42_program.html");
-        options.put("", "43_program.html");
-        options.put("", "44_program.html");
-        options.put("", "45_program.html");
-        options.put("", "46_program.html");
-        options.put("", "47_program.html");
-        options.put("", "48_program.html");
-        options.put("", "49_program.html");
-        options.put("", "50_program.html");
-        options.put("", "51_program.html");
-        options.put("", "52_program.html");
-
         programModelList.add(new TutorialModel("Strings", options));
 
 
@@ -131,12 +104,12 @@ public class ProgramData {
 
 
         options = new TreeMap<>();
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
+        options.put("Floyd's triangle", "43_program.html");
+        options.put("Fibonacci Triangle", "44_program.html");
+        options.put("Alphabet Triangle", "45_program.html");
+        options.put("Number Triangle", "46_program.html");
+        options.put("Print half pyramid using *", "47_program.html");
+        options.put("Pascal's triangle", "48_program.html");
         options.put("", "2_program.html");
         options.put("", "2_program.html");
         options.put("", "2_program.html");
@@ -202,9 +175,17 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Conversations", options));
 
 
+
         options = new TreeMap<>();
         options.put("Use gets() function", "2_program.html");
+        options.put("Program to shutdown or turn off computer", "38_program.html");
+        options.put("Program to get IP address", "39_program.html");
         options.put("", "2_program.html");
+        options.put("", "2_program.html");
+        programModelList.add(new TutorialModel("System", options));
+
+        options = new TreeMap<>();
+        options.put("Use gets() function", "2_program.html");
         options.put("", "2_program.html");
         options.put("", "2_program.html");
         options.put("", "2_program.html");
