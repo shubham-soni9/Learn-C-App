@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
+    android:layout_marginLeft="@dimen/_15dp"
+    android:layout_marginRight="@dimen/_15dp"
     android:background="@drawable/cornered_layout"
     android:gravity="center"
     android:orientation="vertical">

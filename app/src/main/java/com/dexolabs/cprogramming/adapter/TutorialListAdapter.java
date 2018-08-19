@@ -42,7 +42,7 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, final int pos) {
         final int position = viewHolder.getAdapterPosition();
-        viewHolder.tvTutorialTitle.setText(tutorialTitleList[position]);
+        viewHolder.tvTutorialTitle.setText(tutorialTitleList[position].trim());
         viewHolder.tvTutorialTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

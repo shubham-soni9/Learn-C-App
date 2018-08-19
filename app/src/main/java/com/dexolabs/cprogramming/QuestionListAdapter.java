@@ -37,7 +37,7 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
     @Override
     public void onBindViewHolder(@NonNull QuestionListAdapter.ViewHolder viewHolder, final int pos) {
         final int position = viewHolder.getAdapterPosition();
-        viewHolder.tvQuestionTitle.setText(questionTitleList[position]);
+        viewHolder.tvQuestionTitle.setText(questionTitleList[position].trim());
         viewHolder.tvQuestionNumber.setText(String.valueOf(pos + 1));
         viewHolder.tvQuestionNumber.append(".");
         Log.e(TAG, questionTitleList[pos]);
