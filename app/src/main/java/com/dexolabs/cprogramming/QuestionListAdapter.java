@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dexolabs.AlertDialog;
@@ -37,8 +38,11 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
     public void onBindViewHolder(@NonNull QuestionListAdapter.ViewHolder viewHolder, final int pos) {
         final int position = viewHolder.getAdapterPosition();
         viewHolder.tvQuestionTitle.setText(questionTitleList[position]);
+        viewHolder.tvQuestionNumber.setText(String.valueOf(pos + 1));
+        viewHolder.tvQuestionNumber.append(".");
         Log.e(TAG, questionTitleList[pos]);
-        viewHolder.tvQuestionTitle.setOnClickListener(new View.OnClickListener() {
+
+        viewHolder.llParent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showAnswer(questionList.get(questionTitleList[position]));
@@ -52,11 +56,15 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView tvQuestionTitle;
+        private TextView     tvQuestionTitle;
+        private TextView     tvQuestionNumber;
+        private LinearLayout llParent;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tvQuestionTitle = itemView.findViewById(R.id.tvQuestionTitle);
+            tvQuestionTitle = itemView.findViewById(R.id.tvQuestion);
+            tvQuestionNumber = itemView.findViewById(R.id.tvQuestionNumber);
+            llParent = itemView.findViewById(R.id.question_ll_parent);
         }
     }
 

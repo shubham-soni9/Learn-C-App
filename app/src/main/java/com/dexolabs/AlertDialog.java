@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.dexolabs.cprogramming.R;
@@ -86,8 +87,8 @@ public class AlertDialog {
             dialogWindow.getAttributes().windowAnimations = R.style.CustomDialog;
 
             dialogWindow.addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-            alertDialog.setCancelable(false);
-            alertDialog.setCanceledOnTouchOutside(false);
+            alertDialog.setCancelable(true);
+            alertDialog.setCanceledOnTouchOutside(true);
 
             TextView tvTitle = alertDialog.findViewById(R.id.tvTitle);
             TextView tvMessage = alertDialog.findViewById(R.id.tvMessage);

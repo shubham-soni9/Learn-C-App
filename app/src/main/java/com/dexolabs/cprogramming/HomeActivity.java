@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_home);
         initID();
         tvHomeHeader.setText(R.string.start_learning);
-        setFragment(TutorialFragment.newInstance(CommonData.getTutorialData()));
+        onNavigationItemClick(bottomNavigationView.getSelectedItemId());
     }
 
     private void initID() {
@@ -35,14 +35,18 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem menuItem) {
-
             }
         });
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch (menuItem.getItemId()) {
+        onNavigationItemClick(menuItem.getItemId());
+        return true;
+    }
+
+    private void onNavigationItemClick(int itemId) {
+        switch (itemId) {
             case R.id.action_tutorial:
                 setFragment(TutorialFragment.newInstance(CommonData.getTutorialData()));
                 tvHomeHeader.setText(R.string.start_learning);
@@ -64,9 +68,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
                 tvHomeHeader.setText(R.string.more_options);
                 break;
         }
-        return true;
     }
-
 
     private void setFragment(final Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_home_layout, fragment).commit();
