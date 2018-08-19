@@ -30,7 +30,23 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-
+int main()
+{
+   char ch;
+   FILE *fp;
+   if (fp = fopen("test.c", "r"))
+   {
+     ch = getc(fp);
+     while (ch != EOF)
+     {
+        putc(ch, stdout);
+        ch = getc(fp);
+     }
+     fclose(fp);
+     return 0;
+   }
+   return 1;
+}
 
 </code>
 </pre>
@@ -43,7 +59,7 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
+Hi, How are you?
             
 </code>
 </pre>

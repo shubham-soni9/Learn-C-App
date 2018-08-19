@@ -108,6 +108,8 @@ public class ProgramData {
         options.put("Display Upper Triangular Matrix", "141_program.html");
         options.put("Display Lower Triangular Matrix", "142_program.html");
         options.put("Print a given matrix in spiral form", "143_program.html");
+        options.put("Check whether entered matrix is magic square or not ?", "158_program.html");
+        options.put("Addition of All Elements in Matrix\n", "159_program.html");
         programModelList.add(new TutorialModel("Matrix", options));
 
 
@@ -154,7 +156,7 @@ public class ProgramData {
         programModelList.add(new TutorialModel("Structure and Union", options));
 
 
-       // https://codeforwin.org/2018/04/file-handling-programming-exercises-and-solutions-in-c.html
+        // https://codeforwin.org/2018/04/file-handling-programming-exercises-and-solutions-in-c.html
         options = new TreeMap<>();
         options.put("Write a file", "79_program.html");
         options.put("Read string from a file", "49_program.html");
@@ -200,11 +202,35 @@ public class ProgramData {
         options.put("Shell Sort", "116_program.html");
         options.put("Recursive Bubble Sort", "117_program.html");
         options.put("Bucket Sort", "118_program.html");
-        programModelList.add(new TutorialModel("Searching/Sorting", options));
+        programModelList.add(new TutorialModel("Sorting", options));
 
 
         options = new TreeMap<>();
-        options.put("Use gets() function", "2_program.html");
+        options.put("Malloc() Function", "151_program.html");
+        options.put("Calloc() Function", "152_program.html");
+        options.put("Realloc() and Free() Function", "153_program.html");
+        programModelList.add(new TutorialModel("Memory Allocation", options));
+
+
+        options = new TreeMap<>();
+        options.put("C Output", "154_program.html");
+        options.put("gets() and puts() functions", "155_program.html");
+        options.put("getc() and putc() funcations", "156_program.html");
+        options.put("getchar() and putchar() functions", "157_program.html");
+        programModelList.add(new TutorialModel("Input Type", options));
+
+
+
+        options = new TreeMap<>();
+        options.put("Sum of given H.P.", "160_program.html");
+        options.put("Sum of given G.P.", "161_program.html");
+        options.put("Sum of given A.P.", "162_program.html");
+        options.put("Sum of series 1^3 + 2^3 + …. + n^3", "163_program.html");
+        options.put("Sum of the series 13 + 23 + 33 + … + n3", "164_program.html");
+        options.put("Sum of series 1 + 2 + …. + n", "165_program.html");
+        programModelList.add(new TutorialModel("Series", options));
+
+        options = new TreeMap<>();
         options.put("Program to shutdown or turn off computer", "38_program.html");
         options.put("Program to get IP address", "39_program.html");
         options.put("Calculate Area of Circle", "144_program.html");

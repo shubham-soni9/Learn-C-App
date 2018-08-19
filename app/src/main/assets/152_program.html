@@ -27,10 +27,27 @@
         <pre> <code class="language-c">
 
 #include&lt;stdio.h&gt;
-#include&lt;conio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;stdlib.h&gt;
 
 //Main Function
-
+int main()
+{
+     char *mem_allocation;
+     /* memory is allocated dynamically */
+     mem_allocation = calloc( 20, sizeof(char) );
+     if( mem_allocation== NULL )
+     {
+        printf("Couldn't able to allocate requested memory\n");
+     }
+     else
+     {
+         strcpy( mem_allocation,"www.google.com");
+     }
+         printf("Dynamically allocated memory content   : " \
+                "%s\n", mem_allocation );
+         free(mem_allocation);
+}
 
 </code>
 </pre>
@@ -43,7 +60,7 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
+Dynamically allocated memory content : www.google.com
             
 </code>
 </pre>

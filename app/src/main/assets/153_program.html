@@ -27,10 +27,38 @@
         <pre> <code class="language-c">
 
 #include&lt;stdio.h&gt;
-#include&lt;conio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;stdlib.h&gt;
 
 //Main Function
-
+int main()
+{
+    char *mem_allocation;
+    /* memory is allocated dynamically */
+    mem_allocation = malloc( 20 * sizeof(char) );
+    if( mem_allocation == NULL )
+    {
+        printf("Couldn't able to allocate requested memory\n");
+    }
+    else
+    {
+       strcpy( mem_allocation,"google.com");
+    }
+    printf("Dynamically allocated memory content  : " \
+           "%s\n", mem_allocation );
+    mem_allocation=realloc(mem_allocation,100*sizeof(char));
+    if( mem_allocation == NULL )
+    {
+        printf("Couldn't able to allocate requested memory\n");
+    }
+    else
+    {
+        strcpy( mem_allocation,"space is extended upto " \
+                               "100 characters");
+    }
+    printf("Resized memory : %s\n", mem_allocation );
+    free(mem_allocation);
+}
 
 </code>
 </pre>
@@ -43,8 +71,8 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+Dynamically allocated memory content : google.com
+Resized memory : space is extended upto 100 characters            
 </code>
 </pre>
     </div>
