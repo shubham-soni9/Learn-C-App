@@ -30,7 +30,35 @@
 #include&lt;conio.h&gt;
 
 //Main Function
+int checkPalindrome(int);
+int main(){
+    int num,sum;
 
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    sum = checkPalindrome(num);
+
+    if(num==sum)
+         printf("%d is a palindrome",num);
+    else
+    printf("%d is not a palindrome",num);
+
+    return 0;
+}
+
+int checkPalindrome(int num){
+
+    static int sum=0,r;
+
+    if(num!=0){
+         r=num%10;
+         sum=sum*10+r;
+         checkPalindrome(num/10);
+    }
+
+    return sum;
+}
 
 </code>
 </pre>
@@ -43,8 +71,8 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+Enter a number: 25
+25 is not a palindrome
 </code>
 </pre>
     </div>

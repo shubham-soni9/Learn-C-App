@@ -230,11 +230,31 @@ public class ProgramData {
         options.put("Sum of series 1 + 2 + …. + n", "165_program.html");
         programModelList.add(new TutorialModel("Series", options));
 
+
+        options = new TreeMap<>();
+        options.put("Encrypt & Decrypt Message using Vernam Cipher", "166_program.html");
+        options.put("Encrypt & Decrypt Message using Substitution Cipher", "167_program.html");
+        programModelList.add(new TutorialModel("Networking", options));
+
+
+        options = new TreeMap<>();
+        options.put("Find power of a number", "168_program.html");
+        options.put("Find gcd of a number", "169_program.html");
+        options.put("Tower Of Hanoi", "170_program.html");
+        options.put("Factorial Of A Number", "171_program.html");
+        options.put("Print the fibonacci series", "172_program.html");
+        options.put("Program to check given string is palindrome number or not", "173_program.html");
+        programModelList.add(new TutorialModel("Recursion", options));
+
+
         options = new TreeMap<>();
         options.put("Program to shutdown or turn off computer", "38_program.html");
         options.put("Program to get IP address", "39_program.html");
         options.put("Calculate Area of Circle", "144_program.html");
         options.put("Print all Arguments passed using Command Line", "145_program.html");
+        options.put("To check whether a string belongs to a given grammer or not", "174_program.html");
+        options.put("Size of the different data types", "175_program.html");
+
         programModelList.add(new TutorialModel("Extras", options));
 
         return programModelList;

@@ -30,7 +30,36 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-
+unsigned long fib(int);
+void main()
+{
+	int n,i;
+	unsigned long f;
+	clrscr();
+	printf("\nENTER A NUMBER: ");
+	scanf("%d",&n);
+	printf("\nTHE FIBONNACI SERIES UPTO %d NUMBERS IS:\n",n);
+	for(i=0;i < n;i++)
+	{
+		f=fib(i);
+		printf("%lu ",f);
+	}
+	getch();
+}
+unsigned long fib(int x)
+{
+	unsigned long res;
+	if(x==0)
+		return(0);
+	else
+		if(x==1)
+			return(1);
+		else
+		{
+			res=fib(x-1)+fib(x-2);
+			return(res);
+		}
+}
 
 </code>
 </pre>
@@ -43,8 +72,9 @@
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
- DECIMAL value is: 545
-            
+ENTER A NUMBER: 10
+THE FIBONNACI SERIES UPTO 10 NUMBERS IS
+0 1 1 2 3 5 8 13 21 34
 </code>
 </pre>
     </div>
