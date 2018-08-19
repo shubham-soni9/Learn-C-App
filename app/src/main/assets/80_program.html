@@ -22,49 +22,61 @@
 
 <div class="panel-group">
     <div class="panel panel-info">
+        <div class="panel-heading">Description:</div>
+        <!--Collapsable UI-->
+        <pre> <code class="language-c">
+
+C Program which copies one file contents to another file. Here we read the one file and copies the characters to another file
+which are existed in the disc. Here we read the file names from the command line.
+</code>
+</pre>
+    </div>
+</div>
+
+<div class="panel-group">
+    <div class="panel panel-info">
         <div class="panel-heading">Program:</div>
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
+#include&lt;process.h&gt;
 
 //Main Function
-int main()
-{
-    int number;
-
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+void main(int argc, char *argv[]) {
+	FILE *fs,*ft;
+	char ch;
+	clrscr();
+	if(argc!=3) {
+		puts("Invalid number of arguments.");
+		exit(0);
+	}
+	fs = fopen(argv[1],"r");
+	if(fs==NULL) {
+		puts("Source file cannot be opened.");
+		exit(0);
+	}
+	ft = fopen(argv[2],"w");
+	if (ft==NULL) {
+		puts("Target file cannot be opened.");
+		fclose(fs);
+		exit(0);
+	}
+	while(1) {
+		ch=fgetc(fs);
+		if (ch==EOF)
+		   break; else
+		   fputc(ch,ft);
+	}
+	fclose(fs);
+	fclose(ft);
+	getch();
 }
 
 </code>
 </pre>
-        </span>
     </div>
-</div>
-</div>
-
-<div class="panel-group">
-    <div class="panel panel-info">
-        <div class="panel-heading">Output:</div>
-        <!--Collapsable UI-->
-        <pre> <code class="language-c">
-
-Enter a integer: 25
-You entered: 25
-</code>
-</pre>
-        </span>
-    </div>
-</div>
 </div>
 
 

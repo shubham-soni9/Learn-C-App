@@ -32,24 +32,33 @@
 //Main Function
 int main()
 {
-    int number;
+ 	int i, j, rows, columns, a[10][10], Sum = 0;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+ 	printf("\n Please Enter Number of rows and columns  :  ");
+ 	scanf("%d %d", &i, &j);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+ 	printf("\n Please Enter the Matrix Elements \n");
+ 	for(rows = 0; rows < i; rows++)
+  	{
+   		for(columns = 0;columns < j;columns++)
+    	{
+      		scanf("%d", &a[rows][columns]);
+    	}
+  	}
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+ 	for(rows = 0; rows < i; rows++)
+  	{
+   		Sum = Sum + a[rows][rows];
+  	}
+
+ 	printf("\n The Sum of Diagonal Elements of a Matrix =  %d", Sum );
+
+ 	return 0;
 }
 
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 <div class="panel-group">
@@ -58,13 +67,18 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Please Enter Number of rows and columns  : 3 3
+
+Please Enter the Matrix Elements
+10 20 30
+40 50 60
+70 80 90
+
+The Sum of Diagonal Elements of a Matrix =  150
+
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 

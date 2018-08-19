@@ -30,41 +30,26 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-int main()
-{
-    int number;
+void main(){
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    FILE *fp;
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    fp = fopen("test","a");
+    fprintf(fp,"%d %s %d\n",1,"1 a 1",2);
+    fclose(fp) ;
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+    fp = fopen("test","r");
+
+    char rollno[10],name[10],marks[10];
+    fscanf(fp,"%d %s %d\n",&rollno,&name,&marks);
+    printf(" %d         %s    %d\n",rollno,name,marks);
+
+
+    fclose(fp);
 }
-
 </code>
 </pre>
-        </span>
     </div>
-</div>
-</div>
-
-<div class="panel-group">
-    <div class="panel panel-info">
-        <div class="panel-heading">Output:</div>
-        <!--Collapsable UI-->
-        <pre> <code class="language-c">
-
-Enter a integer: 25
-You entered: 25
-</code>
-</pre>
-        </span>
-    </div>
-</div>
 </div>
 
 

@@ -22,28 +22,10 @@
 
 <div class="panel-group">
     <div class="panel panel-info">
-        <div class="panel-heading">Program:</div>
+        <div class="panel-heading">Description:</div>
         <!--Collapsable UI-->
         <pre> <code class="language-c">
-
-#include&lt;stdio.h&gt;
-#include&lt;conio.h&gt;
-
-//Main Function
-int main()
-{
-    int number;
-
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
-}
+C program to create a file called emp.txt and store information about a person, in terms of his name, age and salary.
 
 </code>
 </pre>
@@ -54,12 +36,37 @@ int main()
 
 <div class="panel-group">
     <div class="panel panel-info">
-        <div class="panel-heading">Output:</div>
+        <div class="panel-heading">Program:</div>
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+
+//Main Function
+void main() {
+	FILE *fptr;
+	char name[20];
+	int age;
+	float salary;
+	fptr = fopen ("emp.txt", "w");
+	/*open for writing*/
+	if (fptr == NULL) {
+		printf("File does not exists\n");
+		return;
+	}
+	printf("Enter the name\n");
+	scanf("%s", name);
+	fprintf(fptr, "Name    = %s\n", name);
+	printf("Enter the age\n");
+	scanf("%d", &age);
+	fprintf(fptr, "Age     = %d\n", age);
+	printf("Enter the salary\n");
+	scanf("%f", &salary);
+	fprintf(fptr, "Salary  = %.2f\n", salary);
+	fclose(fptr);
+}
+
 </code>
 </pre>
         </span>

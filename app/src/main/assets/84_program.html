@@ -30,26 +30,78 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-int main()
+void main()
 {
-    int number;
+    int a[10][10],b[10][10],c[10][10],i,j,k,r1,c1,r2,c2;
+    int sum=0;
+    clrscr();
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    printf("Enter number of rows and columns of first matrix (MAX 10)\n");
+    scanf("%d%d",&r1,&c1);
+    printf("Enter number of rows and columns of second matrix MAX 10)\n");
+    scanf("%d%d",&r2,&c2);
+    if(r2==c1)
+    {
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+        printf("\n Enter First Matrix:");
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+        for(i=0; i < r1; i++)
+        {
+            for(j=0; j < c1; j++)
+                scanf("%d",&a[i][j]);
+        }
+
+        printf("\n Enter Second Matrix: ");
+        for(i=0; i < r2; i++)
+        {
+            for(j=0; j < c2; j++)
+                scanf("%d",&b[i][j]);
+        }
+
+        printf("The First Matrix Is: \n");
+        //print the first matrix
+        for(i=0; i < r1; i++)
+        {
+            for(j=0; j < c1; j++)
+                printf(" %d ",a[i][j]);
+            printf("\n");
+        }
+
+        printf("The Second Matrix Is:\n");
+        // print the second matrix
+        for(i=0; i < r2; i++)
+        {
+            for(j=0; j < c2; j++)
+                printf(" %d ",b[i][j]);
+            printf("\n");
+        }
+
+
+        printf("Multiplication of the Matrices:\n");
+
+        for(i=0; i < r1; i++)
+        {
+            for(j=0; j < c2; j++)
+            {
+                c[i][j]=0;
+                for(k=0; k < r1; k++)
+                    c[i][j]+=a[i][k]*b[k][j];
+                printf("%d  ",c[i][j]);
+            }
+            printf("\n");
+        }
+
+    }
+    else
+    {
+        printf("Matrix Multiplication is Not Possible");
+    }
+    getch();
 }
 
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 <div class="panel-group">
@@ -58,13 +110,31 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter number of rows and columns of first matrix (MAX 10)
+3
+3
+Enter number of rows and columns of second matrix MAX 10)
+3
+3
+
+Enter First Matrix:2 2 2 2 2 2 2 2 2
+
+Enter Second Matrix: 3 3 3 3 3 3 3 3 3
+The First Matrix Is:
+ 2  2  2
+ 2  2  2
+ 2  2  2
+The Second Matrix Is:
+ 3  3  3
+ 3  3  3
+ 3  3  3
+Multiplication of the Matrices:
+18  18  18
+18  18  18
+18  18  18
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 

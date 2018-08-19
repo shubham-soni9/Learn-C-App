@@ -30,26 +30,37 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-int main()
+void main ()
 {
-    int number;
+    static int array[10][10];
+    int i, j, m, n;
+    int counter = 0;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+    printf("Enter the order of the matix \n");
+    scanf("%d %d", &m, &n);
+    printf("Enter the co-efficients of the matix \n");
+    for (i = 0; i < m; ++i)
+    {
+        for (j = 0; j < n; ++j)
+        {
+            scanf("%d", &array[i][j]);
+            if (array[i][j] == 0)
+            {
+                ++counter;
+            }
+        }
+    }
+    if (counter > ((m * n) / 2))
+    {
+        printf("The given matrix is sparse matrix \n");
+    }
+    else
+        printf("The given matrix is not a sparse matrix \n");
+    printf("There are %d number of zeros", counter);
 }
-
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 <div class="panel-group">
@@ -58,13 +69,27 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter the order of the matix
+3 3
+Enter the co-efficients of the matix
+10 20 30
+5 10 15
+3 6 9
+The given matrix is not a sparse matrix
+There are 0 number of zeros
+
+$ a.out
+Enter the order of the matix
+3 3
+Enter the co-efficients of the matix
+5 0 0
+0 0 5
+0 5 0
+The given matrix is sparse matrix
+There are 6 number of zeros
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 

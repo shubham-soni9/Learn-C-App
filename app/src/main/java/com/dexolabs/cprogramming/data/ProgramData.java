@@ -90,16 +90,15 @@ public class ProgramData {
 
 
         options = new TreeMap<>();
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
+        options.put("Matrix addition", "82_program.html");
+        options.put("Matrix subtraction", "83_program.html");
+        options.put("Matrix multiplication", "84_program.html");
+        options.put("Transpose of a given Matrix", "85_program.html");
+        options.put("Check if 2 Matrices are Equal", "86_program.html");
+        options.put("Check if a given Matrix is a Sparse Matrix", "87_program.html");
+        options.put("Check whether a matrix is an identity matrix or not", "88_program.html");
+        options.put("Sum of Diagonal Elements of a Matrix\n", "89_program.html");
+        options.put("Swap rows and columns of matrix", "90_program.html");
         programModelList.add(new TutorialModel("Matrix", options));
 
 
@@ -148,16 +147,16 @@ public class ProgramData {
 
 
         options = new TreeMap<>();
+        options.put("Write a file", "79_program.html");
+        options.put("Read string from a file", "49_program.html");
+        options.put("Open a File", "50_program.html");
+        options.put("Read a text file print it on the screen", "52_program.html");
+        options.put("Count number of characters in the file", "78_program.html");
+        options.put("Copies one file contents to another file\n", "80_program.html");
+        options.put("Merge two files", "81_program.html");
         options.put("", "2_program.html");
         options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
+        options.put("Program which produces its own source code as its output", "51_program.html");
         programModelList.add(new TutorialModel("File I/O", options));
 
 

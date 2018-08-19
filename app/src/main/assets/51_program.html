@@ -30,26 +30,24 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-int main()
-{
-    int number;
+int main(){
+    FILE *fp;
+    char c;
+    fp = fopen(__FILE__,"r");
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    do{
+         c= getc(fp);
+         putchar(c);
+    }
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    while(c!=EOF);
+    fclose(fp);
     return 0;
 }
 
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 <div class="panel-group">
@@ -58,13 +56,25 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+#include&lt;stdio.h&gt;
+int main(){
+    FILE *fp;
+    char c;
+    fp = fopen(__FILE__,"r");
+
+    do{
+         c= getc(fp);
+         putchar(c);
+    }
+
+    while(c!=EOF);
+    fclose(fp);
+    return 0;
+}
+
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 

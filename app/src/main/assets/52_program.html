@@ -30,26 +30,31 @@
 #include&lt;conio.h&gt;
 
 //Main Function
-int main()
+void main()
 {
-    int number;
-
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+	FILE *fp;
+	char s;
+	clrscr();
+	fp=fopen("text.txt","r");
+	if(fp==NULL)
+	{
+		printf("\nCAN NOT OPEN FILE");
+		getch();
+		exit();
+	}
+	do
+{
+		s=getc(fp);
+		printf("%c",s);
+	}
+	while(s!=EOF);
+	fclose(fp);
+	getch();
 }
 
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 <div class="panel-group">
@@ -58,13 +63,10 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+CAN NOT OPEN FILE
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 
