@@ -32,24 +32,29 @@
 //Main Function
 int main()
 {
-    int number;
+    char bin[32]={0};
+    int  dec,i;
+    int  cnt;   /*for power index*/
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    printf("Enter binary value: ");
+    gets(bin);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    cnt=0;
+    dec=0;
+    for(i=(strlen(bin)-1);i>=0;i--)
+    {
+        dec=dec+(bin[i]-0x30)*pow((double)2,(double)cnt);
+        cnt++;
+    }
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    printf("DECIMAL value is: %d",dec);
+
     return 0;
 }
 
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 <div class="panel-group">
@@ -58,13 +63,11 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+ Enter binary value: 1000100001
+ DECIMAL value is: 545
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 

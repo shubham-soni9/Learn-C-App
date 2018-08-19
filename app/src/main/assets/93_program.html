@@ -32,17 +32,17 @@
 //Main Function
 int main()
 {
-    int number;
+   int data[5], i;
+   printf("Enter elements: ");
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+   for(i = 0; i < 5; ++i)
+     scanf("%d", data + i);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+   printf("You entered: \n");
+   for(i = 0; i < 5; ++i)
+      printf("%d\n", *(data + i));
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+   return 0;
 }
 
 </code>
@@ -58,8 +58,17 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter elements: 1
+2
+3
+5
+4
+You entered:
+1
+2
+3
+5
+4
 </code>
 </pre>
         </span>

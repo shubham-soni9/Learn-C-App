@@ -32,24 +32,33 @@
 //Main Function
 int main()
 {
-    int number;
+    char str[100];
+    char *ptr;
+    int  cntV,cntC;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    printf("Enter a string: ");
+    gets(str);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    //assign address of str to ptr
+    ptr=str;
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    cntV=cntC=0;
+    while(*ptr!='\0')
+    {
+        if(*ptr=='A' ||*ptr=='E' ||*ptr=='I' ||*ptr=='O' ||*ptr=='U' ||*ptr=='a' ||*ptr=='e' ||*ptr=='i' ||*ptr=='o' ||*ptr=='u')
+            cntV++;
+        else
+            cntC++;
+        //increase the pointer, to point next character
+        ptr++;
+    }
+
+    printf("Total number of VOWELS: %d, CONSONANT: %d\n",cntV,cntC);
     return 0;
 }
-
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 <div class="panel-group">
@@ -58,13 +67,11 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter a string: This is a test string
+Total number of VOWELS: 5, CONSONANT: 16
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 

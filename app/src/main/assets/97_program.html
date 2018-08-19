@@ -32,16 +32,32 @@
 //Main Function
 int main()
 {
-    int number;
+    /*declare same type of variables*/
+    int a,b,c;
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    /*we can create an integer pointer array to
+  store the address of these integer variables*/
+    int *ptr[3];
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    /*assign the address of all integer variables to ptr*/
+    ptr[0]= &amp;a;
+    ptr[1]= &amp;b;
+    ptr[2]= &amp;c;
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    /*assign the values to a,b,c*/
+    a=100;
+    b=200;
+    c=300;
+
+    /*print values using pointer variable*/
+    printf("value of a: %d, b: %d, c: %d\n",*ptr[0],*ptr[1],*ptr[2]);
+
+    /*add 10 to all values using pointer*/
+    *ptr[0] +=10;
+    *ptr[1] +=10;
+    *ptr[2] +=10;
+    printf("After adding 10\nvalue of a: %d, b: %d, c: %d\n",*ptr[0],*ptr[1],*ptr[2]);
+
     return 0;
 }
 
@@ -58,8 +74,9 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+    value of a: 100, b: 200, c: 300
+    After adding 10
+    value of a: 110, b: 210, c: 310
 </code>
 </pre>
         </span>

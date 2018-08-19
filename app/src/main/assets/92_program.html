@@ -29,27 +29,38 @@
 #include&lt;stdio.h&gt;
 #include&lt;conio.h&gt;
 
-//Main Function
-int main()
+// function : swap two numbers using pointers
+void swap(int *a,int *b)
 {
-    int number;
-
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
-
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
-
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
-    return 0;
+    int t;
+     t   = *a;
+    *a   = *b;
+    *b   =  t;
 }
 
+int main()
+{
+    int num1,num2;
+
+    printf("Enter value of num1: ");
+    scanf("%d",&num1);
+    printf("Enter value of num2: ");
+    scanf("%d",&num2);
+
+    //print values before swapping
+    printf("Before Swapping: num1=%d, num2=%d\n",num1,num2);
+
+    //call function by passing addresses of num1 and num2
+    swap(&num1,&num2);
+
+    //print values after swapping
+    printf("After  Swapping: num1=%d, num2=%d\n",num1,num2);
+
+    return 0;
+}
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 <div class="panel-group">
@@ -58,13 +69,14 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+Enter value of num1: 10
+Enter value of num2: 20
+Before Swapping: num1=10, num2=20
+After  Swapping: num1=20, num2=10
+
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 

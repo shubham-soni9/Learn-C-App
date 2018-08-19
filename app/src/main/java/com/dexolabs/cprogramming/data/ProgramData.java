@@ -51,14 +51,6 @@ public class ProgramData {
         options.put("Program to check vowel or consonant using if else", "5_program.html");
         options.put("Whether a Character is an Alphabet or not", "15_program.html");
         options.put("Check Whether a Character is Vowel or Consonant", "19_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
         programModelList.add(new TutorialModel("Characters", options));
 
         options = new TreeMap<>();
@@ -109,24 +101,18 @@ public class ProgramData {
         options.put("Number Triangle", "46_program.html");
         options.put("Print half pyramid using *", "47_program.html");
         options.put("Pascal's triangle", "48_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
         programModelList.add(new TutorialModel("Patterns", options));
 
 
         options = new TreeMap<>();
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
+        options.put("Program to create, initialize, assign and access a pointer variable", "91_program.html");
+        options.put("Program to swap two numbers using pointers", "92_program.html");
+        options.put("Program to Access Elements of an Array Using Pointer", "93_program.html");
+        options.put("Change the value of constant integer using pointers", "94_program.html");
+        options.put("Count vowels and consonants in a string using pointer", "95_program.html");
+        options.put("Print sizes of different type of pointers", "96_program.html");
+        options.put("Array of pointers", "97_program.html");
+        options.put("Double pointer (pointer to pointer)", "98_program.html");
         programModelList.add(new TutorialModel("Pointers I/O", options));
 
 
@@ -154,15 +140,13 @@ public class ProgramData {
         options.put("Count number of characters in the file", "78_program.html");
         options.put("Copies one file contents to another file\n", "80_program.html");
         options.put("Merge two files", "81_program.html");
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
         options.put("Program which produces its own source code as its output", "51_program.html");
         programModelList.add(new TutorialModel("File I/O", options));
 
 
         options = new TreeMap<>();
-        options.put("", "2_program.html");
-        options.put("", "2_program.html");
+        options.put("Convert number from Decimal to Binary", "99_program.html");
+        options.put("Convert number from Binary to Decimal", "100_program.html");
         options.put("", "2_program.html");
         options.put("", "2_program.html");
         options.put("", "2_program.html");

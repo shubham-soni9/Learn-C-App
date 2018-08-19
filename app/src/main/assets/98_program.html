@@ -32,24 +32,32 @@
 //Main Function
 int main()
 {
-    int number;
+    int a;          //integer variable
+    int *p1;            //pointer to an integer
+    int **p2;           //pointer to an integer pointer
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    p1=&amp;a;          //assign address of a
+    p2=&amp;p1;         //assign address of p1
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    a=100;          //assign 100 to a
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    //access the value of a using p1 and p2
+    printf("\nValue of a (using p1): %d",*p1);
+    printf("\nValue of a (using p2): %d",**p2);
+
+    //change the value of a using p1
+    *p1=200;
+    printf("\nValue of a: %d",*p1);
+    //change the value of a using p2
+    **p2=200;
+    printf("\nValue of a: %d",**p2);
+
     return 0;
 }
 
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 <div class="panel-group">
@@ -58,13 +66,13 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+    Value of a (using p1): 100
+    Value of a (using p2): 100
+    Value of a: 200
+    Value of a: 200
 </code>
 </pre>
-        </span>
     </div>
-</div>
 </div>
 
 

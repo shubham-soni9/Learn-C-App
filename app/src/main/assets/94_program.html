@@ -32,19 +32,20 @@
 //Main Function
 int main()
 {
-    int number;
+    const int a=10;     //declare and assign constant integer
+    int *p;             //declare integer pointer
+    p=&amp;a;               //assign address into pointer p
 
-    // printf() dislpays the formatted output
-    printf("Enter an integer: ");
+    printf("Before changing - value of a: %d",a);
 
-    // scanf() reads the formatted input and stores them
-    scanf("%d", &number);
+    //assign value using pointer
+    *p=20;
 
-    // printf() displays the formatted output
-    printf("You entered: %d", number);
+    printf("\nAfter  changing - value of a: %d",a);
+    printf("\nWauuuu... value has changed.");
+
     return 0;
 }
-
 </code>
 </pre>
         </span>
@@ -58,8 +59,9 @@ int main()
         <!--Collapsable UI-->
         <pre> <code class="language-c">
 
-Enter a integer: 25
-You entered: 25
+   Before changing - value of a: 10
+    After  changing - value of a: 20
+    Wauuuu... value has changed.
 </code>
 </pre>
         </span>
