@@ -14,7 +14,7 @@ public class ProgramData {
         options.put("Print an Integer (Entered by the User)", "2_program.html");
         options.put("Add Two Integers", "3_program.html");
         options.put("Multiply two Floating Point Numbers", "4_program.html");
-        options.put("Perform addition, subtraction, multiplication and division", "5_program.html");
+        options.put("Perform add, subtract, multiply and divide", "5_program.html");
         options.put("Find the Size of int, float, double and char", "9_program.html");
         options.put("Program to print \"hello\" without semicolon", "34_program.html");
         options.put("Program without main() function", "35_program.html");
@@ -27,7 +27,7 @@ public class ProgramData {
         options.put("Check if a given Integer is Odd or Even", "6_program.html");
         options.put("Swap Two Numbers", "10_program.html");
         options.put("Swap Number Without Using Temporary Variables", "11_program.html");
-        options.put("Swapping values of three Variables without using forth variable", "126_program.html");
+        options.put("Swapping three values without forth variable", "126_program.html");
         options.put("Generate Multiplication Table", "12_program.html");
         options.put("Find Factorial of a Number", "13_program.html");
         options.put("Calculate the Sum of Natural Numbers", "14_program.html");
@@ -69,7 +69,7 @@ public class ProgramData {
         options.put("Reverse copy array", "75_program.html");
         options.put("Program to divide array", "76_program.html");
         options.put("Array concatenation program", "77_program.html");
-        options.put("Program to Insert an Element in a Specified Position in a given Array", "106_program.html");
+        options.put("Insert an Element in a Specified Position in Array", "106_program.html");
         programModelList.add(new TutorialModel("Arrays", options));
 
 
@@ -108,7 +108,7 @@ public class ProgramData {
         options.put("Display Upper Triangular Matrix", "141_program.html");
         options.put("Display Lower Triangular Matrix", "142_program.html");
         options.put("Print a given matrix in spiral form", "143_program.html");
-        options.put("Check whether entered matrix is magic square or not ?", "158_program.html");
+        options.put("Check whether entered matrix is magic square ?", "158_program.html");
         options.put("Addition of All Elements in Matrix", "159_program.html");
         programModelList.add(new TutorialModel("Matrix", options));
 
@@ -124,9 +124,9 @@ public class ProgramData {
 
 
         options = new TreeMap<>();
-        options.put("Program to create, initialize, assign and access a pointer variable", "91_program.html");
-        options.put("Program to swap two numbers using pointers", "92_program.html");
-        options.put("Program to Access Elements of an Array Using Pointer", "93_program.html");
+        options.put("Create, initialize, assign and access a pointer variable", "91_program.html");
+        options.put("Swap two numbers using pointers", "92_program.html");
+        options.put("Access Elements of an Array Using Pointer", "93_program.html");
         options.put("Change the value of constant integer using pointers", "94_program.html");
         options.put("Count vowels and consonants in a string using pointer", "95_program.html");
         options.put("Print sizes of different type of pointers", "96_program.html");
@@ -145,7 +145,7 @@ public class ProgramData {
         options.put("Program to declare, initialize an union, example of union", "63_program.html");
         options.put("Store Information of a Student Using Structure", "53_program.html");
         options.put("Add Two Complex Numbers by Passing Structure to a Function", "54_program.html");
-        options.put("Store Information Using Structures with Dynamically Memory Allocation", "55_program.html");
+        options.put("Store Information Using Structures with DMA", "55_program.html");
         options.put("Add Two Distances (in inch-feet) System Using Structur", "56_program.html");
         options.put("Store Information of Students Using Structure", "57_program.html");
         options.put("Calculate Difference Between Two Time Periods", "58_program.html");
@@ -184,7 +184,7 @@ public class ProgramData {
         options.put("Octal to Decimal", "102_program.html");
         options.put("Decimal to Hexadecimal", "103_program.html");
         options.put("Hexadecimal to Decimal", "104_program.html");
-        options.put("Convert temperature from degree celsius to fahrenheit", "127_program.html");
+        options.put("Convert from degree celsius to fahrenheit", "127_program.html");
         options.put("Convert days to years weeks and days", "128_program.html");
         programModelList.add(new TutorialModel("Conversations", options));
 
@@ -243,7 +243,7 @@ public class ProgramData {
         options.put("Tower Of Hanoi", "170_program.html");
         options.put("Factorial Of A Number", "171_program.html");
         options.put("Print the fibonacci series", "172_program.html");
-        options.put("Program to check given string is palindrome number or not", "173_program.html");
+        options.put("check palindrome number", "173_program.html");
         programModelList.add(new TutorialModel("Recursion", options));
 
 
