@@ -80,6 +80,17 @@ public class ProgramData {
         options.put("Concatenate Two Strings", "24_program.html");
         options.put("Copy String Without Using strcpy()", "25_program.html");
         options.put("Sort Elements in Dictionary Order", "26_program.html");
+        options.put("Replace Lowercase Characters by Uppercase & Vice-Versa", "119_program.html");
+        options.put("Reverse the String", "120_program.html");
+        options.put("Reverse the String using Recursion", "121_program.html");
+        options.put("Find the Largest & Smallest Word in a String", "122_program.html");
+        options.put("Find a substring within a string", "123_program.html");
+        options.put("Remove given Word from a String", "124_program.html");
+        options.put("Find the Frequency of the Word ‘the’ in a given Sentence", "125_program.html");
+        options.put("", "2_program.html");
+        options.put("", "2_program.html");
+        options.put("", "2_program.html");
+        options.put("", "2_program.html");
         programModelList.add(new TutorialModel("Strings", options));
 
 
