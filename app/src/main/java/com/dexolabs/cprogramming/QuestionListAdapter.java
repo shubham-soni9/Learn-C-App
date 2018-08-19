@@ -74,5 +74,4 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
                 .button(R.string.close_text)
                 .build().show();
     }
-
 }

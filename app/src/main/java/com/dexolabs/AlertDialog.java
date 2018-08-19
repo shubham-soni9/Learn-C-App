@@ -11,7 +11,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.dexolabs.cprogramming.R;
-import com.dexolabs.cprogramming.utility.Utils;
+
+import org.sufficientlysecure.htmltextview.HtmlTextView;
 
 
 /**
@@ -90,7 +91,7 @@ public class AlertDialog {
             alertDialog.setCanceledOnTouchOutside(true);
 
             TextView tvTitle = alertDialog.findViewById(R.id.tvTitle);
-            TextView tvMessage = alertDialog.findViewById(R.id.tvMessage);
+            HtmlTextView tvMessage = alertDialog.findViewById(R.id.tvMessage);
             Button btnAction = alertDialog.findViewById(R.id.btnAction);
 
             if (title != null) {
@@ -98,7 +99,7 @@ public class AlertDialog {
                 tvTitle.setTextAppearance(activity, R.style.CustomTextAppearance_Bold);
                 tvTitle.setVisibility(View.VISIBLE);
             }
-            tvMessage.setText(Utils.fromHtml(message));
+            tvMessage.setHtml(message);
             btnAction.setText(actionButton);
             btnAction.setOnClickListener(new View.OnClickListener() {
 

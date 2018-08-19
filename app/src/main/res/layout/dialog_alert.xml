@@ -22,7 +22,7 @@
         android:textStyle="bold"
         android:visibility="gone" />
 
-    <TextView
+    <org.sufficientlysecure.htmltextview.HtmlTextView
         android:id="@+id/tvMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
