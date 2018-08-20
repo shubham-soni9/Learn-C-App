@@ -766,244 +766,144 @@ public class QuestionData {
         options.put("What is the use of a semicolon (;) at the end of every program statement?", "It has to do with the parsing process and compilation of the code. A semicolon acts as a delimiter, so that the compiler knows where each statement ends, and can proceed to divide the statement into smaller elements for syntax checking.\n" +
                 "\n");
 
-        options.put("", "");
+        options.put("How do you construct an increment statement or decrement statement in C?", "<p>There are actually two ways you can do this. One is to use the increment operator ++ and decrement operator &ndash;. For example, the statement &ldquo;x++&rdquo; means to increment the value of x by 1. Likewise, the statement &ldquo;x &ndash;&rdquo; means to decrement the value of x by 1. Another way of writing increment statements is to use the conventional + plus sign or &ndash; minus sign. In the case of &ldquo;x++&rdquo;, another way to write it is &ldquo;x = x +1&rdquo;.</p>");
 
-        options.put("", "");
 
-        options.put("", "");
+        options.put("When does the compiler not implicitly generate the address of the first element of an array?", "<p>The compiler does not implicitly generate the address of the first element of an array whenever an array name appears:<br />&ndash; as an operand of the sizeof operator<br />&ndash; as an operand of &amp; operator<br />&ndash; as a string literal initialize for a character array</p>");
 
-        options.put("", "");
+        options.put("Is using exit() the same as using return?", "No, the exit() function is used to exit your program and return() controls the operating system.\n" +
+                "The return statement is used to return from a function and return control to the calling function. If you make a return from the main() function, you are essentially returning control(operating system) to the calling function. In this case, the return statement and exit() function are similar.");
 
-        options.put("", "");
+        options.put("What is volatile variable?", "\n" +
+                "Volatile variables are those variables which alters the default way of the program.\n" +
+                "The variable which do not change while compiling but are changeable during execution.");
 
-        options.put("", "");
+        options.put("Difference between global and static variable?", "Static variables persist throughout the scope, but the lifespan is not throughout the program. Global variables persist throughout the scope of base blocks of memory that is their lifespan is throughout the program.");
 
-        options.put("", "");
+        options.put("What are the files automatically opened when C file is executed?", "Standard in, standard out, standard error (stdin, stdout, stderr) are the files which are automatically opened when C file is executed.");
 
-        options.put("", "");
+        options.put("Compare between array and pointer.", "Array can allocate variables but cannot reallocate those variable if required.  Whereas the pointer was assigned to allocate variables and they can also relocate and also are resizable.");
 
-        options.put("", "");
+        options.put("What do you mean by #include<stdio.h>?", "In C, the hash function # tells the compiler that a statement should be sent to the C preprocessor. The include looks after the new files and replace the contents of those files. and stdio.h will be valid only for the printf, scanf functions.");
 
-        options.put("", "");
+        options.put("What does static variable mean?", "Static variables are the variables which retain their values between the function calls. They\n" +
+                "are initialized only once their scope is within the function in which they are defined.");
 
-        options.put("", "");
+        options.put("What is a pointer?", " Pointers are variables which stores the address of another variable. That variable may be a\n" +
+                "scalar (including another pointer), or an aggregate (array or structure). The pointed-to object may\n" +
+                "be part of a larger object, such as a field of a structure or an element in an array.");
 
+        options.put("What are the uses of a pointer?", "<p>Pointer is used in the following cases</p>\n" +
+                "<p>i)&nbsp; It is used to access array elements&lt;br&gt;&lt;/br&gt;</p>\n" +
+                "<p>ii) It is used for dynamic memory allocation.&lt;br&gt;&lt;/br&gt;</p>\n" +
+                "<p>iii) It is used in Call by reference&lt;br&gt;&lt;/br&gt;</p>\n" +
+                "<p>iv) It is used in data structures like trees, graph, linked list etc.&lt;br&gt;&lt;/br&gt;</p>");
 
-        options.put("", "");
 
-        options.put("", "");
 
-        options.put("", "");
+        options.put("In header files whether functions are declared or defined?", "Functions are declared within header file. That is function prototypes exist in a header\n" +
+                "file,not function bodies. They are defined in library (lib).");
 
-        options.put("", "");
+        options.put("What are macros? What are its advantages and disadvantages?", " Macros are abbreviations for lengthy and frequently used statements. When a macro is\n" +
+                "called the entire code is substituted by a single line though the macro definition is of several\n" +
+                "lines.\n" +
+                "The advantage of macro is that it reduces the time taken for control transfer as in case of\n" +
+                "function. The disadvantage of it is here the entire code is substituted so the program becomes\n" +
+                "lengthy if a macro is called several times");
 
-        options.put("", "");
+        options.put("Where does global, static, and local, register variables, free memory and C Program\n" +
+                            "instructions get stored?", " Global: Wherever the linker puts them. Typically the ―BSS segment‖ on many platforms.\n" +
+                "Static: Again, wherever the linker puts them. Often, they‘re intermixed with the globals. The\n" +
+                "only difference between globals and statics is whether the linker will resolve the symbols across\n" +
+                "compilation units.Local: Typically on the stack, unless the variable gets register allocated and\n" +
+                "never spills.Register: Nowadays, these are equivalent to ―Local‖ variables. They live on the stack\n" +
+                "unless they get register-allocated.");
 
-        options.put("", "");
+        options.put("What the advantages of using Unions?", " When the C compiler is allocating memory for unions it will always reserve enough room for the largest member");
 
-        options.put("", "");
+        options.put("Difference between linker and linkage?", "Linker converts an object code into an executable code by linking together the necessary built in functions. The form and place of declaration where the variable is declared in a program determine the linkage of variable.");
 
-        options.put("", "");
+        options.put("Is it possible to have negative index in an array?", "Yes it is possible to index with negative value provided there are data stored in this\n" +
+                "location. Even if it is illegal to refer to the elements that are out of array bounds, the compiler\n" +
+                "will not produce error because C has no check on the bounds of an array.");
 
-        options.put("", "");
+        options.put("Why is it necessary to give the size of an array in an array declaration?", "When an array is declared, the compiler allocates a base address and reserves enough space in memory for all the elements of the array. The size is required to allocate the required space and hence size must be mentioned.");
 
-        options.put("", "");
+        options.put("What modular programming?", "If a program is large, it is subdivided into a number of smaller programs that are called\n" +
+                "modules or subprograms. If a complex problem is solved using more modules, this approach is\n" +
+                "known as modular programming.");
 
-        options.put("", "");
+        options.put("Difference between formal argument and actual argument?", "Formal arguments are the arguments available in the function definition. They are preceded by their own data type. Actual arguments are available in the function call. These arguments are given as constants or variables or expressions to pass the values to the function.");
 
-        options.put("", "");
 
-        options.put("", "");
+        options.put("How are Structure passing and returning implemented by the complier?", "When structures are passed as argument to functions, the entire structure is typically pushed on the stack. To avoid this overhead many programmer often prefer to pass pointers to structure instead of actual structures. Structures are often returned from functions in a location pointed to by an extra, compiler-supported ‗hidden‘ argument to the function.");
 
+        options.put("Can a Structure contain a Pointer to itself?", "Yes such structures are called self-referential structures.");
 
-        options.put("", "");
+        options.put("What is the maximum combined length of command line arguments including the space" +
+                            "between adjacent arguments?", "It depends on the operating system");
 
-        options.put("", "");
+        options.put("How would you use the functions randomize() and random()?", "Randomize() initiates random number generation with a random value. Random() generates random number between 0 and n-1;");
 
-        options.put("", "");
+        options.put("What do the functions atoi(), itoa() and gcvt() do?", "atoi() is a macro that converts integer to character.\n" +
+                "itoa() It converts an integer to string\n" +
+                "gcvt() It converts a floating point number to string");
 
-        options.put("", "");
+        options.put("What is a file?", "A file is a region of storage in hard disks or in auxiliary storage devices.It contains bytes of\n" +
+                "information .It is not a data type.");
 
-        options.put("", "");
+        options.put("What is a stream?", " A stream is a source of data or destination of data that may be associated with a disk or other  I/O device. The source stream provides data to a program and it is known as input stream. The destination stream eceives the output from the program and is known as output stream.");
 
-        options.put("", "");
+        options.put("What is FILE?", "FILE is a predefined data type. It is defined in stdio.h file");
 
-        options.put("", "");
+        options.put("What is a file pointer?", " The pointer to a FILE data type is called as a stream pointer or a file pointer. A file pointer points to the block of information of the stream that had just been opened.");
 
-        options.put("", "");
+        options.put("Difference between a array name and a pointer variable?", "A pointer variable is a variable where as an array name is a fixed address and is not a variable. A pointer variable must be initialized but an array name cannot be initialized. An array name being a constant value , ++ and — operators cannot be applied to it.");
 
-        options.put("", "");
+        options.put("Is the allocated space within a function automatically deallocated when the function\n" +
+                            "returns?", "");
 
-        options.put("", "");
+        options.put("Can we initialize unions?", "ANSI Standard C allows an initializer for the first member of a union. There is no standard way of initializing any other member (nor, under a pre-ANSI compiler, is there generally any way of initializing a union at all).");
 
-        options.put("", "");
+        options.put("What are main characteristics of C language?", "C is a procedural language. The main features of C language include low-level access to memory, simple set of keywords, and clean style. These features make it suitable for system programming like operating system or compiler development.");
 
-        options.put("", "");
 
-        options.put("", "");
+        options.put("Explain zero based addressing.", "<p>- The array subscripts always start at zero.&nbsp;<br />- These subscript values are used to identify the elements in the array.&nbsp;<br />- Since subscripts start at 0, arrays are said to use zero-based addressing.</p>");
 
+        options.put("Are bit fields portable?\n", "No, Bit fields are not portable. Since Bit fields cannot span machine words and the number of bits in a machine word is different on different machines, a particular program using bit fields might not compile on some machines. One should avoid using bit fields except when the machines can directly address bits in memory and the compiler can generate code.");
 
-        options.put("", "");
+        options.put("What are actual arguments?\n", "When some functions are created and used to perform an action on some given values, some values need to be passed to them. The values that are passed into the called function are referred to as actual arguments.");
 
-        options.put("", "");
+        options.put("How many levels deep can include files be nested?", "As such, there is no limit to the number of levels of nested include files you can have but your compiler might run out of stack space while trying to include an inordinately high number of files. This number depends on your hardware configuration and compiler.");
 
-        options.put("", "");
+        options.put("Is it possible to pass an entire structure to functions?", "Yes, it is possible to pass an entire structure to a function in a call by method style. Some programmers prefer to declare the structure globally, then pass a variable of that structure type to a function. It helps in maintaining the consistency and uniformity in terms of argument type.");
 
-        options.put("", "");
+        options.put("What are header files? What are their uses?", "Header files are also called as library files. They carry two important things: the definitions and prototypes of functions being used in a program. ");
 
-        options.put("", "");
+        options.put("Is it possible to create your own header files?", "Yes, it is possible to create a customized header file. To do this, you just need to include the function prototypes that you want to use in your program in it, and use the #include directive followed by the name of your header file.");
 
-        options.put("", "");
 
-        options.put("", "");
+        options.put("Explain \"Bus Error\".", "It is a fatal error in the execution of a machine language instruction. It occurs because the processor detects an abnormal condition on its bus. ");
 
-        options.put("", "");
+        options.put("Explain #pragma statements.", "Implementations of C & C++ supports features unique to the OS or host machine. #pragma directives offer a way for each compiler to offer machine and OS specific features while retaining overall compatibility. Pragmas are used in conditional statements, to provide new pre-processor functionality or implementation-defused information to the compiler.");
 
-        options.put("", "");
+        options.put("What are the different types of objects used in C?\n", "");
 
-        options.put("", "");
+        options.put("What is the use of linkage in C language?", "Linkage is the term that is used to describe the accessibility of the objects from one file to another file. This file can be either from the same file or different files. The linkage is really helpful in managing a large number of links when lots of files are linked together with one another. User can declare the same function more than once within the same scope or different scope. The packaging of the library function can be declared to the function in the header as its function is defined in a source file. ");
 
-        options.put("", "");
+        options.put("What is the data segment that is followed by C?\n", "<p>The data segment is the segment that consists of the four parts:<br /><br /><strong>a) Stack area:</strong>&nbsp;is the first segment part that consists of all the automatic variables and constants that are stored in the stack area. The automatic variables that are included in C are the local variables that are of default storage class, variable of auto class, integer, character, string constants, etc., function parameters and return values.<br /><br /><strong>b) Data area:</strong>&nbsp;consists of all the extern and static variables that are stored in this area. It stores the data permanently the memory variables that are initialized and not initialized.<br /><br /><strong>c) Heap area:</strong>&nbsp;consists of the memory that can be allocated dynamically to the processes. The memory can be dynamically allocated by the use of the function malloc() and calloc().<br /><br /><strong>d) Code area:</strong>&nbsp;consists of a function pointer that is used to access only the code area. The size of the area remains fixed and it remains in the read only memory area.</p>\n" +
+                "<p>&nbsp;</p>");
 
-        options.put("", "");
 
-        options.put("", "");
+        options.put("What is use of integral promotions in C?", "Integral promotions deals with the promotions that are internally being performed to convert the lower precision level to higher level like shorter to int. The conversations that is being defined includes: A short or char will be converted to the int automatically. If the assignment is not being done then the conversation will be assigned to the unsigned int. Through this the original value and sign can be preserved for further actions. The conversation of char can be treated as signed or unsigned but it will always been implementation dependent. These are helpful in applying a conversation on which sift, unary +, -, and ~ operators can be taken place.");
 
+        options.put("What is the use of ?: operator?", "This ?: operator is used to show the conditional statement that allows the output of the statement to be either true or false. This operator is used as:\nexpression?expression1:expression2\n");
 
-        options.put("", "");
+        options.put("How does normalization of huge pointer works?\n", "Huge pointer is the pointer that can point to the whole memory of the RAM and that can access all the segments that are present in a program. The normalization can be done depending on the microprocessor of the system. The physical memory of the system is represented in 20 bit and then there is a conversion of 4 byte or 32 bit address. The increment of the huge pointer will also affect the offset and segment address. Through the huge pointer the access and modification of device driver memory, video memory, etc. Huge pointer manages the overall system of the memory model and also normalizes the overall use of the pointers.");
 
-        options.put("", "");
+        options.put("Why do we use namespace feature?", "Multiple library providers might use common global identifiers. This can cause name collision when an application tries to link with two or more such libraries.");
 
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
-        options.put("", "");
-
+        options.put("What is the purpose of ftell?", "ftell() function is used to get the current file referred by the file pointer.");
 
         return options;
     }
