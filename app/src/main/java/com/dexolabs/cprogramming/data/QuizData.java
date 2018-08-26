@@ -1,17 +1,39 @@
 package com.dexolabs.cprogramming.data;
 
+import com.dexolabs.cprogramming.model.Question;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 public class QuizData {
+    private static Question mQuestion;
 
-    public static LinkedHashMap<String, String> getQuizData() {
-        LinkedHashMap<String, String> options = new LinkedHashMap<>();
+    public static LinkedHashMap<String, ArrayList<Question>> getQuizData() {
+        LinkedHashMap<String, ArrayList<Question>> options = new LinkedHashMap<>();
+        ArrayList<Question> questionList = new ArrayList<>();
 
-        options.put("Data type - 1", "");
-        options.put("Data type - 2", "");
-        options.put("Data type - 3", "");
-        options.put("Data type - 4", "");
-        options.put("Data type - 5", "");
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+
+        options.put("Data type - 1", questionList);
         return options;
+    }
+
+    private static Question getQuestion(String question, String option1, String option2, String option3, String option4, int answer, String explanation) {
+        if (mQuestion == null) {
+            mQuestion = new Question();
+        }
+        mQuestion.setQuestion(question);
+        mQuestion.setOption_1(option1);
+        mQuestion.setOption_2(option2);
+        mQuestion.setOption_3(option3);
+        mQuestion.setOption_4(option4);
+        mQuestion.setAnswer(answer);
+        mQuestion.setExplanations(explanation);
+        return mQuestion;
     }
 }

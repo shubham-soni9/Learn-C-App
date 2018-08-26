@@ -22,6 +22,10 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         initID();
+        setData();
+    }
+
+    private void setData() {
         tvHomeHeader.setText(R.string.start_learning);
         onNavigationItemClick(bottomNavigationView.getSelectedItemId());
     }
@@ -56,7 +60,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
                 tvHomeHeader.setText(R.string.practcie_programs);
                 break;
             case R.id.action_test:
-                setFragment(QuizFragment.newInstance(CommonData.getQuizData()));
+                setFragment(TestListFragment.newInstance(CommonData.getQuizData()));
                 tvHomeHeader.setText(R.string.test_your_talent);
                 break;
             case R.id.action_question:
@@ -73,4 +77,5 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     private void setFragment(final Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_home_layout, fragment).commit();
     }
+
 }

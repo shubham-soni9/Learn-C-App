@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.dexolabs.AlertDialog;
+import com.dexolabs.cprogramming.utility.AlertDialog;
 import com.dexolabs.cprogramming.utility.Log;
 
 import java.util.LinkedHashMap;
@@ -17,7 +17,7 @@ import java.util.LinkedHashMap;
 public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapter.ViewHolder> {
     private LinkedHashMap<String, String> questionList;
     private String[]                      questionTitleList;
-    private String TAG = QuizListAdapter.class.getName();
+    private String TAG = TestListAdapter.class.getName();
     private Activity mContext;
 
 

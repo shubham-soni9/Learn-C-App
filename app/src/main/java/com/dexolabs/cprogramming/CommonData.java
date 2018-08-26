@@ -4,6 +4,7 @@ import com.dexolabs.cprogramming.data.ProgramData;
 import com.dexolabs.cprogramming.data.QuestionData;
 import com.dexolabs.cprogramming.data.QuizData;
 import com.dexolabs.cprogramming.data.TutorialData;
+import com.dexolabs.cprogramming.model.Question;
 import com.dexolabs.cprogramming.model.TutorialModel;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class CommonData {
         return ProgramData.getProgramData();
     }
 
-    public static LinkedHashMap<String, String> getQuizData() {
+    public static LinkedHashMap<String, ArrayList<Question>> getQuizData() {
         return QuizData.getQuizData();
     }
 

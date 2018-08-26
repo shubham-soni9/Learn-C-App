@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_10dp"
+        android:paddingStart="@dimen/_10dp"
+        android:paddingTop="@dimen/_30dp">
+
+        <TextView
+            android:id="@+id/fragment_mcq_tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background_grey"
+            android:padding="@dimen/_10dp"
+            android:text="What is you name ? Tell me something about yourself?"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/app_text_color" />
+
+
+        <TextView
+            android:id="@+id/fragment_mcq_tv_option_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@drawable/rounded_background_white"
+            android:padding="@dimen/_10dp"
+            android:text="Shubham Soni"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/app_text_color" />
+
+
+        <TextView
+            android:id="@+id/fragment_mcq_tv_option_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@drawable/rounded_background_white"
+            android:padding="@dimen/_10dp"
+            android:text="Indrajeet Gupta"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/app_text_color" />
+
+
+        <TextView
+            android:id="@+id/fragment_mcq_tv_option_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@drawable/rounded_background_white"
+            android:padding="@dimen/_10dp"
+            android:text="Rahul Dev"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/app_text_color" />
+
+
+        <TextView
+            android:id="@+id/fragment_mcq_tv_option_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:background="@drawable/rounded_background_white"
+            android:padding="@dimen/_10dp"
+            android:text="Neeraj Wadhwani"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/app_text_color" />
+
+        <TextView
+            android:id="@+id/fragment_mcq_tv_expanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30dp"
+            android:visibility="gone"
+            android:background="@drawable/rounded_background_white"
+            android:padding="@dimen/_10dp"
+            android:text="Name is unique identifier to one person"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/app_text_color" />
+    </LinearLayout>
+</ScrollView>
