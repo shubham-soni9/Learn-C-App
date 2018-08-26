@@ -17,9 +17,12 @@ import com.dexolabs.cprogramming.structure.BaseActivity;
 import java.util.ArrayList;
 
 public class TestActivity extends BaseActivity implements OnQuestionTabListener, OnQuestionListener {
-    private ViewPager       vpQuestions;
-    private FragmentManager fragmentManager;
-    private RecyclerView    rvQuestionNumbers;
+    private ViewPager             vpQuestions;
+    private FragmentManager       fragmentManager;
+    private RecyclerView          rvQuestionNumbers;
+    private ArrayList<Question>   questionList;
+    private QuestionPagerAdapter  questionListAdapter;
+    private QuestionNumberAdapter questionNumberAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,13 +33,10 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     }
 
     private void setData() {
-        ArrayList<Question> questionList = getIntent().getExtras().getParcelableArrayList(Keys.Extras.MCQ_LIST);
+        questionList = getIntent().getExtras().getParcelableArrayList(Keys.Extras.MCQ_LIST);
         fragmentManager = getSupportFragmentManager();
         rvQuestionNumbers.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        QuestionPagerAdapter questionListAdapter = new QuestionPagerAdapter(this, fragmentManager, questionList);
-        vpQuestions.setAdapter(questionListAdapter);
-        QuestionNumberAdapter questionNumberAdapter = new QuestionNumberAdapter(this, questionList);
-        rvQuestionNumbers.setAdapter(questionNumberAdapter);
+        questionAdapter();
         vpQuestions.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
@@ -67,7 +67,28 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     }
 
     @Override
-    public void onQuestionSelected(Question question) {
+    public void onQuestionSelected(Question selectQuestion) {
+        for (Question mQuestion : questionList) {
+            if (mQuestion.getQuestionId() == selectQuestion.getQuestionId()) {
+                questionList.set(questionList.indexOf(mQuestion), selectQuestion);
+                questionAdapter();
+                break;
+            }
+        }
+    }
 
+    private void questionAdapter() {
+        if (questionListAdapter == null) {
+            questionListAdapter = new QuestionPagerAdapter(fragmentManager, questionList);
+            vpQuestions.setAdapter(questionListAdapter);
+        } else {
+            questionListAdapter.notifyDataSetChanged();
+        }
+        if (questionNumberAdapter == null) {
+            questionNumberAdapter = new QuestionNumberAdapter(this, questionList);
+            rvQuestionNumbers.setAdapter(questionNumberAdapter);
+        } else {
+            questionNumberAdapter.notifyDataSetChanged();
+        }
     }
 }

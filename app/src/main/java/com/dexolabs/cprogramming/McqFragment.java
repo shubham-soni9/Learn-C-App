@@ -4,14 +4,13 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.dexolabs.cprogramming.appdata.Constant;
 import com.dexolabs.cprogramming.listener.OnQuestionListener;
-import com.dexolabs.cprogramming.listener.OnQuestionTabListener;
 import com.dexolabs.cprogramming.model.Question;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 import com.dexolabs.cprogramming.utility.Utils;
@@ -19,19 +18,20 @@ import com.dexolabs.cprogramming.utility.Utils;
 import static com.dexolabs.cprogramming.appdata.Keys.Extras.MCQ_Question;
 
 public class McqFragment extends BaseFragment implements View.OnClickListener {
-    private Context         mContext;
-    private RecyclerView    rvQuizList;
-    private TestListAdapter tutorialListAdapter;
-    private Question        question;
-    private TextView        fragment_mcq_tv_question;
-    private TextView        fragment_mcq_tv_option_1;
-    private TextView        fragment_mcq_tv_option_2;
-    private TextView        fragment_mcq_tv_option_3;
-    private TextView        fragment_mcq_tv_option_4;
-    private TextView        fragment_mcq_tv_expanation;
-    private OnQuestionTabListener onQuestionListener;
+    private Context            mContext;
+    private Question           question;
+    private TextView           fragment_mcq_tv_question;
+    private TextView           fragment_mcq_tv_option_1;
+    private TextView           fragment_mcq_tv_option_2;
+    private TextView           fragment_mcq_tv_option_3;
+    private TextView           fragment_mcq_tv_option_4;
+    private TextView           fragment_mcq_tv_expanation;
+    private OnQuestionListener onQuestionListener;
 
-    public static McqFragment newInstance(OnQuestionListener onQuestionListener, Question question) {
+    public McqFragment() {
+    }
+
+    public static McqFragment newInstance(Question question) {
         McqFragment mcqFragment = new McqFragment();
         Bundle bundle = new Bundle();
         bundle.putParcelable(MCQ_Question, question);
@@ -43,6 +43,7 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
     public void onAttach(Context context) {
         super.onAttach(context);
         mContext = context;
+        onQuestionListener = (OnQuestionListener) mContext;
     }
 
     @Nullable
@@ -75,57 +76,74 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
         fragment_mcq_tv_option_2.setText(question.getOption_2());
         fragment_mcq_tv_option_3.setText(question.getOption_3());
         fragment_mcq_tv_option_4.setText(question.getOption_4());
+        updateAnswerView(question.getAnswer());
+        if (question.getAnswer() != question.getIsAttemptAnswer()) {
+            updateAnswerView(question.getIsAttemptAnswer());
+        }
         Utils.setOnClickListener(this, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
+    }
+
+    private void updateAnswerView(int position) {
+        switch (position) {
+            case 1:
+                setAnswerView(fragment_mcq_tv_option_1);
+                break;
+            case 2:
+                setAnswerView(fragment_mcq_tv_option_2);
+                break;
+            case 3:
+                setAnswerView(fragment_mcq_tv_option_3);
+                break;
+            case 4:
+                setAnswerView(fragment_mcq_tv_option_4);
+                break;
+        }
+    }
+
+    private void setAnswerView(View mView) {
+        if (question.getIsAttemptAnswer() == Constant.AnswerType.CORRECT) {
+            mView.setBackgroundResource(R.drawable.rounded_background_green);
+            mView.setEnabled(false);
+        } else if (question.getIsAttemptAnswer() == Constant.AnswerType.INCORRECT) {
+            mView.setBackgroundResource(R.drawable.rounded_background_red);
+            mView.setEnabled(false);
+        } else {
+            mView.setBackgroundResource(R.drawable.rounded_background_white);
+            mView.setEnabled(true);
+        }
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.fragment_mcq_tv_option_1:
-                checkAnswer(view, 1);
+                checkAnswer(1);
                 break;
             case R.id.fragment_mcq_tv_option_2:
-                checkAnswer(view, 2);
+                checkAnswer(2);
                 break;
             case R.id.fragment_mcq_tv_option_3:
-                checkAnswer(view, 3);
+                checkAnswer(3);
                 break;
             case R.id.fragment_mcq_tv_option_4:
-                checkAnswer(view, 4);
+                checkAnswer(4);
                 break;
         }
     }
 
-    private void checkAnswer(final View view, int selectedOption) {
-        if (selectedOption == question.getAnswer()) {
-            view.setBackgroundResource(R.drawable.rounded_background_green);
-        } else {
-            view.setBackgroundResource(R.drawable.rounded_background_red);
-            switch (question.getAnswer()) {
-                case 1:
-                    fragment_mcq_tv_option_1.setBackgroundResource(R.drawable.rounded_background_green);
-                    break;
-                case 2:
-                    fragment_mcq_tv_option_2.setBackgroundResource(R.drawable.rounded_background_green);
-                    break;
-                case 3:
-                    fragment_mcq_tv_option_3.setBackgroundResource(R.drawable.rounded_background_green);
-                    break;
-                case 4:
-                    fragment_mcq_tv_option_4.setBackgroundResource(R.drawable.rounded_background_green);
-                    break;
-            }
-        }
-        fragment_mcq_tv_option_1.setEnabled(false);
-        fragment_mcq_tv_option_2.setEnabled(false);
-        fragment_mcq_tv_option_3.setEnabled(false);
-        fragment_mcq_tv_option_4.setEnabled(false);
-
+    private void checkAnswer(int selectedOption) {
+        question.setSelectedOption(selectedOption);
+        Utils.setEnabled(false, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
+        onQuestionListener.onQuestionSelected(question);
         if (question.getExplanations() != null && !question.getExplanations().isEmpty()) {
             fragment_mcq_tv_expanation.setText(question.getExplanations());
             fragment_mcq_tv_expanation.setVisibility(View.VISIBLE);
         } else {
             fragment_mcq_tv_expanation.setVisibility(View.GONE);
+        }
+        updateAnswerView(question.getAnswer());
+        if (question.getAnswer() != question.getIsAttemptAnswer()) {
+            updateAnswerView(question.getIsAttemptAnswer());
         }
     }
 }

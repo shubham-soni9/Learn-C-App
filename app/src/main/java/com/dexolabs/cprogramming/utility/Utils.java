@@ -75,4 +75,10 @@ public class Utils {
         }
         return result;
     }
+
+    public static void setEnabled(final boolean isEnabled, View... views) {
+        for (View view : views) {
+            view.setEnabled(isEnabled);
+        }
+    }
 }

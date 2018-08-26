@@ -3,16 +3,21 @@ package com.dexolabs.cprogramming.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.dexolabs.cprogramming.appdata.Constant;
+
 public class Question implements Parcelable {
+    private int    questionId;
     private String question;
     private String option_1;
     private String option_2;
     private String option_3;
     private String option_4;
-    private int    answer;
+    private int answer = 0;
     private String explanations;
+    private int selectedOption = 0;
 
     protected Question(Parcel in) {
+        questionId = in.readInt();
         question = in.readString();
         option_1 = in.readString();
         option_2 = in.readString();
@@ -20,6 +25,7 @@ public class Question implements Parcelable {
         option_4 = in.readString();
         answer = in.readInt();
         explanations = in.readString();
+        selectedOption = in.readInt();
     }
 
     public Question() {
@@ -44,6 +50,7 @@ public class Question implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(questionId);
         parcel.writeString(question);
         parcel.writeString(option_1);
         parcel.writeString(option_2);
@@ -51,6 +58,7 @@ public class Question implements Parcelable {
         parcel.writeString(option_4);
         parcel.writeInt(answer);
         parcel.writeString(explanations);
+        parcel.writeInt(selectedOption);
     }
 
     public String getQuestion() {
@@ -108,4 +116,23 @@ public class Question implements Parcelable {
     public void setExplanations(String explanations) {
         this.explanations = explanations;
     }
+
+
+    public int getIsAttemptAnswer() {
+        return selectedOption > 0 ? (selectedOption == getAnswer() ? Constant.AnswerType.CORRECT : Constant.AnswerType.INCORRECT) : Constant.AnswerType.UNANSWERED;
+    }
+
+    public void setSelectedOption(int isAttemptAnswer) {
+        this.selectedOption = isAttemptAnswer;
+    }
+
+    public int getQuestionId() {
+        return questionId;
+    }
+
+    public void setQuestionId(int questionId) {
+        this.questionId = questionId;
+    }
+
+
 }

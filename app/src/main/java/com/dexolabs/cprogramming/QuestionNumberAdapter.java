@@ -30,6 +30,7 @@ public class QuestionNumberAdapter extends RecyclerView.Adapter<QuestionNumberAd
 
     @Override
     public void onBindViewHolder(@NonNull QuestionNumberAdapter.ViewHolder viewHolder, final int position) {
+        Question question = questionList.get(viewHolder.getAdapterPosition());
         viewHolder.tvQuestionNumber.setText(String.valueOf(position + 1));
         viewHolder.tvQuestionNumber.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +38,8 @@ public class QuestionNumberAdapter extends RecyclerView.Adapter<QuestionNumberAd
                 onQuestionTabListener.onQuestionTabSelected(position);
             }
         });
+        viewHolder.tvQuestionNumber.setBackgroundResource(question.getIsAttemptAnswer() > 0 ? (question.getIsAttemptAnswer() == 1
+                ? R.drawable.oval_background_green : R.drawable.oval_background_red) : R.drawable.oval_background_white);
     }
 
     @Override
