@@ -28,9 +28,6 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
     private TextView           fragment_mcq_tv_expanation;
     private OnQuestionListener onQuestionListener;
 
-    public McqFragment() {
-    }
-
     public static McqFragment newInstance(Question question) {
         McqFragment mcqFragment = new McqFragment();
         Bundle bundle = new Bundle();
@@ -92,6 +89,9 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
                     view.setBackgroundResource(R.drawable.rounded_background_red);
                 }
             }
+            Utils.setEnabled(false, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
+        } else {
+            Utils.setEnabled(true, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
         }
     }
 

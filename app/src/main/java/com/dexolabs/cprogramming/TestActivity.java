@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.dexolabs.cprogramming.adapter.QuestionPagerAdapter;
 import com.dexolabs.cprogramming.appdata.Keys;
@@ -13,10 +14,12 @@ import com.dexolabs.cprogramming.listener.OnQuestionListener;
 import com.dexolabs.cprogramming.listener.OnQuestionTabListener;
 import com.dexolabs.cprogramming.model.Question;
 import com.dexolabs.cprogramming.structure.BaseActivity;
+import com.dexolabs.cprogramming.utility.Transition;
+import com.dexolabs.cprogramming.utility.Utils;
 
 import java.util.ArrayList;
 
-public class TestActivity extends BaseActivity implements OnQuestionTabListener, OnQuestionListener {
+public class TestActivity extends BaseActivity implements OnQuestionTabListener, OnQuestionListener, View.OnClickListener {
     private ViewPager             vpQuestions;
     private FragmentManager       fragmentManager;
     private RecyclerView          rvQuestionNumbers;
@@ -58,6 +61,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     private void init() {
         vpQuestions = findViewById(R.id.vpQuestions);
         rvQuestionNumbers = findViewById(R.id.rvQuestionNumbers);
+        Utils.setOnClickListener(this, findViewById(R.id.ibBack));
     }
 
     @Override
@@ -90,5 +94,19 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
         } else {
             questionNumberAdapter.notifyDataSetChanged();
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.ibBack:
+                onBackPressed();
+                break;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Transition.exit(this);
     }
 }

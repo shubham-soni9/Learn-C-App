@@ -14,6 +14,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="false"
         android:duplicateParentState="true"
+        android:visibility="gone"
         android:padding="@dimen/_15dp"
         android:src="@drawable/ic_back" />
 
