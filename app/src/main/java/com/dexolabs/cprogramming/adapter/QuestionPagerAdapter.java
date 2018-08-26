@@ -2,20 +2,18 @@ package com.dexolabs.cprogramming.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentPagerAdapter;
 
 import com.dexolabs.cprogramming.McqFragment;
-import com.dexolabs.cprogramming.TestListFragment;
-import com.dexolabs.cprogramming.TutorialListFragment;
 import com.dexolabs.cprogramming.listener.OnQuestionListener;
-import com.dexolabs.cprogramming.listener.OnQuestionTabListener;
 import com.dexolabs.cprogramming.model.Question;
 
 import java.util.ArrayList;
 
-public class QuestionPagerAdapter extends FragmentStatePagerAdapter {
-    private final ArrayList<Fragment> mFragmentList = new ArrayList<>();
-
+public class QuestionPagerAdapter extends FragmentPagerAdapter {
+    private ArrayList<Question> mQuestionList = new ArrayList<>();
+    private FragmentManager    fragmentManager;
+    private OnQuestionListener onQuestionListener;
 
     /**
      * constructor for all agents pager adapter
@@ -24,19 +22,19 @@ public class QuestionPagerAdapter extends FragmentStatePagerAdapter {
      */
     public QuestionPagerAdapter(final OnQuestionListener onQuestionListener, final FragmentManager fragmentManager, final ArrayList<Question> questions) {
         super(fragmentManager);
-        for (Question question : questions) {
-            mFragmentList.add(McqFragment.newInstance(onQuestionListener,question));
-        }
+        this.mQuestionList = questions;
+        this.onQuestionListener = onQuestionListener;
+        this.fragmentManager = fragmentManager;
+    }
+
+
+    @Override
+    public int getCount() {
+        return mQuestionList.size();
     }
 
     @Override
     public Fragment getItem(final int position) {
-        return mFragmentList.get(position);
+        return McqFragment.newInstance(onQuestionListener, mQuestionList.get(position));
     }
-
-    @Override
-    public int getCount() {
-        return mFragmentList.size();
-    }
-
 }

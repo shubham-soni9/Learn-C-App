@@ -9,13 +9,14 @@ import android.support.v7.widget.RecyclerView;
 
 import com.dexolabs.cprogramming.adapter.QuestionPagerAdapter;
 import com.dexolabs.cprogramming.appdata.Keys;
+import com.dexolabs.cprogramming.listener.OnQuestionListener;
 import com.dexolabs.cprogramming.listener.OnQuestionTabListener;
 import com.dexolabs.cprogramming.model.Question;
 import com.dexolabs.cprogramming.structure.BaseActivity;
 
 import java.util.ArrayList;
 
-public class TestActivity extends BaseActivity implements OnQuestionTabListener {
+public class TestActivity extends BaseActivity implements OnQuestionTabListener, OnQuestionListener {
     private ViewPager       vpQuestions;
     private FragmentManager fragmentManager;
     private RecyclerView    rvQuestionNumbers;
@@ -32,7 +33,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener 
         ArrayList<Question> questionList = getIntent().getExtras().getParcelableArrayList(Keys.Extras.MCQ_LIST);
         fragmentManager = getSupportFragmentManager();
         rvQuestionNumbers.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        QuestionPagerAdapter questionListAdapter = new QuestionPagerAdapter(this,fragmentManager, questionList);
+        QuestionPagerAdapter questionListAdapter = new QuestionPagerAdapter(this, fragmentManager, questionList);
         vpQuestions.setAdapter(questionListAdapter);
         QuestionNumberAdapter questionNumberAdapter = new QuestionNumberAdapter(this, questionList);
         rvQuestionNumbers.setAdapter(questionNumberAdapter);
@@ -62,6 +63,11 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener 
     @Override
     public void onQuestionTabSelected(int position) {
         vpQuestions.setCurrentItem(position, true);
+
+    }
+
+    @Override
+    public void onQuestionSelected(Question question) {
 
     }
 }
