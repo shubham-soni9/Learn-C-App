@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -31,7 +32,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     private ImageButton           ibBack;
     private View                  fabPreviousQuestion;
     private View                  fabNextQuestion;
-    private FloatingActionButton  fabFinish;
+    private AppCompatImageView    fabFinish;
     private int questionPosition = 0;
 
     @Override
