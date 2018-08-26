@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageButton;
 
 import com.dexolabs.cprogramming.adapter.QuestionPagerAdapter;
 import com.dexolabs.cprogramming.appdata.Keys;
@@ -26,6 +27,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     private ArrayList<Question>   questionList;
     private QuestionPagerAdapter  questionListAdapter;
     private QuestionNumberAdapter questionNumberAdapter;
+    private ImageButton           ibBack;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,7 +63,9 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     private void init() {
         vpQuestions = findViewById(R.id.vpQuestions);
         rvQuestionNumbers = findViewById(R.id.rvQuestionNumbers);
-        Utils.setOnClickListener(this, findViewById(R.id.ibBack));
+        ibBack = findViewById(R.id.ibBack);
+        ibBack.setVisibility(View.VISIBLE);
+        Utils.setOnClickListener(this, ibBack);
     }
 
     @Override

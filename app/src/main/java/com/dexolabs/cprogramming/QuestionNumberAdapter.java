@@ -59,10 +59,12 @@ public class QuestionNumberAdapter extends RecyclerView.Adapter<QuestionNumberAd
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tvQuestionNumber;
+        private View     vBottomLine;
 
         public ViewHolder(View itemView) {
             super(itemView);
             tvQuestionNumber = itemView.findViewById(R.id.tvQuestionNumber);
+            vBottomLine = itemView.findViewById(R.id.vBottomLine);
         }
     }
 }
