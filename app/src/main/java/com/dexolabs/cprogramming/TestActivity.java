@@ -2,6 +2,7 @@ package com.dexolabs.cprogramming;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -30,6 +31,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     private ImageButton           ibBack;
     private View                  fabPreviousQuestion;
     private View                  fabNextQuestion;
+    private FloatingActionButton  fabFinish;
     private int questionPosition = 0;
 
     @Override
@@ -58,7 +60,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
                 if (questionList.size() > 0) {
                     if (position == 0) {
                         fabPreviousQuestion.setVisibility(View.GONE);
-                    } else if (questionList.size()-1 == position) {
+                    } else if (questionList.size() - 1 == position) {
                         fabNextQuestion.setVisibility(View.GONE);
                     } else {
                         fabNextQuestion.setVisibility(View.VISIBLE);
@@ -79,7 +81,6 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
 
         fabPreviousQuestion.setVisibility(View.GONE);
         fabNextQuestion.setVisibility((questionList.size() > 1) ? View.VISIBLE : View.GONE);
-
     }
 
     private void init() {
@@ -88,6 +89,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
         ibBack = findViewById(R.id.ibBack);
         fabNextQuestion = findViewById(R.id.fabNextQuestion);
         fabPreviousQuestion = findViewById(R.id.fabPreviousQuestion);
+        fabFinish = findViewById(R.id.fabFinish);
         ibBack.setVisibility(View.VISIBLE);
         Utils.setOnClickListener(this, ibBack, fabNextQuestion, fabPreviousQuestion);
     }
@@ -135,6 +137,8 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
                 break;
             case R.id.fabNextQuestion:
                 vpQuestions.setCurrentItem(questionPosition + 1, true);
+                break;
+            case R.id.fabFinish:
                 break;
         }
     }

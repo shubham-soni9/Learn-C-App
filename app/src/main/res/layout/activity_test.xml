@@ -42,6 +42,17 @@
         app:backgroundTint="@color/white"
         app:fabCustomSize="@dimen/_55dp" />
 
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/fabFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:src="@drawable/ic_finish" />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabNextQuestion"
         android:layout_width="wrap_content"
@@ -54,4 +65,5 @@
         android:src="@drawable/ic_back_forward"
         app:backgroundTint="@color/white"
         app:fabCustomSize="@dimen/_55dp" />
+
 </RelativeLayout>
