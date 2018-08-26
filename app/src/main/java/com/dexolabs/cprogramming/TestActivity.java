@@ -70,7 +70,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     public void onQuestionSelected(Question selectQuestion) {
         for (Question mQuestion : questionList) {
             if (mQuestion.getQuestionId() == selectQuestion.getQuestionId()) {
-                questionList.set(questionList.indexOf(mQuestion), selectQuestion);
+                questionList.set(questionList.indexOf(selectQuestion), selectQuestion);
                 questionAdapter();
                 break;
             }

@@ -84,6 +84,9 @@ public class Question implements Parcelable {
     public int getAnswer() {
         return answer;
     }
+    public void setAnswer(int answer) {
+        this.answer = answer;
+    }
 
     public String getExplanations() {
         return explanations;
@@ -109,21 +112,18 @@ public class Question implements Parcelable {
         this.option_4 = option_4;
     }
 
-    public void setAnswer(int answer) {
-        this.answer = answer;
-    }
 
     public void setExplanations(String explanations) {
         this.explanations = explanations;
     }
 
 
-    public int getIsAttemptAnswer() {
-        return selectedOption > 0 ? (selectedOption == getAnswer() ? Constant.AnswerType.CORRECT : Constant.AnswerType.INCORRECT) : Constant.AnswerType.UNANSWERED;
+    public int getSelectedOption() {
+        return selectedOption;
     }
 
-    public void setSelectedOption(int isAttemptAnswer) {
-        this.selectedOption = isAttemptAnswer;
+    public void setSelectedOption(int selectedOption) {
+        this.selectedOption = selectedOption;
     }
 
     public int getQuestionId() {

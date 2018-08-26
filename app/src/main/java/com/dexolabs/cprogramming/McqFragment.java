@@ -76,41 +76,37 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
         fragment_mcq_tv_option_2.setText(question.getOption_2());
         fragment_mcq_tv_option_3.setText(question.getOption_3());
         fragment_mcq_tv_option_4.setText(question.getOption_4());
-        updateAnswerView(question.getAnswer());
-        if (question.getAnswer() != question.getIsAttemptAnswer()) {
-            updateAnswerView(question.getIsAttemptAnswer());
-        }
+        onAnswerSelectedView();
         Utils.setOnClickListener(this, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
     }
 
-    private void updateAnswerView(int position) {
-        switch (position) {
-            case 1:
-                setAnswerView(fragment_mcq_tv_option_1);
-                break;
-            case 2:
-                setAnswerView(fragment_mcq_tv_option_2);
-                break;
-            case 3:
-                setAnswerView(fragment_mcq_tv_option_3);
-                break;
-            case 4:
-                setAnswerView(fragment_mcq_tv_option_4);
-                break;
+    private void onAnswerSelectedView() {
+        if (question.getSelectedOption() != Constant.AnswerType.UNANSWERED) {
+            View view = getAnswerView(question.getAnswer());
+            if (view != null) {
+                view.setBackgroundResource(R.drawable.rounded_background_green);
+            }
+            view = getAnswerView(question.getSelectedOption());
+            if (view != null) {
+                if (question.getSelectedOption() != question.getAnswer()) {
+                    view.setBackgroundResource(R.drawable.rounded_background_red);
+                }
+            }
         }
     }
 
-    private void setAnswerView(View mView) {
-        if (question.getIsAttemptAnswer() == Constant.AnswerType.CORRECT) {
-            mView.setBackgroundResource(R.drawable.rounded_background_green);
-            mView.setEnabled(false);
-        } else if (question.getIsAttemptAnswer() == Constant.AnswerType.INCORRECT) {
-            mView.setBackgroundResource(R.drawable.rounded_background_red);
-            mView.setEnabled(false);
-        } else {
-            mView.setBackgroundResource(R.drawable.rounded_background_white);
-            mView.setEnabled(true);
+    private View getAnswerView(int position) {
+        switch (position) {
+            case 1:
+                return fragment_mcq_tv_option_1;
+            case 2:
+                return fragment_mcq_tv_option_2;
+            case 3:
+                return fragment_mcq_tv_option_3;
+            case 4:
+                return fragment_mcq_tv_option_4;
         }
+        return null;
     }
 
     @Override
@@ -141,9 +137,6 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
         } else {
             fragment_mcq_tv_expanation.setVisibility(View.GONE);
         }
-        updateAnswerView(question.getAnswer());
-        if (question.getAnswer() != question.getIsAttemptAnswer()) {
-            updateAnswerView(question.getIsAttemptAnswer());
-        }
+        onAnswerSelectedView();
     }
 }

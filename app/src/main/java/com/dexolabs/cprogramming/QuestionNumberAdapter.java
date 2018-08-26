@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.dexolabs.cprogramming.appdata.Constant;
 import com.dexolabs.cprogramming.listener.OnQuestionTabListener;
 import com.dexolabs.cprogramming.model.Question;
 
@@ -29,7 +30,8 @@ public class QuestionNumberAdapter extends RecyclerView.Adapter<QuestionNumberAd
     }
 
     @Override
-    public void onBindViewHolder(@NonNull QuestionNumberAdapter.ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull QuestionNumberAdapter.ViewHolder viewHolder, final int pos) {
+        final int position = viewHolder.getAdapterPosition();
         Question question = questionList.get(viewHolder.getAdapterPosition());
         viewHolder.tvQuestionNumber.setText(String.valueOf(position + 1));
         viewHolder.tvQuestionNumber.setOnClickListener(new View.OnClickListener() {
@@ -38,8 +40,16 @@ public class QuestionNumberAdapter extends RecyclerView.Adapter<QuestionNumberAd
                 onQuestionTabListener.onQuestionTabSelected(position);
             }
         });
-        viewHolder.tvQuestionNumber.setBackgroundResource(question.getIsAttemptAnswer() > 0 ? (question.getIsAttemptAnswer() == 1
-                ? R.drawable.oval_background_green : R.drawable.oval_background_red) : R.drawable.oval_background_white);
+
+        if (question.getSelectedOption() != Constant.AnswerType.UNANSWERED) {
+            if (question.getSelectedOption() == question.getAnswer()) {
+                viewHolder.tvQuestionNumber.setBackgroundResource(R.drawable.oval_background_green);
+            } else {
+                viewHolder.tvQuestionNumber.setBackgroundResource(R.drawable.oval_background_red);
+            }
+        } else {
+            viewHolder.tvQuestionNumber.setBackgroundResource(R.drawable.oval_background_white);
+        }
     }
 
     @Override
@@ -55,5 +65,4 @@ public class QuestionNumberAdapter extends RecyclerView.Adapter<QuestionNumberAd
             tvQuestionNumber = itemView.findViewById(R.id.tvQuestionNumber);
         }
     }
-
 }
