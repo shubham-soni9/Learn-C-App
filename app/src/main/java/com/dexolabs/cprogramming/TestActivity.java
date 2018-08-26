@@ -28,6 +28,9 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     private QuestionPagerAdapter  questionListAdapter;
     private QuestionNumberAdapter questionNumberAdapter;
     private ImageButton           ibBack;
+    private View                  fabPreviousQuestion;
+    private View                  fabNextQuestion;
+    private int questionPosition = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,6 +54,20 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
             @Override
             public void onPageSelected(final int position) {
                 rvQuestionNumbers.smoothScrollToPosition(position);
+                questionPosition = position;
+                if (questionList.size() > 0) {
+                    if (position == 0) {
+                        fabPreviousQuestion.setVisibility(View.GONE);
+                    } else if (questionList.size()-1 == position) {
+                        fabNextQuestion.setVisibility(View.GONE);
+                    } else {
+                        fabNextQuestion.setVisibility(View.VISIBLE);
+                        fabPreviousQuestion.setVisibility(View.VISIBLE);
+                    }
+                } else {
+                    fabNextQuestion.setVisibility(View.GONE);
+                    fabPreviousQuestion.setVisibility(View.GONE);
+                }
             }
 
             @Override
@@ -58,14 +75,21 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
 
             }
         });
+
+
+        fabPreviousQuestion.setVisibility(View.GONE);
+        fabNextQuestion.setVisibility((questionList.size() > 1) ? View.VISIBLE : View.GONE);
+
     }
 
     private void init() {
         vpQuestions = findViewById(R.id.vpQuestions);
         rvQuestionNumbers = findViewById(R.id.rvQuestionNumbers);
         ibBack = findViewById(R.id.ibBack);
+        fabNextQuestion = findViewById(R.id.fabNextQuestion);
+        fabPreviousQuestion = findViewById(R.id.fabPreviousQuestion);
         ibBack.setVisibility(View.VISIBLE);
-        Utils.setOnClickListener(this, ibBack);
+        Utils.setOnClickListener(this, ibBack, fabNextQuestion, fabPreviousQuestion);
     }
 
     @Override
@@ -105,6 +129,12 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
         switch (view.getId()) {
             case R.id.ibBack:
                 onBackPressed();
+                break;
+            case R.id.fabPreviousQuestion:
+                vpQuestions.setCurrentItem(questionPosition - 1, true);
+                break;
+            case R.id.fabNextQuestion:
+                vpQuestions.setCurrentItem(questionPosition + 1, true);
                 break;
         }
     }

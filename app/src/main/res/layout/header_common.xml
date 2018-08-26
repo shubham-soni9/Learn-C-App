@@ -16,7 +16,7 @@
         android:duplicateParentState="true"
         android:visibility="gone"
         android:padding="@dimen/_15dp"
-        android:src="@drawable/ic_back" />
+        android:src="@drawable/ic_back_arrow" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/tvHomeHeader"
