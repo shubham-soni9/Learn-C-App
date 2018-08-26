@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.dexolabs.cprogramming.McqFragment;
 import com.dexolabs.cprogramming.TestListFragment;
 import com.dexolabs.cprogramming.TutorialListFragment;
+import com.dexolabs.cprogramming.listener.OnQuestionListener;
+import com.dexolabs.cprogramming.listener.OnQuestionTabListener;
 import com.dexolabs.cprogramming.model.Question;
 
 import java.util.ArrayList;
@@ -20,10 +22,10 @@ public class QuestionPagerAdapter extends FragmentStatePagerAdapter {
      *
      * @param fragmentManager the provided fragment manager
      */
-    public QuestionPagerAdapter(final FragmentManager fragmentManager, final ArrayList<Question> questions) {
+    public QuestionPagerAdapter(final OnQuestionListener onQuestionListener, final FragmentManager fragmentManager, final ArrayList<Question> questions) {
         super(fragmentManager);
         for (Question question : questions) {
-            mFragmentList.add(McqFragment.newInstance(question));
+            mFragmentList.add(McqFragment.newInstance(onQuestionListener,question));
         }
     }
 

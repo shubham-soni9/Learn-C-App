@@ -18,6 +18,17 @@ public class QuizData {
         questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
         questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
         questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
+        questionList.add(getQuestion("What is your name?", "Shubham Soni", "Rahul dev", "Ramesh Jadhav", "Neeraj Yadav", 1, ""));
 
         options.put("Data type - 1", questionList);
         return options;

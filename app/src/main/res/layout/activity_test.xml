@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -7,6 +8,22 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/header_common" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/_5dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvQuestionNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/_7dp"
+            android:layout_marginTop="@dimen/_7dp"
+            android:paddingEnd="@dimen/_5dp"
+            android:paddingStart="@dimen/_5dp" />
+    </android.support.v7.widget.CardView>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vpQuestions"

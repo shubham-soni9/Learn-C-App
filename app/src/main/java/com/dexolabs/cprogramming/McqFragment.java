@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.dexolabs.cprogramming.listener.OnQuestionListener;
+import com.dexolabs.cprogramming.listener.OnQuestionTabListener;
 import com.dexolabs.cprogramming.model.Question;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 import com.dexolabs.cprogramming.utility.Utils;
@@ -27,8 +29,9 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
     private TextView        fragment_mcq_tv_option_3;
     private TextView        fragment_mcq_tv_option_4;
     private TextView        fragment_mcq_tv_expanation;
+    private OnQuestionTabListener onQuestionListener;
 
-    public static McqFragment newInstance(Question question) {
+    public static McqFragment newInstance(OnQuestionListener onQuestionListener, Question question) {
         McqFragment mcqFragment = new McqFragment();
         Bundle bundle = new Bundle();
         bundle.putParcelable(MCQ_Question, question);
