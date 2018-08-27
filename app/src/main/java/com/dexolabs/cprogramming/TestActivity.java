@@ -2,7 +2,6 @@ package com.dexolabs.cprogramming;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.AppCompatImageView;
@@ -12,7 +11,6 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.dexolabs.cprogramming.adapter.QuestionPagerAdapter;
-import com.dexolabs.cprogramming.appdata.Keys;
 import com.dexolabs.cprogramming.listener.OnQuestionListener;
 import com.dexolabs.cprogramming.listener.OnQuestionTabListener;
 import com.dexolabs.cprogramming.model.Question;
@@ -21,6 +19,8 @@ import com.dexolabs.cprogramming.utility.Transition;
 import com.dexolabs.cprogramming.utility.Utils;
 
 import java.util.ArrayList;
+
+import static com.dexolabs.cprogramming.appdata.Keys.Extras.MCQ_LIST;
 
 public class TestActivity extends BaseActivity implements OnQuestionTabListener, OnQuestionListener, View.OnClickListener {
     private ViewPager             vpQuestions;
@@ -44,7 +44,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     }
 
     private void setData() {
-        questionList = getIntent().getExtras().getParcelableArrayList(Keys.Extras.MCQ_LIST);
+        questionList = getIntent().getExtras().getParcelableArrayList(MCQ_LIST);
         fragmentManager = getSupportFragmentManager();
         rvQuestionNumbers.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         questionAdapter();
@@ -92,7 +92,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
         fabPreviousQuestion = findViewById(R.id.fabPreviousQuestion);
         fabFinish = findViewById(R.id.fabFinish);
         ibBack.setVisibility(View.VISIBLE);
-        Utils.setOnClickListener(this, ibBack, fabNextQuestion, fabPreviousQuestion);
+        Utils.setOnClickListener(this, ibBack, fabNextQuestion, fabPreviousQuestion,fabFinish);
     }
 
     @Override
@@ -140,6 +140,9 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
                 vpQuestions.setCurrentItem(questionPosition + 1, true);
                 break;
             case R.id.fabFinish:
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList(MCQ_LIST, questionList);
+                Transition.transit(this, TestFinishActivity.class, bundle);
                 break;
         }
     }

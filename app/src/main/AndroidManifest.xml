@@ -30,6 +30,9 @@
         <activity
             android:name=".TestActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestFinishActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

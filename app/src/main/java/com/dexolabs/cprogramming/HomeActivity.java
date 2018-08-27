@@ -75,7 +75,10 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     }
 
     private void setFragment(final Fragment fragment) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_home_layout, fragment).commit();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.frame_home_layout, fragment)
+                .commit();
     }
 
 }
