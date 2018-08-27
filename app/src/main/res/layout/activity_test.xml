@@ -27,8 +27,8 @@
         android:id="@+id/vpQuestions"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/cvQuestions" />
-
+        android:layout_below="@+id/cvQuestions"
+        android:paddingBottom="@dimen/_80dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabPreviousQuestion"

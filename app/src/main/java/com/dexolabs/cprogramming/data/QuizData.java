@@ -14,16 +14,24 @@ public class QuizData {
 
         questionList.add(getQuestion(1, "Which of the following is not a valid variable name declaration?", "int _a4;", "int 4_a;", "int _4a", "int a_4;", 2, "Variable name cannot start with a digit."));
         questionList.add(getQuestion(2, "Which of the following statements should be used to obtain a remainder after dividing 4.15 by 3.1 ?", "rem = modf(4.15, 3.1);", "rem = fmod(4.15, 3.1);", "Remainder cannot be obtain in floating point division.", "rem = modf(4.15, 3.1);", 2, "fmod(x,y) - Calculates x modulo y, the remainder of x/y. \n" +
-                "This function is the same as the modulus operator. But fmod() performs floating point divisions."));
+                "This function is the same as the modulus operator. But fmod() performs floating point divisions.\n#include <stdio.h>\n" +
+                "#include <math.h>\n" +
+                "\n" +
+                "int main ()\n" +
+                "{\n" +
+                "  printf (\"fmod of 3.14/2.1 is %lf\\n\", fmod (3.14,2.1) );\n" +
+                "  return 0;\n" +
+                "}"));
 
-//        questionList.add(getQuestion(3, "", "", "", "", "" + "", 0, ""));
-//        questionList.add(getQuestion(4, "", "", "", "", "" + "", 0, ""));
-//        questionList.add(getQuestion(5, "", "", "", "", "" + "", 0, ""));
-//        questionList.add(getQuestion(6, "", "", "", "", "" + "", 0, ""));
-//        questionList.add(getQuestion(7, "", "", "", "", "" + "", 0, ""));
-//        questionList.add(getQuestion(8, "", "", "", "", "" + "", 0, ""));
-//        questionList.add(getQuestion(9, "", "", "", "", "" + "", 0, ""));
-//        questionList.add(getQuestion(10, "", "", "", "", "" + "", 0, ""));
+
+        questionList.add(getQuestion(3, "", "", "", "", "" + "", 0, ""));
+        questionList.add(getQuestion(4, "", "", "", "", "" + "", 0, ""));
+        questionList.add(getQuestion(5, "", "", "", "", "" + "", 0, ""));
+        questionList.add(getQuestion(6, "", "", "", "", "" + "", 0, ""));
+        questionList.add(getQuestion(7, "", "", "", "", "" + "", 0, ""));
+        questionList.add(getQuestion(8, "", "", "", "", "" + "", 0, ""));
+        questionList.add(getQuestion(9, "", "", "", "", "" + "", 0, ""));
+        questionList.add(getQuestion(10, "", "", "", "", "" + "", 0, ""));
         options.put("Variable Names – 1", questionList);
 
 
