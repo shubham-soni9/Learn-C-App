@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.dexolabs.cprogramming.adapter.QuestionPagerAdapter;
+import com.dexolabs.cprogramming.dialog.PieAnswerDialog;
 import com.dexolabs.cprogramming.listener.OnQuestionListener;
 import com.dexolabs.cprogramming.listener.OnQuestionTabListener;
 import com.dexolabs.cprogramming.model.Question;
@@ -92,7 +93,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
         fabPreviousQuestion = findViewById(R.id.fabPreviousQuestion);
         fabFinish = findViewById(R.id.fabFinish);
         ibBack.setVisibility(View.VISIBLE);
-        Utils.setOnClickListener(this, ibBack, fabNextQuestion, fabPreviousQuestion,fabFinish);
+        Utils.setOnClickListener(this, ibBack, fabNextQuestion, fabPreviousQuestion, fabFinish);
     }
 
     @Override
@@ -140,9 +141,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
                 vpQuestions.setCurrentItem(questionPosition + 1, true);
                 break;
             case R.id.fabFinish:
-                Bundle bundle = new Bundle();
-                bundle.putParcelableArrayList(MCQ_LIST, questionList);
-                Transition.transit(this, TestFinishActivity.class, bundle);
+                showAnswer();
                 break;
         }
     }
@@ -150,5 +149,12 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
     @Override
     public void onBackPressed() {
         Transition.exit(this);
+    }
+
+    private void showAnswer() {
+        new PieAnswerDialog.Builder(this)
+                .button(R.string.finish)
+                .setQuestionList(questionList)
+                .build().show();
     }
 }

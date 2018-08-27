@@ -1,4 +1,4 @@
-package com.dexolabs.cprogramming.utility;
+package com.dexolabs.cprogramming.dialog;
 
 import android.app.Activity;
 import android.app.Dialog;

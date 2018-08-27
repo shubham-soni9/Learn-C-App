@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.dexolabs.cprogramming.utility.AlertDialog;
+import com.dexolabs.cprogramming.dialog.AlertDialog;
 import com.dexolabs.cprogramming.utility.Log;
 
 import java.util.LinkedHashMap;
