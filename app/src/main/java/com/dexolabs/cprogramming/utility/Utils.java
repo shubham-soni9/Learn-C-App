@@ -13,10 +13,13 @@ import android.text.Spanned;
 import android.util.TypedValue;
 import android.view.View;
 
+import com.google.gson.Gson;
+
 import java.lang.reflect.Field;
 
 public class Utils {
-    private static final String TAG = Utils.class.getName();
+    private static final String TAG          = Utils.class.getName();
+    private static final String REQUEST_BODY = "Request Body :: ";
 
     @SuppressLint("RestrictedApi")
     public static void removeShiftMode(BottomNavigationView view) {
@@ -98,5 +101,18 @@ public class Utils {
         Canvas canvas = new Canvas(image);
         canvas.drawText(text, 0, baseline, paint);
         return image;
+    }
+
+    public static void logRequestBody(Object object) {
+        try {
+            Log.i(TAG, REQUEST_BODY + objecttoJson(object));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static String objecttoJson(Object object) {
+        return new Gson().toJson(object);
     }
 }

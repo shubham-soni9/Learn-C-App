@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.dexolabs.cprogramming.model.Question;
 import com.dexolabs.cprogramming.structure.BaseFragment;
+import com.dexolabs.cprogramming.utility.Utils;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -30,6 +31,7 @@ public class TestListFragment extends BaseFragment {
         Bundle bundle = new Bundle();
         bundle.putSerializable(MCQ_LIST, testList);
         testListFragment.setArguments(bundle);
+        Utils.logRequestBody(testList);
         return testListFragment;
     }
 
