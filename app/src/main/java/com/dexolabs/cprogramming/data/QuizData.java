@@ -9,11 +9,11 @@ public class QuizData {
     private static Question mQuestion;
 
     public static LinkedHashMap<String, ArrayList<Question>> getQuizData() {
-        LinkedHashMap<String, ArrayList<Question>> options ;
+        LinkedHashMap<String, ArrayList<Question>> options;
         ArrayList<Question> questionList = new ArrayList<>();
-
         options = new LinkedHashMap<>();
-        questionList.add(getQuestion(1, "Which of the following is not a valid variable name declaration?", "int _a4;", "int 4_a;", "int _4a",  "int a_4;", 2, "Variable name cannot start with a digit."));
+
+        questionList.add(getQuestion(1, "Which of the following is not a valid variable name declaration?", "int _a4;", "int 4_a;", "int _4a", "int a_4;", 2, "Variable name cannot start with a digit."));
         questionList.add(getQuestion(2, "Which of the following statements should be used to obtain a remainder after dividing 4.15 by 3.1 ?", "rem = modf(4.15, 3.1);", "rem = fmod(4.15, 3.1);", "Remainder cannot be obtain in floating point division.", "rem = modf(4.15, 3.1);", 2, "fmod(x,y) - Calculates x modulo y, the remainder of x/y. \n" +
                 "This function is the same as the modulus operator. But fmod() performs floating point divisions."));
         questionList.add(getQuestion(3, "", "", "", "", "" + "", 0, ""));
@@ -26,7 +26,7 @@ public class QuizData {
         questionList.add(getQuestion(10, "", "", "", "", "" + "", 0, ""));
         options.put("Variable Names – 1", questionList);
 
-        options = new LinkedHashMap<>();
+
         questionList = new ArrayList<>();
         questionList.add(getQuestion(11, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(12, "", "", "", "", "" + "", 0, ""));
@@ -40,7 +40,7 @@ public class QuizData {
         questionList.add(getQuestion(20, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(21, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(22, "", "", "", "", "" + "", 0, ""));
@@ -54,7 +54,7 @@ public class QuizData {
         questionList.add(getQuestion(30, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(31, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(32, "", "", "", "", "" + "", 0, ""));
@@ -68,7 +68,7 @@ public class QuizData {
         questionList.add(getQuestion(40, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(41, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(42, "", "", "", "", "" + "", 0, ""));
@@ -82,7 +82,7 @@ public class QuizData {
         questionList.add(getQuestion(50, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(51, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(52, "", "", "", "", "" + "", 0, ""));
@@ -96,7 +96,7 @@ public class QuizData {
         questionList.add(getQuestion(60, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(61, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(62, "", "", "", "", "" + "", 0, ""));
@@ -110,7 +110,7 @@ public class QuizData {
         questionList.add(getQuestion(70, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(71, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(72, "", "", "", "", "" + "", 0, ""));
@@ -124,7 +124,7 @@ public class QuizData {
         questionList.add(getQuestion(80, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(81, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(82, "", "", "", "", "" + "", 0, ""));
@@ -138,7 +138,7 @@ public class QuizData {
         questionList.add(getQuestion(90, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(91, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(92, "", "", "", "", "" + "", 0, ""));
@@ -152,7 +152,7 @@ public class QuizData {
         questionList.add(getQuestion(100, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(101, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(102, "", "", "", "", "" + "", 0, ""));
@@ -166,7 +166,7 @@ public class QuizData {
         questionList.add(getQuestion(110, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(111, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(112, "", "", "", "", "" + "", 0, ""));
@@ -180,7 +180,7 @@ public class QuizData {
         questionList.add(getQuestion(120, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(121, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(122, "", "", "", "", "" + "", 0, ""));
@@ -194,7 +194,7 @@ public class QuizData {
         questionList.add(getQuestion(130, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(131, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(132, "", "", "", "", "" + "", 0, ""));
@@ -208,7 +208,7 @@ public class QuizData {
         questionList.add(getQuestion(140, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(141, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(142, "", "", "", "", "" + "", 0, ""));
@@ -222,7 +222,7 @@ public class QuizData {
         questionList.add(getQuestion(150, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(151, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(152, "", "", "", "", "" + "", 0, ""));
@@ -236,7 +236,7 @@ public class QuizData {
         questionList.add(getQuestion(160, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(161, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(162, "", "", "", "", "" + "", 0, ""));
@@ -250,7 +250,7 @@ public class QuizData {
         questionList.add(getQuestion(170, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(171, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(172, "", "", "", "", "" + "", 0, ""));
@@ -264,7 +264,7 @@ public class QuizData {
         questionList.add(getQuestion(180, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(181, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(182, "", "", "", "", "" + "", 0, ""));
@@ -278,7 +278,7 @@ public class QuizData {
         questionList.add(getQuestion(190, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(191, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(192, "", "", "", "", "" + "", 0, ""));
@@ -292,7 +292,7 @@ public class QuizData {
         questionList.add(getQuestion(200, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(201, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(202, "", "", "", "", "" + "", 0, ""));
@@ -306,7 +306,7 @@ public class QuizData {
         questionList.add(getQuestion(210, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(211, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(212, "", "", "", "", "" + "", 0, ""));
@@ -320,7 +320,7 @@ public class QuizData {
         questionList.add(getQuestion(220, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(221, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(222, "", "", "", "", "" + "", 0, ""));
@@ -334,7 +334,7 @@ public class QuizData {
         questionList.add(getQuestion(230, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(231, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(232, "", "", "", "", "" + "", 0, ""));
@@ -348,7 +348,7 @@ public class QuizData {
         questionList.add(getQuestion(240, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(241, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(242, "", "", "", "", "" + "", 0, ""));
@@ -362,7 +362,7 @@ public class QuizData {
         questionList.add(getQuestion(250, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(251, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(252, "", "", "", "", "" + "", 0, ""));
@@ -376,7 +376,7 @@ public class QuizData {
         questionList.add(getQuestion(260, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(261, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(262, "", "", "", "", "" + "", 0, ""));
@@ -390,7 +390,7 @@ public class QuizData {
         questionList.add(getQuestion(270, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(271, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(272, "", "", "", "", "" + "", 0, ""));
@@ -404,7 +404,7 @@ public class QuizData {
         questionList.add(getQuestion(280, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(281, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(282, "", "", "", "", "" + "", 0, ""));
@@ -418,7 +418,7 @@ public class QuizData {
         questionList.add(getQuestion(290, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(291, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(292, "", "", "", "", "" + "", 0, ""));
@@ -432,7 +432,7 @@ public class QuizData {
         questionList.add(getQuestion(300, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(301, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(302, "", "", "", "", "" + "", 0, ""));
@@ -446,7 +446,7 @@ public class QuizData {
         questionList.add(getQuestion(310, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(311, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(312, "", "", "", "", "" + "", 0, ""));
@@ -460,7 +460,7 @@ public class QuizData {
         questionList.add(getQuestion(320, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(321, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(322, "", "", "", "", "" + "", 0, ""));
@@ -474,7 +474,7 @@ public class QuizData {
         questionList.add(getQuestion(330, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(331, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(332, "", "", "", "", "" + "", 0, ""));
@@ -488,7 +488,7 @@ public class QuizData {
         questionList.add(getQuestion(340, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(341, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(342, "", "", "", "", "" + "", 0, ""));
@@ -502,7 +502,7 @@ public class QuizData {
         questionList.add(getQuestion(350, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(351, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(352, "", "", "", "", "" + "", 0, ""));
@@ -516,7 +516,7 @@ public class QuizData {
         questionList.add(getQuestion(360, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(361, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(362, "", "", "", "", "" + "", 0, ""));
@@ -530,7 +530,7 @@ public class QuizData {
         questionList.add(getQuestion(370, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(371, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(372, "", "", "", "", "" + "", 0, ""));
@@ -544,7 +544,7 @@ public class QuizData {
         questionList.add(getQuestion(380, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(381, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(382, "", "", "", "", "" + "", 0, ""));
@@ -558,7 +558,7 @@ public class QuizData {
         questionList.add(getQuestion(390, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(391, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(392, "", "", "", "", "" + "", 0, ""));
@@ -572,7 +572,7 @@ public class QuizData {
         questionList.add(getQuestion(400, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(401, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(402, "", "", "", "", "" + "", 0, ""));
@@ -586,7 +586,7 @@ public class QuizData {
         questionList.add(getQuestion(410, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(411, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(412, "", "", "", "", "" + "", 0, ""));
@@ -600,7 +600,7 @@ public class QuizData {
         questionList.add(getQuestion(420, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(421, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(422, "", "", "", "", "" + "", 0, ""));
@@ -614,7 +614,7 @@ public class QuizData {
         questionList.add(getQuestion(430, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(431, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(432, "", "", "", "", "" + "", 0, ""));
@@ -628,7 +628,7 @@ public class QuizData {
         questionList.add(getQuestion(440, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(441, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(442, "", "", "", "", "" + "", 0, ""));
@@ -642,7 +642,7 @@ public class QuizData {
         questionList.add(getQuestion(450, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(451, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(452, "", "", "", "", "" + "", 0, ""));
@@ -656,7 +656,7 @@ public class QuizData {
         questionList.add(getQuestion(460, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(461, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(462, "", "", "", "", "" + "", 0, ""));
@@ -670,7 +670,7 @@ public class QuizData {
         questionList.add(getQuestion(470, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(471, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(472, "", "", "", "", "" + "", 0, ""));
@@ -684,7 +684,7 @@ public class QuizData {
         questionList.add(getQuestion(480, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(481, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(482, "", "", "", "", "" + "", 0, ""));
@@ -698,7 +698,7 @@ public class QuizData {
         questionList.add(getQuestion(490, "", "", "", "", "" + "", 0, ""));
         options.put("", questionList);
 
-        options = new LinkedHashMap<>();
+        
         questionList = new ArrayList<>();
         questionList.add(getQuestion(491, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(492, "", "", "", "", "" + "", 0, ""));
