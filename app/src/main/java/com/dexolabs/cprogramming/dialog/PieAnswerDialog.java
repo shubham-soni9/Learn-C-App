@@ -164,7 +164,7 @@ public class PieAnswerDialog {
             pieChart.getDescription().setText("");
 
 
-            pieChart.animateY(3000, Easing.EasingOption.EaseInOutBack);
+            pieChart.animateY(5000, Easing.EasingOption.EaseOutBounce);
 
 
             List<LegendEntry> entries = new ArrayList<>();
