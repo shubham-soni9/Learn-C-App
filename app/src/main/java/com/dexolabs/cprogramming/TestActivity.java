@@ -155,6 +155,12 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
         new PieAnswerDialog.Builder(this)
                 .button(R.string.finish)
                 .setQuestionList(questionList)
+                .listener(new PieAnswerDialog.Listener() {
+                    @Override
+                    public void performPostAlertAction(int purpose, Bundle backpack) {
+                        onBackPressed();
+                    }
+                })
                 .build().show();
     }
 }

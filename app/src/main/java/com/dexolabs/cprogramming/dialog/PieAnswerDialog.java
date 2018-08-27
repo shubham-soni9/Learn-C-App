@@ -182,6 +182,7 @@ public class PieAnswerDialog {
 
                 entries.add(entry);
             }
+
             pieChart.getLegend().setCustom(entries);
             pieChart.getLegend().setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
             pieChart.getLegend().setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
