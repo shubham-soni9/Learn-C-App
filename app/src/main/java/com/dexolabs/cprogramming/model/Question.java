@@ -31,6 +31,19 @@ public class Question implements Parcelable {
     public Question() {
     }
 
+
+    public Question(int questionId, String question, String option_1, String option_2, String option_3, String option_4, int answer, String explanations, int selectedOption) {
+        this.questionId = questionId;
+        this.question = question;
+        this.option_1 = option_1;
+        this.option_2 = option_2;
+        this.option_3 = option_3;
+        this.option_4 = option_4;
+        this.answer = answer;
+        this.explanations = explanations;
+        this.selectedOption = selectedOption;
+    }
+
     public static final Creator<Question> CREATOR = new Creator<Question>() {
         @Override
         public Question createFromParcel(Parcel in) {
