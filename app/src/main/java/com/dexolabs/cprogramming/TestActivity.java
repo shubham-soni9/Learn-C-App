@@ -21,8 +21,6 @@ import com.dexolabs.cprogramming.utility.Utils;
 
 import java.util.ArrayList;
 
-import io.github.kbiakov.codeview.classifier.CodeProcessor;
-
 import static com.dexolabs.cprogramming.appdata.Keys.Extras.MCQ_LIST;
 
 public class TestActivity extends BaseActivity implements OnQuestionTabListener, OnQuestionListener, View.OnClickListener {

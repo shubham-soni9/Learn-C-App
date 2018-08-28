@@ -14,15 +14,7 @@ public class QuizData {
 
         questionList.add(getQuestion(1, "Which of the following is not a valid variable name declaration?", "int _a4;", "int 4_a;", "int _4a", "int a_4;", 2, "Variable name cannot start with a digit."));
         questionList.add(getQuestion(2, "Which of the following statements should be used to obtain a remainder after dividing 4.15 by 3.1 ?", "rem = modf(4.15, 3.1);", "rem = fmod(4.15, 3.1);", "Remainder cannot be obtain in floating point division.", "rem = modf(4.15, 3.1);", 2, "fmod(x,y) - Calculates x modulo y, the remainder of x/y. \n" +
-                "This function is the same as the modulus operator. But fmod() performs floating point divisions.\n#include <stdio.h>\n" +
-                "#include <math.h>\n" +
-                "\n" +
-                "int main ()\n" +
-                "{\n" +
-                "  printf (\"fmod of 3.14/2.1 is %lf\\n\", fmod (3.14,2.1) );\n" +
-                "  return 0;\n" +
-                "}"));
-
+                "This function is the same as the modulus operator. But fmod() performs floating point divisions."));
 
         questionList.add(getQuestion(3, "", "", "", "", "" + "", 0, ""));
         questionList.add(getQuestion(4, "", "", "", "", "" + "", 0, ""));
@@ -724,7 +716,7 @@ public class QuizData {
         return options;
     }
 
-    private  static Question getQuestion(int questionId, String question, String option1, String option2, String option3, String option4, int answer, String explanation) {
+    private static Question getQuestion(int questionId, String question, String option1, String option2, String option3, String option4, int answer, String explanation) {
         return new Question(questionId, question, option1, option2, option3, option4, answer, explanation, 0);
     }
 }
