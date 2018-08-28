@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.dexolabs.cprogramming.appdata.Constant;
@@ -27,6 +28,7 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
     private TextView           fragment_mcq_tv_option_4;
     private TextView           fragment_mcq_tv_expanation;
     private TextView           tvExplainLabel;
+    private ScrollView         scrollView;
     private OnQuestionListener onQuestionListener;
 
     public static McqFragment newInstance(Question question) {
@@ -67,6 +69,7 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
         fragment_mcq_tv_option_4 = rootView.findViewById(R.id.fragment_mcq_tv_option_4);
         fragment_mcq_tv_expanation = rootView.findViewById(R.id.fragment_mcq_tv_expanation);
         tvExplainLabel = rootView.findViewById(R.id.tvExplainLabel);
+        scrollView = rootView.findViewById(R.id.scrollView);
     }
 
     private void setData() {

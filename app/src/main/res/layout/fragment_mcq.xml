@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/scrollView"
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:paddingBottom="@dimen/_10dp"
@@ -81,7 +82,7 @@
                 android:id="@+id/tvExplainLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_30dp"
+                android:layout_marginTop="@dimen/_15dp"
                 android:padding="@dimen/_10dp"
                 android:text="Explations:"
                 android:textAppearance="@style/CustomTextAppearance.Bold"
