@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">C Offline</string>
+    <string name="application_name">C Offline</string>
     <string name="tab_1">Tutorial</string>
     <string name="tab_2">Program</string>
     <string name="tab_3">Quiz</string>

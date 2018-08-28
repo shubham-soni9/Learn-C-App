@@ -15,6 +15,8 @@ import com.dexolabs.cprogramming.model.Question;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 import com.dexolabs.cprogramming.utility.Utils;
 
+import io.github.kbiakov.codeview.CodeView;
+
 import static com.dexolabs.cprogramming.appdata.Keys.Extras.MCQ_Question;
 
 public class McqFragment extends BaseFragment implements View.OnClickListener {
@@ -25,7 +27,7 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
     private TextView           fragment_mcq_tv_option_2;
     private TextView           fragment_mcq_tv_option_3;
     private TextView           fragment_mcq_tv_option_4;
-    private TextView           fragment_mcq_tv_expanation;
+    private CodeView           fragment_mcq_tv_expanation;
     private OnQuestionListener onQuestionListener;
 
     public static McqFragment newInstance(Question question) {
@@ -132,7 +134,7 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
         Utils.setEnabled(false, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
         onQuestionListener.onQuestionSelected(question);
         if (question.getExplanations() != null && !question.getExplanations().isEmpty()) {
-            fragment_mcq_tv_expanation.setText(question.getExplanations());
+            fragment_mcq_tv_expanation.setCode(question.getExplanations());
             fragment_mcq_tv_expanation.setVisibility(View.VISIBLE);
         } else {
             fragment_mcq_tv_expanation.setVisibility(View.GONE);

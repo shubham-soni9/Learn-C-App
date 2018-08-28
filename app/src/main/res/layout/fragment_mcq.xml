@@ -75,9 +75,10 @@
                 android:textAppearance="@style/CustomTextAppearance.Regular"
                 android:textColor="@color/app_text_color" />
 
-            <TextView
+
+            <io.github.kbiakov.codeview.CodeView
                 android:id="@+id/fragment_mcq_tv_expanation"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_30dp"
                 android:background="@drawable/rounded_background_white"
@@ -85,7 +86,7 @@
                 android:text="Name is unique identifier to one person"
                 android:textAppearance="@style/CustomTextAppearance.Regular"
                 android:textColor="@color/app_text_color"
-                android:visibility="gone" />
+                android:visibility="gne" />
 
         </LinearLayout>
 
