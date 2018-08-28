@@ -9,7 +9,7 @@ import java.io.FileWriter;
  * Custom log class
  */
 public class Log {
-    private static final boolean PRINT = true;
+    public static final boolean PRINT = false;
 
     private static final String TAG = Log.class.getSimpleName();
 

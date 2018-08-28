@@ -7,4 +7,6 @@ public interface Constant {
         int CORRECT    = 1;
         int INCORRECT  = 2;
     }
+
+
 }

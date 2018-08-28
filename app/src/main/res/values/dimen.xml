@@ -61,4 +61,6 @@
     <dimen name="_20sp">20sp</dimen>
     <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
     <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
+    <dimen name="dialog_corner_radius">3dp</dimen>
+
 </resources>

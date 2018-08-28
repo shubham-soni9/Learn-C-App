@@ -20,6 +20,7 @@ import java.lang.reflect.Field;
 public class Utils {
     private static final String TAG          = Utils.class.getName();
     private static final String REQUEST_BODY = "Request Body :: ";
+    private static final String EMPTY_STRING = "";
 
     @SuppressLint("RestrictedApi")
     public static void removeShiftMode(BottomNavigationView view) {
@@ -104,15 +105,40 @@ public class Utils {
     }
 
     public static void logRequestBody(Object object) {
-        try {
-            Log.i(TAG, REQUEST_BODY + objecttoJson(object));
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (Log.PRINT) {
+            try {
+                Log.i(TAG, REQUEST_BODY + objecttoJson(object));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
 
     public static String objecttoJson(Object object) {
         return new Gson().toJson(object);
+    }
+
+    /**
+     * Method to assign strings Safely
+     *
+     * @param assignable
+     * @return
+     */
+    public static String assign(String assignable) {
+
+        return assignable == null || assignable.equalsIgnoreCase("[]") ? EMPTY_STRING : assignable;
+    }
+
+    /**
+     * Method to assign Strings safely
+     *
+     * @param assignable
+     * @param alternative
+     * @return
+     */
+    public static String assign(String assignable, String alternative) {
+
+        return assignable == null || assignable.isEmpty() ? (alternative == null ? EMPTY_STRING : alternative) : (assignable.equals("null") ? assign(alternative) : assignable);
     }
 }

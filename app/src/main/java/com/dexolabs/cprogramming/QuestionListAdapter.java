@@ -2,6 +2,7 @@ package com.dexolabs.cprogramming;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.dexolabs.cprogramming.dialog.AlertDialog;
+import com.dexolabs.cprogramming.dialog.QuestionDialog;
 import com.dexolabs.cprogramming.utility.Log;
 
 import java.util.LinkedHashMap;
@@ -18,12 +19,14 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
     private LinkedHashMap<String, String> questionList;
     private String[]                      questionTitleList;
     private String TAG = TestListAdapter.class.getName();
-    private Activity mContext;
+    private Activity        mContext;
+    private FragmentManager fragmentManager;
 
 
-    public QuestionListAdapter(LinkedHashMap<String, String> questionList, Activity mContext) {
+    public QuestionListAdapter(FragmentManager fragmentManager, LinkedHashMap<String, String> questionList, Activity mContext) {
         this.questionList = questionList;
         this.mContext = mContext;
+        this.fragmentManager = fragmentManager;
         questionTitleList = questionList.keySet().toArray(new String[questionList.size()]);
     }
 
@@ -45,7 +48,7 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
         viewHolder.llParent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showAnswer(questionList.get(questionTitleList[position]));
+                showAnswer(position);
             }
         });
     }
@@ -68,10 +71,12 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
         }
     }
 
-    private void showAnswer(String answer) {
-        new AlertDialog.Builder(mContext)
-                .message(answer)
-                .button(R.string.close_text)
-                .build().show();
+    private void showAnswer(int position) {
+        QuestionDialog.Builder builder = new QuestionDialog.Builder(mContext);
+        builder.currentPosition(position);
+        builder.questionDataList(questionList);
+        builder.positiveButton(R.string.next);
+        builder.negativeButton(R.string.previous);
+        builder.build().show();
     }
 }
