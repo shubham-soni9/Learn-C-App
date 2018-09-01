@@ -140,35 +140,35 @@ public class PieAnswerDialog {
                     }
                 }
             }
-
+            final ArrayList<Integer> colorList = new ArrayList<>();
             ArrayList<PieEntry> yvalues = new ArrayList<>();
-            if (correct != 0)
+            if (correct != 0) {
                 yvalues.add(new PieEntry(correct, 0));
+                colorList.add(Color.rgb(0, 204, 102));
+            }
 
-            if (incorrect != 0)
+            if (incorrect != 0) {
                 yvalues.add(new PieEntry(incorrect, 1));
-
-            if (unanswered != 0)
+                colorList.add(Color.rgb(255, 77, 77));
+            }
+            if (unanswered != 0) {
                 yvalues.add(new PieEntry(unanswered, 2));
+                colorList.add(Color.rgb(191, 128, 64));
+            }
 
             PieDataSet dataSet = new PieDataSet(yvalues, "Test Results");
-            final int[] PIE_COLORS = {Color.rgb(0, 204, 102), Color.rgb(255, 77, 77), Color.rgb(191, 128, 64)};
             final String[] PIE_TEXTS = {"Correct", "Incorrect", "Unanswered"};
 
-            dataSet.setColors(PIE_COLORS);
+            dataSet.setColors(colorList);
             PieData data = new PieData(dataSet);
             data.setValueFormatter(new PercentFormatter());
             data.setValueTextSize(Utils.convertDpToPixel(5));
             data.setValueTextColor(ContextCompat.getColor(activity, R.color.white_100));
             pieChart.setData(data);
             pieChart.getDescription().setText("");
-
-
             pieChart.animateY(5000, Easing.EasingOption.EaseOutBounce);
-
-
             List<LegendEntry> entries = new ArrayList<>();
-
+            final int[] PIE_COLORS = {Color.rgb(0, 204, 102), Color.rgb(255, 77, 77), Color.rgb(191, 128, 64)};
             for (int i = 0; i < Math.min(PIE_COLORS.length, PIE_TEXTS.length); i++) {
                 final LegendEntry entry = new LegendEntry();
                 entry.formColor = PIE_COLORS[i];
