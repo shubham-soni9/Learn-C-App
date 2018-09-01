@@ -154,20 +154,107 @@ public class QuizData {
 
         options.put("Variable Names - 2", questionList);
 
-//
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(21, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(22, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(23, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(24, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(25, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(26, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(27, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(28, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(29, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(30, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
+
+        questionList = new ArrayList<>();
+        questionList.add(getQuestion(21, "Which of the following correctly shows the hierarchy of arithmetic operations in C?\n" +
+                "\n", "/ + * -", "+ - / *", "* - / +", "/ * + -", 4, "<div id=\"divAnswer_118\" class=\"bix-div-answer mx-none\">\n" +
+                "<div class=\"bix-ans-description\">" +
+                "<p>Simply called as BODMAS (Bracket of Division, Multiplication, Addition and Subtraction).</p>\n" +
+                "<p>How Do I Remember ? BODMAS !</p>\n" +
+                "<p>&nbsp;</p>" +
+                "<ul>" +
+                "<li><strong>B</strong>&nbsp;- Brackets first</li>\n" +
+                "<li><strong>O</strong>&nbsp;- Orders (ie Powers and Square Roots, etc.)</li>\n" +
+                "<li><strong>DM</strong>&nbsp;- Division and Multiplication (left-to-right)</li>\n" +
+                "<li><strong>AS</strong>&nbsp;- Addition and Subtraction (left-to-right)</li>\n" +
+                "</ul>" +
+                "<p>&nbsp;</p>" +
+                "</div>" +
+                "</div>"));
+
+        questionList.add(getQuestion(22, "In which order do the following gets evaluated\n1.\tRelational\n" +
+                "2.\tArithmetic\n" +
+                "3.\tLogical\n" +
+                "4.\tAssignment\n", "2134", "1234", "4321", "3214", 1, "<p>2. Arithmetic operators:&nbsp;<em class=\"C-code\">*, /, %, +, -&nbsp;</em><br />1. Relational operators:&nbsp;<em class=\"C-code\">&gt;, &lt;, &gt;=, &lt;=, ==, !=</em><br />3. Logical operators :&nbsp;<em class=\"C-code\">!, &amp;&amp;, ||</em><br />4. Assignment operators:&nbsp;<em class=\"C-code\">=</em></p>"));
+
+        questionList.add(getQuestion(23, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">-3</span>;\n" +
+                "        <span style=\"color: #B00040\">int</span> k <span style=\"color: #666666\">=</span> i <span style=\"color: #666666\">%</span> <span style=\"color: #666666\">2</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, k);\n" +
+                "    }\n" +
+                "</pre></div>\n", "Compile time error", "-1", "1", "Implementation defined", 2, ""));
+
+        questionList.add(getQuestion(24, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">3</span>;\n" +
+                "        <span style=\"color: #B00040\">int</span> l <span style=\"color: #666666\">=</span> i <span style=\"color: #666666\">/</span> <span style=\"color: #666666\">-2</span>;\n" +
+                "        <span style=\"color: #B00040\">int</span> k <span style=\"color: #666666\">=</span> i <span style=\"color: #666666\">%</span> <span style=\"color: #666666\">-2</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d %d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, l, k);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "    }\n" +
+                "</pre></div>\n", "1 -1", "Compile time error", "Implementation defined", "-1 1", 4, ""));
+
+        questionList.add(getQuestion(25, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">-6</span>;\n" +
+                "        i <span style=\"color: #666666\">=</span> i <span style=\"color: #666666\">/</span> <span style=\"color: #666666\">3</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, i);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "    }\n" +
+                "</pre></div>\n", "-2", "Implementation defined", "Compile time error", "-3", 1, ""));
+
+        questionList.add(getQuestion(26, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">  <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">1</span>, y <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>, z <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">5</span>;\n" +
+                "        <span style=\"color: #B00040\">int</span> a <span style=\"color: #666666\">=</span> x <span style=\"color: #666666\">&amp;&amp;</span> y <span style=\"color: #666666\">||</span> z<span style=\"color: #666666\">++</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, z);\n" +
+                "    }\n" +
+                "</pre></div>\n", "0", "5", "6", "Varies", 3, ""));
+
+        questionList.add(getQuestion(27, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">2</span>, y <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>, z <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">4</span>;\n" +
+                "        x <span style=\"color: #666666\">&gt;</span> y <span style=\"color: #666666\">?</span> printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, z) <span style=\"color: #666666\">:</span> <span style=\"color: #008000; font-weight: bold\">return</span> z;\n" +
+                "    }\n" +
+                "</pre></div>\n", "4", "2", "Compile time error", "Run time error", 3, ""));
+
+        questionList.add(getQuestion(28, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">1</span>, z <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">3</span>;\n" +
+                "        <span style=\"color: #B00040\">int</span> y <span style=\"color: #666666\">=</span> x <span style=\"color: #666666\">&lt;&lt;</span> <span style=\"color: #666666\">3</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot; %d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, y);\n" +
+                "    }\n" +
+                "</pre></div>\n", "-2147483648", "Run time error", "8", "-1", 3, ""));
+
+        questionList.add(getQuestion(29, "What is the final value of j in the below code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>, j <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">if</span> (i <span style=\"color: #666666\">&amp;&amp;</span> (j <span style=\"color: #666666\">=</span> i <span style=\"color: #666666\">+</span> <span style=\"color: #666666\">15</span>))\n" +
+                "            <span style=\"color: #408080; font-style: italic\">//do something</span>\n" +
+                "            ;\n" +
+                "    }\n" +
+                "</pre></div>\n", "15", "0", "Depends on the compiler", "Depends on language standard", 2, ""));
+
+        questionList.add(getQuestion(30, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>, j <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">if</span> (i <span style=\"color: #666666\">&amp;&amp;</span> (j <span style=\"color: #666666\">=</span> i <span style=\"color: #666666\">+</span> <span style=\"color: #666666\">15</span>))\n" +
+                "            <span style=\"color: #408080; font-style: italic\">//do something</span>\n" +
+                "            ;\n" +
+                "    }\n" +
+                "</pre></div>\n", "No", "Depends on the compiler", "Yes", "Depends on the standard", 1, ""));
+
+        options.put("Operators – 1", questionList);
+
 //
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(31, "", "", "", "", "", 0, ""));
