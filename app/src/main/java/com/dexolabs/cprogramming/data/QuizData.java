@@ -388,7 +388,7 @@ public class QuizData {
                 "So, <span style=\"color: #BA2121\">&#39;&amp;&#39;</span> is not a Logical operator.\n" +
                 "</pre></div>\n"));
 
-        questionList.add(getQuestion(44, "In mathematics and computer programming, which is the correct order of mathematical operators ?", "Addition, Subtraction, Multiplication, Division", "Multiplication, Addition, Division, Subtraction", "Addition, Division, Modulus, Subtraction", "Division, Multiplication, Addition, Subtraction\n", 4, "Simply called as BODMAS (Brackets, Order, Division, Multiplication, Addition and Subtraction).\n" +
+        questionList.add(getQuestion(44, "In mathematics and computer programming, which is the correct order of mathematical operators ?", "Addition, Subtraction, Multiplication, Division", "Multiplication, Addition, Division, Subtraction", "Addition, Division, Modulus, Subtraction", "Division, Multiplication, Addition, Subtraction\n", 4, "Simply called as BODMAS (Brackets, Order, Division, Multiplication, Addition and Subtraction).\n"
                 ));
 
         questionList.add(getQuestion(45, "Which of the following cannot be checked in a switch-case statement?", "Character", "Integer", "Float", "enum", 3, "The switch/case statement in the c language is defined by the language specification to use an int value, so you can not use a float value."));
@@ -456,17 +456,147 @@ public class QuizData {
 
 
         questionList = new ArrayList<>();
-        questionList.add(getQuestion(51, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(52, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(53, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(54, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(55, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(56, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(57, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(58, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(59, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(60, "", "", "", "", "", 0, ""));
-        options.put("", questionList);
+        questionList.add(getQuestion(51, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">1</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">if</span> (x <span style=\"color: #666666\">&gt;</span> <span style=\"color: #666666\">0</span>)\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;inside if</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">else</span> <span style=\"color: #0000FF\">if</span> (x <span style=\"color: #666666\">&gt;</span> <span style=\"color: #666666\">0</span>)\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;inside elseif</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "inside elseif", "inside if" +
+                "    inside elseif", "inside if", "compile time error", 2, ""));
+
+        questionList.add(getQuestion(52, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">if</span> (x<span style=\"color: #666666\">++</span>)\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;true</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">else</span> <span style=\"color: #008000; font-weight: bold\">if</span> (x <span style=\"color: #666666\">==</span> <span style=\"color: #666666\">1</span>)\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;false</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "true", "false", "compile time error", "undefined behaviour", 2, ""));
+
+        questionList.add(getQuestion(53, "Comment on the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> a <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">1</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">if</span> (a)\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;Good &quot;</span>);\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;Bad</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">else</span>\n" +
+                "            <span style=\"color: #0000FF\">printf</span>(<span style=\"color: #BA2121\">&quot;Better</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "Output will be Good Bad", "Output will be Bad Better", "Output will be Bad", "Compile time errors during compilation", 4, ""));
+
+        questionList.add(getQuestion(54, "What is the output of this C code(When 1 is entered)?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span>ch;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;enter a value between 1 to 3:&quot;</span>);\n" +
+                "        scanf(<span style=\"color: #BA2121\">&quot;%s&quot;</span>, ch);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">switch</span> (ch)\n" +
+                "        {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">case</span> <span style=\"color: #BA2121\">&quot;1&quot;</span>:\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;1&quot;</span>);\n" +
+                "            <span style=\"color: #008000; font-weight: bold\">break</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">case</span> <span style=\"color: #BA2121\">&quot;2&quot;</span>:\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;2&quot;</span>);\n" +
+                "            <span style=\"color: #008000; font-weight: bold\">break</span>;\n" +
+                "        }\n" +
+                "    }\n" +
+                "</pre></div>", "1", "2", "Compile time error", "Run time error", 3, ""));
+
+        questionList.add(getQuestion(55, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">97</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">switch</span> (x)\n" +
+                "        {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">case</span> <span style=\"color: #BA2121\">&#39;a&#39;</span>:\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;yes &quot;</span>);\n" +
+                "            <span style=\"color: #008000; font-weight: bold\">break</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">case</span> <span style=\"color: #666666\">97</span>:\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;no</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "            <span style=\"color: #008000; font-weight: bold\">break</span>;\n" +
+                "        }\n" +
+                "    }\n" +
+                "</pre></div>", "yes no", "yes", "Character case value error", "Duplicate case value error", 4, ""));
+
+        questionList.add(getQuestion(56, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">const</span> <span style=\"color: #B00040\">int</span> a <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">1</span>,  b <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">2</span>;\n" +
+                "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">1</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">switch</span> (x)\n" +
+                "        {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">case</span> a:\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;yes &quot;</span>);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">case</span> b:\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;no</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "            <span style=\"color: #008000; font-weight: bold\">break</span>;\n" +
+                "        }\n" +
+                "    }\n" +
+                "</pre></div>", "yes no", "no", "Compile time error", "yes", 3, ""));
+
+        questionList.add(getQuestion(57, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">switch</span> (printf(<span style=\"color: #BA2121\">&quot;Do&quot;</span>))\n" +
+                "        {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">case</span> <span style=\"color: #666666\">1</span>:\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;First</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "            <span style=\"color: #008000; font-weight: bold\">break</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">case</span> <span style=\"color: #666666\">2</span>:\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;Second</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "            <span style=\"color: #008000; font-weight: bold\">break</span>;\n" +
+                "        <span style=\"color: #A0A000\">default:</span>\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;Default</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "            <span style=\"color: #008000; font-weight: bold\">break</span>;\n" +
+                "        }\n" +
+                "    }\n" +
+                "</pre></div>", "DoFirst", "DoSecond", "DoDefault", "Do", 2, ""));
+
+        questionList.add(getQuestion(58, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">if</span> (printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, printf(<span style=\"color: #BA2121\">&quot;)))</span>\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;We are Happy&quot;</span>);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">else</span> <span style=\"color: #0000FF\">if</span> (printf(<span style=\"color: #BA2121\">&quot;1&quot;</span>))\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;We are Sad&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "0We are Happy", "1We are Sad", "1We are Happy", "compile time error", 4, ""));
+
+        questionList.add(getQuestion(59, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">if</span> (x <span style=\"color: #666666\">==</span> <span style=\"color: #666666\">0</span>)\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;true, &quot;</span>);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">else</span> <span style=\"color: #0000FF\">if</span> (x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">10</span>)\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;false, &quot;</span>);\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, x);\n" +
+                "    }\n" +
+                "</pre></div>", "true, 0", "false, 0", "compile time error", "true, 10", 1, ""));
+
+        questionList.add(getQuestion(60, "Point out the error, if any in the program.\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> a <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">10</span>;\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">switch</span>(a)\n" +
+                "    {\n" +
+                "    }\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;This is c program.&quot;</span>);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #A0A000\">Error:</span> No <span style=\"color: #008000; font-weight: bold\">case</span> statement specified\n" +
+                "</pre></div>", "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #A0A000\">Error:</span> No <span style=\"color: #008000; font-weight: bold\">default</span> specified\n" +
+                "</pre></div>", "No Error", "Error: infinite loop occurs", 3, "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">There can exist a <span style=\"color: #008000; font-weight: bold\">switch</span> statement, which has no <span style=\"color: #008000; font-weight: bold\">case</span>.\n" +
+                "</pre></div>"));
+
+        options.put("Control Instructions - 2", questionList);
 
 //
 //        questionList = new ArrayList<>();
