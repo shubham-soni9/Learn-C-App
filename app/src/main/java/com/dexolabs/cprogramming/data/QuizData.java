@@ -923,48 +923,181 @@ public class QuizData {
         options.put("Preprocessors", questionList);
 
 
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(101, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(102, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(103, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(104, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(105, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(106, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(107, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(108, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(109, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(110, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
-//
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(111, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(112, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(113, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(114, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(115, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(116, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(117, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(118, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(119, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(120, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
-//
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(121, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(122, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(123, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(124, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(125, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(126, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(127, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(128, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(129, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(130, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
-//
+        questionList = new ArrayList<>();
+        questionList.add(getQuestion(101, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        m();\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, x);\n" +
+                "    }\n" +
+                "    <span style=\"color: #B00040\">int</span> x;\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">m</span>()\n" +
+                "    {\n" +
+                "        x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">4</span>;\n" +
+                "    }\n" +
+                "</pre></div>", "0", "4", "Undefined", "Compile time error", 4, ""));
+        questionList.add(getQuestion(102, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> x;\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, x);\n" +
+                "    }\n" +
+                "</pre></div>", "Run time error", "Junk value", "0", "Undefined", 3, ""));
+        questionList.add(getQuestion(103, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">7</span>;\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">3</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, x);\n" +
+                "        {\n" +
+                "            x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">4</span>;\n" +
+                "        }\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, x);\n" +
+                "    }\n" +
+                "</pre></div>", "3 3", "3 7", "3 4", "Run time error", 3, ""));
+
+        questionList.add(getQuestion(104, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">9</span>;\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">2</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, x);\n" +
+                "        {\n" +
+                "            <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">3</span>;\n" +
+                "        }\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, x);\n" +
+                "    }\n" +
+                "</pre></div>", "2 2", "2 3", "2 9", "Run time error", 1, ""));
+
+        questionList.add(getQuestion(105, "Functions in C are ALWAYS:", "External", "Internal", "Both Internal and External", "External and Internal are not valid terms for functions", 1, ""));
+
+        questionList.add(getQuestion(106, "Global variables are:", "External", "Internal", "Both Internal and External", "None of the mentioned", 1, ""));
+
+        questionList.add(getQuestion(107, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        m();\n" +
+                "        m();\n" +
+                "    }\n" +
+                "    <span style=\"color: #B00040\">void</span> m()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">static</span> <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">8</span>;\n" +
+                "        x<span style=\"color: #666666\">++</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, x);\n" +
+                "    }\n" +
+                "</pre></div>", "8 8", "8 9", "9 9", "9 10", 4, ""));
+
+        questionList.add(getQuestion(108, "In case of a conflict between the names of a local and global variable what happens?", "The global variable is given a priority.", "The local variable is given a priority.", "Which one will get a priority depends upon which one is defined first.", "The compiler reports an error.", 2, ""));
+
+        questionList.add(getQuestion(109, "Where will the space be allocated for an automatic storage class variable?", "In CPU register", "In memory as well as in CPU register", "In memory", "On disk.", 3, ""));
+
+        questionList.add(getQuestion(110, "For which of the following situation should the register storage class be used?", "For local variable in a function", "For loop counter", "For collecting values returned from a function", "For variables used in a recursive function", 2, ""));
+
+        options.put("Storage Classes - 1", questionList);
+
+
+
+        questionList = new ArrayList<>();
+
+        questionList.add(getQuestion(111, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">register</span> <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">10</span>;\n" +
+                "        <span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>p <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">&amp;</span>i;\n" +
+                "        <span style=\"color: #666666\">*</span>p <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">11</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d %d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, i, <span style=\"color: #666666\">*</span>p);\n" +
+                "    }\n" +
+                "</pre></div>", "Depends on whether i is actually stored in machine register", "10 10", "11 11", "Compile time error", 4, ""));
+
+        questionList.add(getQuestion(112, "register keyword mandates compiler to place it in machine register.", "true", "Depends on the standard", "false", "None of the mentioned", 3, ""));
+
+        questionList.add(getQuestion(113, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">register</span> <span style=\"color: #008000; font-weight: bold\">static</span> <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">10</span>;\n" +
+                "        i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">11</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, i);\n" +
+                "    }\n" +
+                "</pre></div>", "10", "11", "Compile time error", "Undefined behaviour", 3, ""));
+
+        questionList.add(getQuestion(114, "The scope of an automatic variable is:", "Within the block it appears", "Within the blocks of the block it appears", "Until the end of program", "Within the block it appears & Within the blocks of the block it appears", 4, ""));
+
+        questionList.add(getQuestion(115, "Automatic variables are allocated space in the form of a:", "queue", "stack", "priority queue", "random", 2, ""));
+
+        questionList.add(getQuestion(116, "Which of the following is a storage specifier?", "enum", "auto", "volatile", "union", 2, ""));
+
+        questionList.add(getQuestion(117, "Default storage class if not any is specified for a local variable, is auto", "true", "false", "Depends on the standard", "None of the mentioned", 1, ""));
+
+        questionList.add(getQuestion(118, "Automatic variables are stored in", "stack", "data segment", "register", "heap", 1, ""));
+
+        questionList.add(getQuestion(119, "When compiler accepts the request to use the variable as a register?", "It is stored in CPU", "It is stored in main memory", "It is stored in cache memory", "It is stored in secondary memory", 1, ""));
+
+        questionList.add(getQuestion(120, "Register variables reside in", "stack", "registers", "heap", "main memory", 2, ""));
+
+        options.put("Storage Classes - 2", questionList);
+
+
+
+        questionList = new ArrayList<>();
+
+        questionList.add(getQuestion(121, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">register</span> <span style=\"color: #B00040\">int</span> x;\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, x);\n" +
+                "    }\n" +
+                "</pre></div>", "Compile time error", "Varies", "Junk value", "0", 1, ""));
+
+        questionList.add(getQuestion(122, "Automatic variables are variables that are", "Declared within the scope of a block, usually a function", "Declared with auto keyword", "Declared outside all functions", "Declared within the keyword extern", 1, ""));
+
+        questionList.add(getQuestion(123, "Automatic variables", "Exist only within that scope in which it is declared", "Cease to exist after the block is exited", "Only 1", "Exist only within that scope in which it is declared & exist after the block is exited", 4, ""));
+
+        questionList.add(getQuestion(124, "Automatic variables are allocated memory in", "heap", "Data segment", "Code segment", "stack", 4, ""));
+
+        questionList.add(getQuestion(125, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x;\n" +
+                "    }\n" +
+                "</pre></div>\n\nhere x is", "static variable", "register variable", "global variable", "automatic variable", 4, ""));
+
+        questionList.add(getQuestion(126, "Automatic variables are initialised to", "Junk value", "Zero", "Nothing", "Both Zero & Junk value", 1, ""));
+
+        questionList.add(getQuestion(127, "What is the scope of an external variable?", "Whole source file in which it is defined", "From the point of declaration to the end of the file in which it is defined", "Any source file in a program", "From the point of declaration to the end of the file being compiled", 4, ""));
+
+        questionList.add(getQuestion(128, "Comment on the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> i;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">for</span> (i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;i <span style=\"color: #666666\">&lt;</span> <span style=\"color: #666666\">5</span>; i<span style=\"color: #666666\">++</span>)\n" +
+                "        <span style=\"color: #B00040\">int</span> a <span style=\"color: #666666\">=</span> i;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, a);\n" +
+                "    }\n" +
+                "</pre></div>", "Redeclaration of a in same scope throws error", "Syntax error in declaration of a", "a is out of scope when printf is called", "No errors, program will show the output 5", 2, ""));
+
+        questionList.add(getQuestion(129, "Which variable has the longest scope?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> b;\n" +
+                "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> c;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "    }\n" +
+                "    <span style=\"color: #B00040\">int</span> a;\n" +
+                "</pre></div>", "a", "b", "c", "Both a and b", 2, ""));
+
+        questionList.add(getQuestion(130, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> i;\n" +
+                "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">extern</span> <span style=\"color: #B00040\">int</span> i;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">if</span> (i <span style=\"color: #666666\">==</span> <span style=\"color: #666666\">0</span>)\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;scope rules</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "Compile time error due to multiple declaration", "Compile time error due to not defining type in statement extern i", "scope rules", "Nothing as i value is not zero being automatic variable", 3, ""));
+
+        options.put("Storage Classes - 3", questionList);
+
+
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(131, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(132, "", "", "", "", "", 0, ""));
