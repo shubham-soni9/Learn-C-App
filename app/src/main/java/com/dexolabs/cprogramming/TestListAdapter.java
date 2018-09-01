@@ -41,6 +41,8 @@ public class TestListAdapter extends RecyclerView.Adapter<TestListAdapter.ViewHo
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int pos) {
         int position = viewHolder.getAdapterPosition();
         viewHolder.tvTutorialTitle.setText(tutorialTitleList[position]);
+        viewHolder.tvTutorialNumber.setText(String.valueOf(pos + 1));
+        viewHolder.tvTutorialNumber.append(".");
         Log.e(TAG, tutorialTitleList[pos]);
         viewHolder.tvTutorialTitle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,10 +61,13 @@ public class TestListAdapter extends RecyclerView.Adapter<TestListAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tvTutorialTitle;
+        private TextView tvTutorialNumber;
 
         public ViewHolder(View itemView) {
             super(itemView);
             tvTutorialTitle = itemView.findViewById(R.id.tvTutorialTitle);
+            tvTutorialNumber = itemView.findViewById(R.id.tvTutorialNumber);
+
         }
     }
 
