@@ -79,7 +79,6 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
         fragment_mcq_tv_option_2.setHtml(Utils.parseHtml(question.getOption_2()));
         fragment_mcq_tv_option_3.setHtml(Utils.parseHtml(question.getOption_3()));
         fragment_mcq_tv_option_4.setHtml(Utils.parseHtml(question.getOption_4()));
-        fragment_mcq_tv_expanation.setHtml(Utils.parseHtml(question.getExplanations()));
         onAnswerSelectedView();
         Utils.setOnClickListener(this, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
     }
@@ -100,13 +99,19 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
         } else {
             Utils.setEnabled(true, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
         }
-        if (question.getSelectedOption() != 0 && question.getExplanations() != null && !question.getExplanations().isEmpty()) {
+        if (question.getSelectedOption() != 0) {
             fragment_mcq_tv_expanation.setVisibility(View.VISIBLE);
             tvExplainLabel.setVisibility(View.VISIBLE);
+            if (question.getExplanations() != null && !question.getExplanations().isEmpty()) {
+                fragment_mcq_tv_expanation.setHtml(Utils.parseHtml(question.getExplanations()));
+            } else {
+                fragment_mcq_tv_expanation.setHtml(getString(R.string.not_available));
+            }
         } else {
             fragment_mcq_tv_expanation.setVisibility(View.GONE);
             tvExplainLabel.setVisibility(View.GONE);
         }
+
     }
 
     private View getAnswerView(int position) {
