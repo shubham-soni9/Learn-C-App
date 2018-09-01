@@ -142,7 +142,7 @@ public class QuizData {
                 "        <span style=\"color: #008000; font-weight: bold\">enum</span> {ORANGE <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">5</span>, BANANA, APPLE <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">4</span>, MANGO};\n" +
                 "        printf(<span style=\"color: #BA2121\">&quot;MANGO = %d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, MANGO);\n" +
                 "    }\n" +
-                "</pre></div>\n", "MANGO = 3", "MANGO = 5", "MANGO = 6", "MANGO = 4", 3, "In enum, the value of constant is defined to the recent assignment from left."));
+                "</pre></div>\n", "MANGO = 3", "MANGO = 5", "MANGO = 6", "MANGO = 4", 2, "In enum, the value of constant is defined to the recent assignment from left."));
 
         questionList.add(getQuestion(20, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
                 "    <span style=\"color: #B00040\">int</span> main()\n" +
@@ -150,9 +150,9 @@ public class QuizData {
                 "        <span style=\"color: #B00040\">int</span> var <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">011</span>;\n" +
                 "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, var);\n" +
                 "    }\n" +
-                "</pre></div>\n", "2", "10", "8", "9", 9, "011 is octal representation of 9."));
+                "</pre></div>\n", "2", "10", "8", "9", 4, "011 is octal representation of 9."));
 
-        options.put("Variable Names -2", questionList);
+        options.put("Variable Names - 2", questionList);
 
 //
 //        questionList = new ArrayList<>();
