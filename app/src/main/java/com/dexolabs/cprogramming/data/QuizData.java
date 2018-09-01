@@ -1293,34 +1293,99 @@ public class QuizData {
         options.put("Arrays - 3", questionList);
 
 
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(161, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(162, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(163, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(164, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(165, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(166, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(167, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(168, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(169, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(170, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
-//
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(171, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(172, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(173, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(174, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(175, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(176, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(177, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(178, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(179, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(180, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
-//
+        questionList = new ArrayList<>();
+
+        questionList.add(getQuestion(161, "What is (void*)0?", "Representation of void pointer", "Representation of NULL pointer", "Error", "None of above", 2, ""));
+
+        questionList.add(getQuestion(162, "How many bytes are occupied by near, far and huge pointers (DOS)?", "near=4 far=8 huge=8", "near=2 far=4 huge=8", "near=4 far=4 huge=8", "near=2 far=4 huge=4", 4, "near=2, far=4 and huge=4 pointers exist only under DOS. Under windows and Linux every pointers is 4 bytes long."));
+
+        questionList.add(getQuestion(163, "If a variable is a pointer to a structure, then which of the following operator is used to access data members of the structure through the pointer variable?", "&", "*", ".", "->", 4, ""));
+
+        questionList.add(getQuestion(164, "A pointer is", "A variable that stores address of an instruction", "A variable that stores address of other variable", "A keyword used to create variables", "All of the above", 2, ""));
+
+        questionList.add(getQuestion(165, "The operator used to get value at address stored in a pointer variable is", "&&", "||", "&", "*", 4, ""));
+
+        questionList.add(getQuestion(166, "What will be the output of the program ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> i<span style=\"color: #666666\">=3</span>, <span style=\"color: #666666\">*</span>j, k;\n" +
+                "    j <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">&amp;</span>i;\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, i<span style=\"color: #666666\">**</span>j<span style=\"color: #666666\">*</span>i<span style=\"color: #666666\">+*</span>j);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "3", "9", "27", "30", 4, ""));
+
+        questionList.add(getQuestion(167, "What will be the output of the program ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">char</span> str[<span style=\"color: #666666\">20</span>] <span style=\"color: #666666\">=</span> <span style=\"color: #BA2121\">&quot;Hello&quot;</span>;\n" +
+                "    <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span><span style=\"color: #008000; font-weight: bold\">const</span> p<span style=\"color: #666666\">=</span>str;\n" +
+                "    <span style=\"color: #666666\">*</span>p<span style=\"color: #666666\">=</span><span style=\"color: #BA2121\">&#39;M&#39;</span>;\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%s</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, str);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "Hello", "Mello", "MHello", "HMello", 2, ""));
+
+        questionList.add(getQuestion(168, "What will be the output of the program ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span>str;\n" +
+                "    str <span style=\"color: #666666\">=</span> <span style=\"color: #BA2121\">&quot;%s&quot;</span>;\n" +
+                "    printf(str, <span style=\"color: #BA2121\">&quot;K</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "K", "%s", "No output", "Error", 1, ""));
+
+        questionList.add(getQuestion(169, "What will be the output of the program if the size of pointer is 4-bytes?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d, %d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, <span style=\"color: #008000; font-weight: bold\">sizeof</span>(<span style=\"color: #008000\">NULL</span>), <span style=\"color: #008000; font-weight: bold\">sizeof</span>(<span style=\"color: #BA2121\">&quot;&quot;</span>));\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "2, 2", "2, 1", "4, 2", "4, 1", 4, ""));
+
+        questionList.add(getQuestion(170, "What will be the output of the program ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%c</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, <span style=\"color: #666666\">7</span>[<span style=\"color: #BA2121\">&quot;SourceTree&quot;</span>]);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "Nothing will print", "print \"r\" of SourceTree", "print \"7\"", "Error: in printf", 2, ""));
+
+        options.put("Pointers - 1", questionList);
+
+
+
+        questionList = new ArrayList<>();
+
+        questionList.add(getQuestion(171, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(172, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(173, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(174, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(175, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(176, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(177, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(178, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(179, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(180, "", "", "", "", "", 0, ""));
+
+        options.put("Pointers - 2", questionList);
+
+
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(181, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(182, "", "", "", "", "", 0, ""));
