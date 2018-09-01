@@ -98,7 +98,7 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
         } else {
             Utils.setEnabled(true, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
         }
-        if (question.getExplanations() != null && !question.getExplanations().isEmpty()) {
+        if (question.getSelectedOption() != 0 && question.getExplanations() != null && !question.getExplanations().isEmpty()) {
             fragment_mcq_tv_expanation.setText(question.getExplanations());
             fragment_mcq_tv_expanation.setVisibility(View.VISIBLE);
             tvExplainLabel.setVisibility(View.VISIBLE);
