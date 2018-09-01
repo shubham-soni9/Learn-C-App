@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.dexolabs.cprogramming.appdata.Constant;
 import com.dexolabs.cprogramming.listener.OnQuestionListener;
@@ -16,18 +15,20 @@ import com.dexolabs.cprogramming.model.Question;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 import com.dexolabs.cprogramming.utility.Utils;
 
+import org.sufficientlysecure.htmltextview.HtmlTextView;
+
 import static com.dexolabs.cprogramming.appdata.Keys.Extras.MCQ_Question;
 
 public class McqFragment extends BaseFragment implements View.OnClickListener {
     private Context            mContext;
     private Question           question;
-    private TextView           fragment_mcq_tv_question;
-    private TextView           fragment_mcq_tv_option_1;
-    private TextView           fragment_mcq_tv_option_2;
-    private TextView           fragment_mcq_tv_option_3;
-    private TextView           fragment_mcq_tv_option_4;
-    private TextView           fragment_mcq_tv_expanation;
-    private TextView           tvExplainLabel;
+    private HtmlTextView       fragment_mcq_tv_question;
+    private HtmlTextView       fragment_mcq_tv_option_1;
+    private HtmlTextView       fragment_mcq_tv_option_2;
+    private HtmlTextView       fragment_mcq_tv_option_3;
+    private HtmlTextView       fragment_mcq_tv_option_4;
+    private HtmlTextView       fragment_mcq_tv_expanation;
+    private HtmlTextView       tvExplainLabel;
     private ScrollView         scrollView;
     private OnQuestionListener onQuestionListener;
 
@@ -73,11 +74,12 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
     }
 
     private void setData() {
-        fragment_mcq_tv_question.setText(question.getQuestion());
-        fragment_mcq_tv_option_1.setText(question.getOption_1());
-        fragment_mcq_tv_option_2.setText(question.getOption_2());
-        fragment_mcq_tv_option_3.setText(question.getOption_3());
-        fragment_mcq_tv_option_4.setText(question.getOption_4());
+        fragment_mcq_tv_question.setHtml(Utils.parseHtml(question.getQuestion()));
+        fragment_mcq_tv_option_1.setHtml(Utils.parseHtml(question.getOption_1()));
+        fragment_mcq_tv_option_2.setHtml(Utils.parseHtml(question.getOption_2()));
+        fragment_mcq_tv_option_3.setHtml(Utils.parseHtml(question.getOption_3()));
+        fragment_mcq_tv_option_4.setHtml(Utils.parseHtml(question.getOption_4()));
+        fragment_mcq_tv_expanation.setHtml(Utils.parseHtml(question.getExplanations()));
         onAnswerSelectedView();
         Utils.setOnClickListener(this, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
     }
@@ -99,7 +101,6 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
             Utils.setEnabled(true, fragment_mcq_tv_option_1, fragment_mcq_tv_option_2, fragment_mcq_tv_option_3, fragment_mcq_tv_option_4);
         }
         if (question.getSelectedOption() != 0 && question.getExplanations() != null && !question.getExplanations().isEmpty()) {
-            fragment_mcq_tv_expanation.setText(question.getExplanations());
             fragment_mcq_tv_expanation.setVisibility(View.VISIBLE);
             tvExplainLabel.setVisibility(View.VISIBLE);
         } else {

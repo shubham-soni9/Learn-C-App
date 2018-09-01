@@ -30,14 +30,15 @@ public class QuizData {
 
 
         questionList = new ArrayList<>();
-        questionList.add(getQuestion(11, "In the following program where is the variable a getting defined and where it is getting declared?\n\n#include<stdio.h>\n" +
-                "int main()\n" +
+        questionList.add(getQuestion(11, "In the following program where is the variable a getting defined and where it is getting declared?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
                 "{\n" +
-                "    extern int a;\n" +
-                "    printf(\"%d\\n\", a);\n" +
-                "    return 0;\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">extern</span> <span style=\"color: #B00040\">int</span> a;\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, a);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
                 "}\n" +
-                "int a=20", "\textern int a is declaration, int a = 20 is the definition", "int a = 20 is declaration, extern int a is the definition", "int a = 20 is definition, a is not defined", "a is declared, a is not defined", 1, "- During declaration we tell the datatype of the Variable.\n" +
+                "<span style=\"color: #B00040\">int</span> a<span style=\"color: #666666\">=20</span>;\n" +
+                "</pre></div>\n", "\textern int a is declaration, int a = 20 is the definition", "int a = 20 is declaration, extern int a is the definition", "int a = 20 is definition, a is not defined", "a is declared, a is not defined", 1, "- During declaration we tell the datatype of the Variable.\n" +
                 "\n" +
                 "- During definition the value is initialized."));
         questionList.add(getQuestion(12, "", "", "", "", "", 0, ""));

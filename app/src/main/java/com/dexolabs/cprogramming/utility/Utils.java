@@ -141,4 +141,12 @@ public class Utils {
 
         return assignable == null || assignable.isEmpty() ? (alternative == null ? EMPTY_STRING : alternative) : (assignable.equals("null") ? assign(alternative) : assignable);
     }
+
+
+    public static String parseHtml(String string) {
+        string = string.replace("\n", "<br>");
+        string = string.replace("   ", "&nbsp;&nbsp;&nbsp;");
+        string = string.replace("  ", "&nbsp;&nbsp;");
+        return string;
+    }
 }
