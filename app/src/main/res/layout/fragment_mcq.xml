@@ -78,7 +78,7 @@
                 android:textColor="@color/app_text_color" />
 
 
-            <org.sufficientlysecure.htmltextview.HtmlTextView
+            <TextView
                 android:id="@+id/tvExplainLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

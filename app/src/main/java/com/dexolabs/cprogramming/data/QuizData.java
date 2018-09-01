@@ -1098,34 +1098,34 @@ public class QuizData {
         options.put("Storage Classes - 3", questionList);
 
 
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(131, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(132, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(133, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(134, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(135, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(136, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(137, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(138, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(139, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(140, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
-//
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(141, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(142, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(143, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(144, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(145, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(146, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(147, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(148, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(149, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(150, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
-//
+        questionList = new ArrayList<>();
+        questionList.add(getQuestion(131, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(132, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(133, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(134, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(135, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(136, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(137, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(138, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(139, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(140, "", "", "", "", "", 0, ""));
+        options.put("Arrays - 1", questionList);
+
+
+        questionList = new ArrayList<>();
+        questionList.add(getQuestion(141, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(142, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(143, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(144, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(145, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(146, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(147, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(148, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(149, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(150, "", "", "", "", "", 0, ""));
+        options.put("Arrays - 2", questionList);
+
+
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(151, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(152, "", "", "", "", "", 0, ""));

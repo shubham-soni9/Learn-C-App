@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.dexolabs.cprogramming.appdata.Constant;
 import com.dexolabs.cprogramming.listener.OnQuestionListener;
@@ -28,7 +29,7 @@ public class McqFragment extends BaseFragment implements View.OnClickListener {
     private HtmlTextView       fragment_mcq_tv_option_3;
     private HtmlTextView       fragment_mcq_tv_option_4;
     private HtmlTextView       fragment_mcq_tv_expanation;
-    private HtmlTextView       tvExplainLabel;
+    private TextView           tvExplainLabel;
     private ScrollView         scrollView;
     private OnQuestionListener onQuestionListener;
 
