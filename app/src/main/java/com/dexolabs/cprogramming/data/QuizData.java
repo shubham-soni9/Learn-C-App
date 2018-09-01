@@ -26,11 +26,20 @@ public class QuizData {
         questionList.add(getQuestion(8, "When we mention the prototype of a function?", "Defining", "Declaring", "Prototyping", "Calling", 2, "A function prototype in C or C++ is a declaration of a function that omits the function body but does specify the function's name, argument types and return type."));
         questionList.add(getQuestion(9, "Which is valid C expression?", "int my_num = 100,000;", "int my num = 1000;", "int $my_num = 10000;", "int my_num = 100000;", 4, "Space, comma and $ cannot be used in a variable name."));
         questionList.add(getQuestion(10, "By default a real number is treated as a", "double", "float", "long double", "far double", 1, ""));
-        options.put("Variable Names", questionList);
+        options.put("Variable Names - 1", questionList);
 
 
         questionList = new ArrayList<>();
-        questionList.add(getQuestion(11, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(11, "In the following program where is the variable a getting defined and where it is getting declared?\n\n#include<stdio.h>\n" +
+                "int main()\n" +
+                "{\n" +
+                "    extern int a;\n" +
+                "    printf(\"%d\\n\", a);\n" +
+                "    return 0;\n" +
+                "}\n" +
+                "int a=20", "\textern int a is declaration, int a = 20 is the definition", "int a = 20 is declaration, extern int a is the definition", "int a = 20 is definition, a is not defined", "a is declared, a is not defined", 1, "- During declaration we tell the datatype of the Variable.\n" +
+                "\n" +
+                "- During definition the value is initialized."));
         questionList.add(getQuestion(12, "", "", "", "", "", 0, ""));
         questionList.add(getQuestion(13, "", "", "", "", "", 0, ""));
         questionList.add(getQuestion(14, "", "", "", "", "", 0, ""));
@@ -40,7 +49,7 @@ public class QuizData {
         questionList.add(getQuestion(18, "", "", "", "", "", 0, ""));
         questionList.add(getQuestion(19, "", "", "", "", "", 0, ""));
         questionList.add(getQuestion(20, "", "", "", "", "", 0, ""));
-        options.put("", questionList);
+        options.put("Variable Names -2", questionList);
 
 //
 //        questionList = new ArrayList<>();
