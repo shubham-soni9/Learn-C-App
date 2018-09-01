@@ -873,27 +873,56 @@ public class QuizData {
 
         questionList.add(getQuestion(90, "The value obtained in the function is given back to main by using ________ keyword?", "static", "return", "volatile", "new", 2, ""));
 
-        options.put("Functions - 1", questionList);
+        options.put("Functions", questionList);
 
 
 
+        questionList = new ArrayList<>();
+
+        questionList.add(getQuestion(91, "Property which allows to produce different executable for different platforms in C is called?", "Selective inclusion", "Conditional compilation", "Recursive macros", "File inclusion", 2, "Conditional compilation is the preprocessor facility to produce different executable."));
+
+        questionList.add(getQuestion(92, "<!-- HTML generated using hilite.me --><div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt; is called</span>\n" +
+                "</pre></div>", "Inclusion directive", "File inclusion directive", "Preprocessor directive", "None of the mentioned", 3, ""));
+
+        questionList.add(getQuestion(93, "C preprocessors can have compiler specific features.", "false", "true", "Depends on the standard", "Depends on the platform", 2, "#pragma is compiler specific feature."));
+
+        questionList.add(getQuestion(94, "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">In which stage the following code \n" +
+                "<span style=\"color: #BC7A00\">#include&lt;stdio.h&gt; </span>\n" +
+                "gets replaced by the contents of the file stdio.h\n" +
+                "</pre></div>", "During linking", "During editing", "During execution", "During preprocessing", 4, "<!-- HTML generated using hilite.me --><div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">The preprocessor replaces the line <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span> with the system header file of that name. More precisely, the entire text of the file <span style=\"border: 1px solid #FF0000\">&#39;</span>stdio.h<span style=\"border: 1px solid #FF0000\">&#39;</span> replaces the <span style=\"border: 1px solid #FF0000\">#</span>include directive.\n" +
+                "</pre></div>"));
+
+        questionList.add(getQuestion(95, "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "<span style=\"color: #BC7A00\">#define CUBE(x) (x*x*x)</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> a, b<span style=\"color: #666666\">=3</span>;\n" +
+                "    a <span style=\"color: #666666\">=</span> CUBE(b<span style=\"color: #666666\">++</span>);\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d, %d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, a, b);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "27, 4", "27, 6", "Error", "9, 4", 2, ""));
+
+        questionList.add(getQuestion(96, "Which of the following are C preprocessors?", "#endif", "#define", "#ifdef", "all", 4, ""));
+
+        questionList.add(getQuestion(97, "#include statement must be written", "Before any scanf/printf", "After main()", "It can be written anywhere", "Before main()", 1, "Using these directives before main() improves readability."));
+
+        questionList.add(getQuestion(98, "The #include directive", "Statements are not typically placed at the top of a program", "Tells the preprocessor to grab the text of a file and place it directly into the current file", "All of the mentioned", "None of the mentioned", 2, ""));
+
+        questionList.add(getQuestion(99, "The preprocessor provides the ability for _______________", "Conditional compilation and line control.", "The inclusion of macro expansions", "The inclusion of header files", "All of the mentioned", 4, "The preprocessor provides the ability for the inclusion of header files, macro expansions, conditional compilation, and line control."));
+
+        questionList.add(getQuestion(100, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "<span style=\"color: #BC7A00\">#define foo(m, n) m * n = 10</span>\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;in main</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "}\n" +
+                "</pre></div>", "Preprocessor error as lvalue is required for the expression m*n=10", "Compilation error as lvalue is required for the expression m*n=10", "In main", "None", 3, "Preprocessor just replaces whatever is given compiler then checks for error at the replaced part of the code. Here it is not replaced anywhere."));
+
+        options.put("Preprocessors", questionList);
 
 
-
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(91, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(92, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(93, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(94, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(95, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(96, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(97, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(98, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(99, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(100, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
-//
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(101, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(102, "", "", "", "", "", 0, ""));
