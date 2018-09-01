@@ -598,20 +598,90 @@ public class QuizData {
 
         options.put("Control Instructions - 2", questionList);
 
-//
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(61, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(62, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(63, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(64, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(65, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(66, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(67, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(68, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(69, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(70, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
+
+        questionList = new ArrayList<>();
+        questionList.add(getQuestion(61, "The following code ‘for(;;)’ represents an infinite loop. It can be terminated by.", "exit(0)", "break", "abort()", "all of the mentioned", 2, ""));
+        questionList.add(getQuestion(62, "What is the output of this C code?\n<!-- HTML generated using hilite.me --><div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">double</span> k <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">for</span> (k <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0.0</span>; k <span style=\"color: #666666\">&lt;</span> <span style=\"color: #666666\">3.0</span>; k<span style=\"color: #666666\">++</span>);\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;%lf&quot;</span>, k);\n" +
+                "    }\n" +
+                "</pre></div>", "2.000000", "4.000000", "3.000000", "Run time error", 3, ""));
+
+        questionList.add(getQuestion(63, "Which for loop has range of similar indexes of ‘i’ used in for (i = 0;i < n; i++)?", "for (i = n; i>0; i–)", "for (i = n; i >= 0; i–)", " for (i = n-1; i>0; i–)", "for (i = n-1; i>-1; i–)", 4, ""));
+
+        questionList.add(getQuestion(64, "What is the output of this C code?\n<!-- HTML generated using hilite.me --><div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> k <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">for</span> (k)\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;Hello&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "Compile time error", "Nothing", "hello", "Varies", 1, ""));
+
+        questionList.add(getQuestion(65, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> k <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">for</span> (k <span style=\"color: #666666\">&lt;</span> <span style=\"color: #666666\">3</span>; k<span style=\"color: #666666\">++</span>)\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;Hello&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "Compile time error", "Hello is printed thrice", "Nothing", "Varies", 1, ""));
+
+        questionList.add(getQuestion(66, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> k <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">for</span> (k <span style=\"color: #666666\">&lt;</span> <span style=\"color: #666666\">3</span>; k<span style=\"color: #666666\">++</span>)\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;Hello&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "Hello is printed thrice", "Hello is printed twice", "Run time error", "Hello is printed infinitely", 1, ""));
+
+        questionList.add(getQuestion(67, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">for</span> (; ; ;)\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;In for loop</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;After loop</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "Compile time error", "After loop", "Infinite loop", "Undefined behaviour", 1, ""));
+
+        questionList.add(getQuestion(68, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">while</span> ()\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;In while loop &quot;</span>);\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;After loop</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "In while loop after loop", "After loop", "Compile time error", "Infinite loop", 3, ""));
+
+        questionList.add(getQuestion(69, "How many times i value is checked in the below code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">do</span> {\n" +
+                "            i<span style=\"color: #666666\">++</span>;\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;in while loop</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "        } <span style=\"color: #008000; font-weight: bold\">while</span> (i <span style=\"color: #666666\">&lt;</span> <span style=\"color: #666666\">3</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "1", "2", "3", "4", 3, ""));
+
+        questionList.add(getQuestion(70, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">2</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">do</span>\n" +
+                "        {\n" +
+                "            printf(<span style=\"color: #BA2121\">&quot;Hi&quot;</span>);\n" +
+                "        } <span style=\"color: #008000; font-weight: bold\">while</span> (i <span style=\"color: #666666\">&lt;</span> <span style=\"color: #666666\">2</span>)\n" +
+                "    }\n" +
+                "</pre></div>", "Compile time error", "Hi", "Hi Hi", "Varies", 1, ""));
+
+        options.put("Loop Instructions - 1", questionList);
+
 //
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(71, "", "", "", "", "", 0, ""));
