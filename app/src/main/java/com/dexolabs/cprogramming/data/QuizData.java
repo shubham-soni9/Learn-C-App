@@ -1222,16 +1222,74 @@ public class QuizData {
 
 
         questionList = new ArrayList<>();
-        questionList.add(getQuestion(151, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(152, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(153, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(154, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(155, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(156, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(157, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(158, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(159, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(160, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(151, "To declare a 3 dimensional array using pointers, which of the following is the correct syntax:", "char *a[][];", "char **a[];", "char ***a;", "all of the mentioned", 1, ""));
+
+        questionList.add(getQuestion(152, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span>a[<span style=\"color: #666666\">10</span>] <span style=\"color: #666666\">=</span> {<span style=\"color: #BA2121\">&quot;hi&quot;</span>, <span style=\"color: #BA2121\">&quot;hello&quot;</span>, <span style=\"color: #BA2121\">&quot;how&quot;</span>};\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, <span style=\"color: #008000; font-weight: bold\">sizeof</span>(a));\n" +
+                "    }\n" +
+                "</pre></div>", "10", "12", "40", "Run time error", 3, ""));
+
+        questionList.add(getQuestion(153, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span>a[<span style=\"color: #666666\">10</span>] <span style=\"color: #666666\">=</span> {<span style=\"color: #BA2121\">&quot;hi&quot;</span>, <span style=\"color: #BA2121\">&quot;hello&quot;</span>, <span style=\"color: #BA2121\">&quot;how&quot;</span>};\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, <span style=\"color: #008000; font-weight: bold\">sizeof</span>(a[<span style=\"color: #666666\">1</span>]));\n" +
+                "    }\n" +
+                "</pre></div>", "3", "4", "5", "6", 2, ""));
+
+        questionList.add(getQuestion(154, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">char</span> a[<span style=\"color: #666666\">10</span>][<span style=\"color: #666666\">5</span>] <span style=\"color: #666666\">=</span> {<span style=\"color: #BA2121\">&quot;hi&quot;</span>, <span style=\"color: #BA2121\">&quot;hello&quot;</span>, <span style=\"color: #BA2121\">&quot;fellows&quot;</span>};\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%s&quot;</span>, a[<span style=\"color: #666666\">2</span>]);\n" +
+                "    }\n" +
+                "</pre></div>", "fellow", "fello", "fell", "fellows", 2, ""));
+
+        questionList.add(getQuestion(155, "What is the output of the code given below?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span>a[<span style=\"color: #666666\">1</span>] <span style=\"color: #666666\">=</span> {<span style=\"color: #BA2121\">&quot;hello&quot;</span>};\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%s&quot;</span>, a[<span style=\"color: #666666\">0</span>]);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "    }\n" +
+                "</pre></div>", "Compile time error", "Undefined behaviour", "hellon", "hello", 4, ""));
+
+        questionList.add(getQuestion(156, "Which of the following statements are true?\n<!-- HTML generated using hilite.me --><div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    P. Pointer to Array\n" +
+                "    Q. Multi<span style=\"color: #666666\">-</span>dimensional array\n" +
+                "</pre></div>", "P are static, Q are dynamic", "P are dynamic, Q are static", "P are dynamic, Q are dynamic", " P are static, Q are static", 2, ""));
+
+        questionList.add(getQuestion(157, "Which of the following uses structure?", "Array of structures", "Binary Tree", "Linked Lists", "All", 4, ""));
+
+        questionList.add(getQuestion(158, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">struct</span> student\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span>name;\n" +
+                "    };\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">struct</span> student s[<span style=\"color: #666666\">2</span>], r[<span style=\"color: #666666\">2</span>];\n" +
+                "        s[<span style=\"color: #666666\">1</span>] <span style=\"color: #666666\">=</span> s[<span style=\"color: #666666\">0</span>] <span style=\"color: #666666\">=</span> <span style=\"color: #BA2121\">&quot;alan&quot;</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%s%s&quot;</span>, s[<span style=\"color: #666666\">0</span>].name, s[<span style=\"color: #666666\">1</span>].name);\n" +
+                "    }\n" +
+                "</pre></div>", "Nothing", "Compile time error", "alan alan", "Varies", 1, ""));
+
+        questionList.add(getQuestion(159, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">struct</span> student\n" +
+                "    {\n" +
+                "    };\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">struct</span> student s[<span style=\"color: #666666\">2</span>];\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, <span style=\"color: #008000; font-weight: bold\">sizeof</span>(s));\n" +
+                "    }\n" +
+                "</pre></div>" , "0", "2", "4", "8", 1, ""));
+
+        questionList.add(getQuestion(160, "What type of array is generally generated in Command-line argument?", "Single dimension array", "Jagged Array", "2-Dimensional Square Array", "2-Dimensional Rectangular Array", 2, ""));
+
         options.put("Arrays - 3", questionList);
 
 
