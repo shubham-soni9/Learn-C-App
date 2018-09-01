@@ -800,7 +800,6 @@ public class QuestionData {
                 "<p>iv) It is used in data structures like trees, graph, linked list etc.&lt;br&gt;&lt;/br&gt;</p>");
 
 
-
         options.put("In header files whether functions are declared or defined?", "Functions are declared within header file. That is function prototypes exist in a header\n" +
                 "file,not function bodies. They are defined in library (lib).");
 
@@ -813,11 +812,11 @@ public class QuestionData {
 
         options.put("Where does global, static, and local, register variables, free memory and C Program\n" +
                             "instructions get stored?", " Global: Wherever the linker puts them. Typically the ―BSS segment‖ on many platforms.\n" +
-                "Static: Again, wherever the linker puts them. Often, they‘re intermixed with the globals. The\n" +
-                "only difference between globals and statics is whether the linker will resolve the symbols across\n" +
-                "compilation units.Local: Typically on the stack, unless the variable gets register allocated and\n" +
-                "never spills.Register: Nowadays, these are equivalent to ―Local‖ variables. They live on the stack\n" +
-                "unless they get register-allocated.");
+                            "Static: Again, wherever the linker puts them. Often, they‘re intermixed with the globals. The\n" +
+                            "only difference between globals and statics is whether the linker will resolve the symbols across\n" +
+                            "compilation units.Local: Typically on the stack, unless the variable gets register allocated and\n" +
+                            "never spills.Register: Nowadays, these are equivalent to ―Local‖ variables. They live on the stack\n" +
+                            "unless they get register-allocated.");
 
         options.put("What the advantages of using Unions?", " When the C compiler is allocating memory for unions it will always reserve enough room for the largest member");
 

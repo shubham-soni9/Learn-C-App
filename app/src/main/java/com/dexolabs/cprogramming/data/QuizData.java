@@ -39,8 +39,8 @@ public class QuizData {
                 "}\n" +
                 "<span style=\"color: #B00040\">int</span> a<span style=\"color: #666666\">=20</span>;\n" +
                 "</pre></div>\n", "\textern int a is declaration, int a = 20 is the definition", "int a = 20 is declaration, extern int a is the definition", "int a = 20 is definition, a is not defined", "a is declared, a is not defined", 1, "- During declaration we tell the datatype of the Variable.\n" +
-                "\n" +
-                "- During definition the value is initialized."));
+                                             "\n" +
+                                             "- During definition the value is initialized."));
 
         questionList.add(getQuestion(12, "Comment on the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
                 "    <span style=\"color: #B00040\">int</span> main()\n" +
@@ -62,18 +62,18 @@ public class QuizData {
                 "</pre></div>\n", "It will run without any error and prints 25", "It will cause a run-time error", "It will experience infinite looping", "It will cause a compile-time error", 1, "C program can have same function name and same variable name."));
 
         questionList.add(getQuestion(14,
-                "What is the output of the program given below ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
-                        "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
-                        "{\n" +
-                        "    <span style=\"color: #008000; font-weight: bold\">enum</span> status { pass, fail, atkt};\n" +
-                        "    <span style=\"color: #008000; font-weight: bold\">enum</span> status stud1, stud2, stud3;\n" +
-                        "    stud1 <span style=\"color: #666666\">=</span> pass;\n" +
-                        "    stud2 <span style=\"color: #666666\">=</span> atkt;\n" +
-                        "    stud3 <span style=\"color: #666666\">=</span> fail;\n" +
-                        "    printf(<span style=\"color: #BA2121\">&quot;%d, %d, %d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, stud1, stud2, stud3);\n" +
-                        "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
-                        "}\n" +
-                        "</pre></div>\n", "1, 3, 2", "0, 1, 2", "1, 2, 3", "0, 2, 1", 4, "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">enum</span> takes the format like {<span style=\"color: #666666\">0</span>,<span style=\"color: #666666\">1</span>,<span style=\"color: #666666\">2.</span>.) so pass<span style=\"color: #666666\">=0</span>, fail<span style=\"color: #666666\">=1</span>, atkt<span style=\"color: #666666\">=2</span>\n" +
+                                     "What is the output of the program given below ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                                             "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                                             "{\n" +
+                                             "    <span style=\"color: #008000; font-weight: bold\">enum</span> status { pass, fail, atkt};\n" +
+                                             "    <span style=\"color: #008000; font-weight: bold\">enum</span> status stud1, stud2, stud3;\n" +
+                                             "    stud1 <span style=\"color: #666666\">=</span> pass;\n" +
+                                             "    stud2 <span style=\"color: #666666\">=</span> atkt;\n" +
+                                             "    stud3 <span style=\"color: #666666\">=</span> fail;\n" +
+                                             "    printf(<span style=\"color: #BA2121\">&quot;%d, %d, %d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, stud1, stud2, stud3);\n" +
+                                             "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                                             "}\n" +
+                                             "</pre></div>\n", "1, 3, 2", "0, 1, 2", "1, 2, 3", "0, 2, 1", 4, "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">enum</span> takes the format like {<span style=\"color: #666666\">0</span>,<span style=\"color: #666666\">1</span>,<span style=\"color: #666666\">2.</span>.) so pass<span style=\"color: #666666\">=0</span>, fail<span style=\"color: #666666\">=1</span>, atkt<span style=\"color: #666666\">=2</span>\n" +
                                              "\n" +
                                              "stud1 <span style=\"color: #666666\">=</span> pass (value is <span style=\"color: #666666\">0</span>)\n" +
                                              "\n" +
@@ -112,18 +112,18 @@ public class QuizData {
                 "</pre></div>\n", "1", "0", "Error", "None of these", 1, "Since x < y turns to be TRUE it is replaced by 1. Then 1 < z is compared and to be TRUE. The 1 is assigned to i."));
 
         questionList.add(getQuestion(17,
-                "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
-                        "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
-                        "{\n" +
-                        "    <span style=\"color: #B00040\">int</span> X<span style=\"color: #666666\">=60</span>;\n" +
-                        "    {\n" +
-                        "        <span style=\"color: #B00040\">int</span> X<span style=\"color: #666666\">=35</span>;\n" +
-                        "        printf(<span style=\"color: #BA2121\">&quot;%d &quot;</span>, X);\n" +
-                        "    }\n" +
-                        "    printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, X);\n" +
-                        "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
-                        "}\n" +
-                        "</pre></div>\n", "60 60", "60", "35 60", "35 35", 3, "In case of a conflict between a local variable and global variable, the local variable gets priority."));
+                                     "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                                             "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                                             "{\n" +
+                                             "    <span style=\"color: #B00040\">int</span> X<span style=\"color: #666666\">=60</span>;\n" +
+                                             "    {\n" +
+                                             "        <span style=\"color: #B00040\">int</span> X<span style=\"color: #666666\">=35</span>;\n" +
+                                             "        printf(<span style=\"color: #BA2121\">&quot;%d &quot;</span>, X);\n" +
+                                             "    }\n" +
+                                             "    printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, X);\n" +
+                                             "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                                             "}\n" +
+                                             "</pre></div>\n", "60 60", "60", "35 60", "35 35", 3, "In case of a conflict between a local variable and global variable, the local variable gets priority."));
 
         questionList.add(getQuestion(18, "Comment on the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
                 "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +

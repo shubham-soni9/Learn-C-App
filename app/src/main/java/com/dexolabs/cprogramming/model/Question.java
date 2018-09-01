@@ -3,8 +3,6 @@ package com.dexolabs.cprogramming.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.dexolabs.cprogramming.appdata.Constant;
-
 public class Question implements Parcelable {
     private int    questionId;
     private String question;
@@ -97,6 +95,7 @@ public class Question implements Parcelable {
     public int getAnswer() {
         return answer;
     }
+
     public void setAnswer(int answer) {
         this.answer = answer;
     }

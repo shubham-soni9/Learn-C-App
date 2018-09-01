@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class QuestionPagerAdapter extends FragmentPagerAdapter {
     private ArrayList<Question> mQuestionList = new ArrayList<>();
-    private FragmentManager    fragmentManager;
+    private FragmentManager fragmentManager;
 
     /**
      * constructor for all agents pager adapter
