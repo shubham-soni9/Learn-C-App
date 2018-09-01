@@ -1099,47 +1099,142 @@ public class QuizData {
 
 
         questionList = new ArrayList<>();
-        questionList.add(getQuestion(131, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(132, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(133, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(134, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(135, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(136, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(137, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(138, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(139, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(140, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(131, "What will happen if in a C program you assign a value to an array element whose subscript exceeds the size of array?", "The compiler would report an error.", "The element will be set to 0.", "The program may crash if some important data gets overwritten.", "The array size would appropriately grow.", 3, "If the index of the array size is exceeded, the program will crash. Hence \"option c\" is the correct answer. But the modern compilers will take care of this kind of errors."));
+
+        questionList.add(getQuestion(132, "<!-- HTML generated using hilite.me --><div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">What does the following declaration mean<span style=\"color: #666666\">?</span>\n" +
+                "<span style=\"color: #B00040\">int</span> (<span style=\"color: #666666\">*</span>ptr)[<span style=\"color: #666666\">15</span>];\n" +
+                "</pre></div>", "ptr is an array of 15 integers", "ptr is an pointer to array", "ptr is array of pointers to 15 integers", "ptr is a pointer to an array of 15 integers", 4, ""));
+
+        questionList.add(getQuestion(133,
+                "In C, if you pass an array as an argument to a function, what actually gets passed?", "First element of the array", "Base address of the array", "Address of the last element of array", "Value of elements in array", 2, "When we pass an array as a funtion argument, the base address of the array will be passed."));
+
+        questionList.add(getQuestion(134, "What will be the output of the program ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> a[<span style=\"color: #666666\">5</span>] <span style=\"color: #666666\">=</span> {<span style=\"color: #666666\">5</span>, <span style=\"color: #666666\">1</span>, <span style=\"color: #666666\">15</span>, <span style=\"color: #666666\">20</span>, <span style=\"color: #666666\">25</span>};\n" +
+                "    <span style=\"color: #B00040\">int</span> i, j, m;\n" +
+                "    i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">++</span>a[<span style=\"color: #666666\">1</span>];\n" +
+                "    j <span style=\"color: #666666\">=</span> a[<span style=\"color: #666666\">1</span>]<span style=\"color: #666666\">++</span>;\n" +
+                "    m <span style=\"color: #666666\">=</span> a[i<span style=\"color: #666666\">++</span>];\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d, %d, %d&quot;</span>, i, j, m);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "1, 2, 5", "3, 2, 15", "2, 3, 20", "2, 1, 15", 2, ""));
+
+        questionList.add(getQuestion(135, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> a[<span style=\"color: #666666\">3</span>] <span style=\"color: #666666\">=</span> {<span style=\"color: #666666\">1</span>, <span style=\"color: #666666\">2</span>, <span style=\"color: #666666\">3</span>};\n" +
+                "        <span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>p <span style=\"color: #666666\">=</span> a;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%p</span><span style=\"color: #BB6622; font-weight: bold\">\\t</span><span style=\"color: #BA2121\">%p&quot;</span>, p, a);\n" +
+                "    }\n" +
+                "</pre></div>", "Same address is printed.", "Different address is printed", "Compile time error", "Nothing", 1, ""));
+
+        questionList.add(getQuestion(136, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span>s<span style=\"color: #666666\">=</span> <span style=\"color: #BA2121\">&quot;hello&quot;</span>;\n" +
+                "        <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span>p <span style=\"color: #666666\">=</span> s;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%c</span><span style=\"color: #BB6622; font-weight: bold\">\\t</span><span style=\"color: #BA2121\">%c&quot;</span>, <span style=\"color: #666666\">1</span>[p], s[<span style=\"color: #666666\">1</span>]);\n" +
+                "    }\n" +
+                "</pre></div>", "h h", "l l", "e e", "Run time error", 3, ""));
+
+        questionList.add(getQuestion(137, "What is the output of the code given below?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> ary[<span style=\"color: #666666\">4</span>] <span style=\"color: #666666\">=</span> {<span style=\"color: #666666\">1</span>, <span style=\"color: #666666\">2</span>, <span style=\"color: #666666\">3</span>, <span style=\"color: #666666\">4</span>};\n" +
+                "        <span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>p <span style=\"color: #666666\">=</span> ary <span style=\"color: #666666\">+</span> <span style=\"color: #666666\">3</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, p[<span style=\"color: #666666\">-2</span>]);\n" +
+                "    }\n" +
+                "</pre></div>", "2", "1", "Compile time error", "Some garbage value", 1, ""));
+
+        questionList.add(getQuestion(138, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> ary[<span style=\"color: #666666\">4</span>] <span style=\"color: #666666\">=</span> {<span style=\"color: #666666\">1</span>, <span style=\"color: #666666\">2</span>, <span style=\"color: #666666\">3</span>, <span style=\"color: #666666\">4</span>};\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, <span style=\"color: #666666\">*</span>ary);\n" +
+                "    }\n" +
+                "</pre></div>", "1", "Some garbage value", "Compile time error", "Undefined variable", 1, ""));
+
+        questionList.add(getQuestion(139, "Comment on an array of void data type:", "It only stores element of similar data type to first element", "It acquires the data type with the highest precision in it", "You cannot have an array of void data type", "It can store any data-type", 3, ""));
+
+        questionList.add(getQuestion(140, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> a[<span style=\"color: #666666\">2</span>][<span style=\"color: #666666\">3</span>] <span style=\"color: #666666\">=</span> {<span style=\"color: #666666\">1</span>, <span style=\"color: #666666\">2</span>, <span style=\"color: #666666\">3</span>, <span style=\"color: #666666\">4</span>, <span style=\"color: #666666\">5</span>};\n" +
+                "        <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>, j <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">for</span> (i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>; i <span style=\"color: #666666\">&lt;</span> <span style=\"color: #666666\">2</span>; i<span style=\"color: #666666\">++</span>)\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">for</span> (j <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>; j <span style=\"color: #666666\">&lt;</span> <span style=\"color: #666666\">3</span>; j<span style=\"color: #666666\">++</span>)\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, a[i][j]);\n" +
+                "    }\n" +
+                "</pre></div>", "1 2 3 4 5 junk", "1 2 3 4 5 5", "1 2 3 4 5 0", "Run time error", 3, ""));
+
         options.put("Arrays - 1", questionList);
 
 
+
         questionList = new ArrayList<>();
-        questionList.add(getQuestion(141, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(142, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(143, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(144, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(145, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(146, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(147, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(148, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(149, "", "", "", "", "", 0, ""));
-        questionList.add(getQuestion(150, "", "", "", "", "", 0, ""));
+
+        questionList.add(getQuestion(141, "Which of the following is not possible statically in C?", "Jagged Array", "Rectangular Array", "Cuboidal Array", "Multidimensional Array", 1, ""));
+
+        questionList.add(getQuestion(142, "Applications of multidimensional array are?", "Minimum Spanning Tree", "Matrix-Multiplication", "Finding connectivity between nodes", "All of the mentioned", 4, ""));
+
+        questionList.add(getQuestion(143, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> ary[<span style=\"color: #666666\">2</span>][<span style=\"color: #666666\">3</span>][<span style=\"color: #666666\">4</span>], j <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">20</span>;\n" +
+                "        ary[<span style=\"color: #666666\">0</span>][<span style=\"color: #666666\">0</span>] <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">&amp;</span>j;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, <span style=\"color: #666666\">*</span>ary[<span style=\"color: #666666\">0</span>][<span style=\"color: #666666\">0</span>]);\n" +
+                "    }\n" +
+                "</pre></div>", "Address of j", "Compile time error", "20", "Undefined behaviour", 2, ""));
+
+        questionList.add(getQuestion(144, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> ary[<span style=\"color: #666666\">2</span>][<span style=\"color: #666666\">3</span>];\n" +
+                "        ary[][] <span style=\"color: #666666\">=</span> {{<span style=\"color: #666666\">1</span>, <span style=\"color: #666666\">2</span>, <span style=\"color: #666666\">3</span>}, {<span style=\"color: #666666\">4</span>, <span style=\"color: #666666\">5</span>, <span style=\"color: #666666\">6</span>}};\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, ary[<span style=\"color: #666666\">1</span>][<span style=\"color: #666666\">0</span>]);\n" +
+                "    }\n" +
+                "</pre></div>", "Compile time error", "1", "2", "4", 4, ""));
+
+        questionList.add(getQuestion(145, "What will be the output of the program ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">float</span> arr[] <span style=\"color: #666666\">=</span> {<span style=\"color: #666666\">12.4</span>, <span style=\"color: #666666\">2.3</span>, <span style=\"color: #666666\">4.5</span>, <span style=\"color: #666666\">6.7</span>};\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, <span style=\"color: #008000; font-weight: bold\">sizeof</span>(arr)<span style=\"color: #666666\">/</span><span style=\"color: #008000; font-weight: bold\">sizeof</span>(arr[<span style=\"color: #666666\">0</span>]));\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "4", "5", "6", "7", 1, ""));
+
+        questionList.add(getQuestion(146, "Referring an element outside array bounds is a", "Syntax error", "Logical error", "Execution time error", "Both B and C", 4, ""));
+
+        questionList.add(getQuestion(147, "Each element of an array is searched against searching key, is specialty of", "Bubble sort", "Linear search", "Binary search", "All of them", 2, ""));
+
+        questionList.add(getQuestion(148, "A one-dimensional array of one-dimensional arrays is called", "Multi-dimensional array", "Multi-casting array", "Two-dimensional array", "Three-dimensional array", 3, ""));
+
+        questionList.add(getQuestion(149, "Sequence of objects that have same type, is called", "Functions", "Arrays", "Stacks", "Operators\n", 2, ""));
+
+        questionList.add(getQuestion(150, "Binary search algorithm uses", "Linear way to search values", "Divide and conquer method", "Bubble sorting technique", "None of them", 2, ""));
+
         options.put("Arrays - 2", questionList);
 
 
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(151, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(152, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(153, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(154, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(155, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(156, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(157, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(158, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(159, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(160, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
-//
+        questionList = new ArrayList<>();
+        questionList.add(getQuestion(151, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(152, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(153, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(154, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(155, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(156, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(157, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(158, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(159, "", "", "", "", "", 0, ""));
+        questionList.add(getQuestion(160, "", "", "", "", "", 0, ""));
+        options.put("Arrays - 3", questionList);
+
+
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(161, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(162, "", "", "", "", "", 0, ""));
