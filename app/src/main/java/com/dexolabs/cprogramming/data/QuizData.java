@@ -1360,32 +1360,32 @@ public class QuizData {
         options.put("Pointers - 1", questionList);
 
 
-
-        questionList = new ArrayList<>();
-
-        questionList.add(getQuestion(171, "", "", "", "", "", 0, ""));
-
-        questionList.add(getQuestion(172, "", "", "", "", "", 0, ""));
-
-        questionList.add(getQuestion(173, "", "", "", "", "", 0, ""));
-
-        questionList.add(getQuestion(174, "", "", "", "", "", 0, ""));
-
-        questionList.add(getQuestion(175, "", "", "", "", "", 0, ""));
-
-        questionList.add(getQuestion(176, "", "", "", "", "", 0, ""));
-
-        questionList.add(getQuestion(177, "", "", "", "", "", 0, ""));
-
-        questionList.add(getQuestion(178, "", "", "", "", "", 0, ""));
-
-        questionList.add(getQuestion(179, "", "", "", "", "", 0, ""));
-
-        questionList.add(getQuestion(180, "", "", "", "", "", 0, ""));
-
-        options.put("Pointers - 2", questionList);
-
-
+//
+//        questionList = new ArrayList<>();
+//
+//        questionList.add(getQuestion(171, "", "", "", "", "", 0, ""));
+//
+//        questionList.add(getQuestion(172, "", "", "", "", "", 0, ""));
+//
+//        questionList.add(getQuestion(173, "", "", "", "", "", 0, ""));
+//
+//        questionList.add(getQuestion(174, "", "", "", "", "", 0, ""));
+//
+//        questionList.add(getQuestion(175, "", "", "", "", "", 0, ""));
+//
+//        questionList.add(getQuestion(176, "", "", "", "", "", 0, ""));
+//
+//        questionList.add(getQuestion(177, "", "", "", "", "", 0, ""));
+//
+//        questionList.add(getQuestion(178, "", "", "", "", "", 0, ""));
+//
+//        questionList.add(getQuestion(179, "", "", "", "", "", 0, ""));
+//
+//        questionList.add(getQuestion(180, "", "", "", "", "", 0, ""));
+//
+//        options.put("Pointers - 2", questionList);
+//
+//
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(181, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(182, "", "", "", "", "", 0, ""));
@@ -1397,7 +1397,7 @@ public class QuizData {
 //        questionList.add(getQuestion(188, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(189, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(190, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
+//        options.put("Structures, Unions, Enums", questionList);
 //
 //
 //        questionList = new ArrayList<>();
@@ -1412,8 +1412,8 @@ public class QuizData {
 //        questionList.add(getQuestion(199, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(200, "", "", "", "", "", 0, ""));
 //        options.put("", questionList);
-//
-//
+
+
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(201, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(202, "", "", "", "", "", 0, ""));
