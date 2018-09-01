@@ -773,20 +773,113 @@ public class QuizData {
         options.put("Loop Instructions - 2", questionList);
 
 
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(81, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(82, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(83, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(84, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(85, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(86, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(87, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(88, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(89, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(90, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
-//
-//
+        questionList = new ArrayList<>();
+        questionList.add(getQuestion(81, "How many times the program will print Soniya?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;Soniya&quot;</span>);\n" +
+                "    main();\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "Infinite times", "32767 times", "65535 times", "Till stack overflows", 4, "A stack overflow occurs when too much memory is used on the call stack.\n" +
+                "\n"));
+
+        questionList.add(getQuestion(82, "The keyword used to transfer control from a function back to the calling function is", "goto", "switch", "return", "go back", 3, "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">The keyword <span style=\"color: #008000; font-weight: bold\">return</span> is used to transfer control from a function back to the calling function.\n" +
+                "</pre></div>"));
+
+        questionList.add(getQuestion(83, "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> fun(<span style=\"color: #B00040\">int</span>);\n" +
+                "    <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> fun(<span style=\"color: #666666\">10</span>);\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, <span style=\"color: #666666\">--</span>i);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">fun</span>(<span style=\"color: #B00040\">int</span> i)\n" +
+                "{\n" +
+                "   <span style=\"color: #008000; font-weight: bold\">return</span> (i<span style=\"color: #666666\">++</span>);\n" +
+                "}\n" +
+                "</pre></div>", "8", "9", "10", "11", 2, ""));
+
+        questionList.add(getQuestion(84, "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">func1</span>(<span style=\"color: #B00040\">int</span>);\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> k<span style=\"color: #666666\">=35</span>;\n" +
+                "    k <span style=\"color: #666666\">=</span> func1(k<span style=\"color: #666666\">=</span>func1(k<span style=\"color: #666666\">=</span>func1(k)));\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;k=%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, k);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">func1</span>(<span style=\"color: #B00040\">int</span> k)\n" +
+                "{\n" +
+                "    k<span style=\"color: #666666\">++</span>;\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> k;\n" +
+                "}\n" +
+                "</pre></div>", "k=37", "k=35", "k=36", "k=38", 4, ""));
+
+        questionList.add(getQuestion(85, "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "<span style=\"color: #BC7A00\">#include&lt;stdlib.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> i<span style=\"color: #666666\">=0</span>;\n" +
+                "    i<span style=\"color: #666666\">++</span>;\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">if</span>(i<span style=\"color: #666666\">&lt;=5</span>)\n" +
+                "    {\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;LearnC&quot;</span>);\n" +
+                "        exit(<span style=\"color: #666666\">1</span>);\n" +
+                "        main();\n" +
+                "    }\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "Prints \"LearnC\" 5 times", "Infinite loop", "Function main() doesn't calls itself", "Prints \"LearnC\"", 4, ""));
+
+        questionList.add(getQuestion(86, "What is the return-type of the function sqrt()", "float", "int", "double", "depends on the data type of the parameter", 3, ""));
+
+        questionList.add(getQuestion(87, "What is the output of this code having void return-type function?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">foo</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">1</span>;\n" +
+                "    }\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> x <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">0</span>;\n" +
+                "        x <span style=\"color: #666666\">=</span> foo();\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, x);\n" +
+                "    }\n" +
+                "</pre></div>", "Runtime error", "Compile time error", "0", "1", 2, ""));
+
+        questionList.add(getQuestion(88, "What will be the data type returned for the following function?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">func</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">return</span> (<span style=\"color: #B00040\">double</span>)(<span style=\"color: #B00040\">char</span>)<span style=\"color: #666666\">5.0</span>;\n" +
+                "    }\n" +
+                "</pre></div>", "double", "multiple type-casting in return is illegal", "char", "int", 4, ""));
+
+        questionList.add(getQuestion(89, "The output of the code below is\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"> <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> k <span style=\"color: #666666\">=</span> m();\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, k);\n" +
+                "    }\n" +
+                "    <span style=\"color: #B00040\">void</span> m()\n" +
+                "    {\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;world&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "world 5", "Error", "Nothing", "Junk value", 1, ""));
+
+        questionList.add(getQuestion(90, "The value obtained in the function is given back to main by using ________ keyword?", "static", "return", "volatile", "new", 2, ""));
+
+        options.put("Functions - 1", questionList);
+
+
+
+
+
+
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(91, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(92, "", "", "", "", "", 0, ""));
