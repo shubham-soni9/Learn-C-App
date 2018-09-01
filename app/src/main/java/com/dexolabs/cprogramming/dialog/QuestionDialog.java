@@ -136,7 +136,7 @@ public class QuestionDialog {
         }
 
         tvTitle.setText(questionTitleList[currentPosition]);
-        tvMessage.setHtml(questionList.get(questionTitleList[currentPosition]));
+        tvMessage.setHtml(Utils.parseHtml(questionList.get(questionTitleList[currentPosition])));
         tvQuestionNumber.setText(String.valueOf(currentPosition + 1));
     }
 
