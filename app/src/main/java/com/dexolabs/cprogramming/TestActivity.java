@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.dexolabs.cprogramming.adapter.QuestionPagerAdapter;
+import com.dexolabs.cprogramming.dialog.OptionsDialog;
 import com.dexolabs.cprogramming.dialog.PieAnswerDialog;
 import com.dexolabs.cprogramming.listener.OnQuestionListener;
 import com.dexolabs.cprogramming.listener.OnQuestionTabListener;
@@ -141,7 +142,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
                 vpQuestions.setCurrentItem(questionPosition + 1, true);
                 break;
             case R.id.fabFinish:
-                showAnswer();
+                showFinishCheckDialog();
                 break;
         }
     }
@@ -151,8 +152,22 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
         Transition.exit(this);
     }
 
-    private void showAnswer() {
-        new PieAnswerDialog.Builder(this)
+    private void showFinishCheckDialog() {
+        new OptionsDialog.Builder(this).message(R.string.do_you_want_to_finish_the_test).listener(new OptionsDialog.Listener() {
+            @Override
+            public void performPositiveAction(int purpose, Bundle backpack) {
+                showAnswerChart();
+            }
+
+            @Override
+            public void performNegativeAction(int purpose, Bundle backpack) {
+
+            }
+        }).build().show();
+    }
+
+    private void showAnswerChart(){
+        new PieAnswerDialog.Builder(TestActivity.this)
                 .button(R.string.finish)
                 .setQuestionList(questionList)
                 .listener(new PieAnswerDialog.Listener() {
