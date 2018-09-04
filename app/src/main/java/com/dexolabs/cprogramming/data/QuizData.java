@@ -1445,20 +1445,99 @@ public class QuizData {
         options.put("Structures, Unions, Enums", questionList);
 
 
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(181, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(182, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(183, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(184, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(185, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(186, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(187, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(188, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(189, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(190, "", "", "", "", "", 0, ""));
-//        options.put("Structures, Unions, Enums", questionList);
-//
-//
+
+        questionList = new ArrayList<>();
+
+        questionList.add(getQuestion(181, "Function rewind() will?", "Reposition the file pointer stream to end of file.", "Reposition the file pointer to a character reverse.", "Reposition the file pointer to begining of that line.", "Reposition the file pointer to begining of file.", 4, ""));
+
+        questionList.add(getQuestion(182, "What is stderr ?", "standard error streams", "standard error types", "standard error definitions", "standard error", 1, ""));
+
+        questionList.add(getQuestion(183, "Maths function acos (x) stands for", "Inverse Sine of x", "Inverse Cosine of x", "Inverse Tangent of x", "Floor of x", 2, ""));
+
+        questionList.add(getQuestion(184, "Standard C library file < stdlib.h> is used for", "Declares a utility function", "Declares a mathematical function", "Declares time function", "Declares date function", 1, ""));
+
+        questionList.add(getQuestion(185, "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "<span style=\"color: #BC7A00\">#define int char </span>\n" +
+                "<span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "      <span style=\"color: #B00040\">int</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">65</span>;\n" +
+                "      printf(<span style=\"color: #BA2121\">&quot;sizeof(i)=%d&quot;</span>, <span style=\"color: #008000; font-weight: bold\">sizeof</span>(i));\n" +
+                "}\n" +
+                "</pre></div>", "sizeof(i)=2", "sizeof(i)=1", "Compiler Error", "None of These", 2, ""));
+
+        questionList.add(getQuestion(186,
+                "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                        "<span style=\"color: #BC7A00\">#include&lt;math.h&gt;</span>\n" +
+                        "\n" +
+                        "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                        "{\n" +
+                        "    <span style=\"color: #B00040\">float</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">2.5</span>;\n" +
+                        "    printf(<span style=\"color: #BA2121\">&quot;%f, %d&quot;</span>, floor(i), ceil(i));\n" +
+                        "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                        "}\n" +
+                        "</pre></div>", "2, 3", "2.000000, 3", "2.000000, 0", "2, 0", 3, "Both ceil() and floor() return the integer found as a double.\n" +
+                                             "\n" +
+                                             "floor(2.5) returns the largest integral value(round down) that is not greater than 2.5. So output is 2.000000.\n" +
+                                             "\n" +
+                                             "ceil(2.5) returns 3, while converting the double to int it returns '0'. \n" +
+                                             "So, the output is '2.000000, 0'."));
+
+        questionList.add(getQuestion(187, "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> i;\n" +
+                "    i <span style=\"color: #666666\">=</span> scanf(<span style=\"color: #BA2121\">&quot;%d %d&quot;</span>, <span style=\"color: #666666\">&amp;</span>i, <span style=\"color: #666666\">&amp;</span>i);\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, i);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "2", "1", "Garbage", "Error: cannot assign scanf to variable", 1, ""));
+
+        questionList.add(getQuestion(188, "Point out the error in the following program.\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    fprintf(<span style=\"color: #BA2121\">&quot;Hello world&quot;</span>);\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%.ef&quot;</span>, <span style=\"color: #666666\">2.0</span>);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "Error: in fprintf() statement.", "No error and prints \"Hello world\"", "No error and prints \"2.0\"", "Error: unknown value in printf() statement.", 1, "Syntax Error"));
+
+        questionList.add(getQuestion(189, "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> i;\n" +
+                "    <span style=\"color: #B00040\">char</span> c;\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">for</span>(i<span style=\"color: #666666\">=1</span>; i<span style=\"color: #666666\">&lt;=5</span>; i<span style=\"color: #666666\">++</span>)\n" +
+                "    {\n" +
+                "        scanf(<span style=\"color: #BA2121\">&quot;%c&quot;</span>, <span style=\"color: #666666\">&amp;</span>c); <span style=\"color: #408080; font-style: italic\">/* given input is &#39;d&#39; */</span>\n" +
+                "        ungetc(c, stdout);\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%c&quot;</span>, c);\n" +
+                "        ungetc(c, stdin);\n" +
+                "    }\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "ddd", "dddd", "dddddd", "d", 4, ""));
+
+        questionList.add(getQuestion(190, "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "<span style=\"color: #BC7A00\">#include&lt;stdlib.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span>i <span style=\"color: #666666\">=</span> <span style=\"color: #BA2121\">&quot;55.555&quot;</span>;\n" +
+                "    <span style=\"color: #B00040\">int</span> result1 <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">10</span>;\n" +
+                "    <span style=\"color: #B00040\">float</span> result2 <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">11.111</span>;\n" +
+                "    result1 <span style=\"color: #666666\">=</span> result1<span style=\"color: #666666\">+</span>atoi(i);\n" +
+                "    result2 <span style=\"color: #666666\">=</span> result2<span style=\"color: #666666\">+</span>atof(i);\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d, %f&quot;</span>, result1, result2);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "55, 55.555", "65, 66.666000", "55, 55", "66, 66.666600", 4, ""));
+
+        options.put("Library Functions", questionList);
+
+
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(191, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(192, "", "", "", "", "", 0, ""));
