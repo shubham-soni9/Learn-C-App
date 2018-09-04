@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.dexolabs.cprogramming.appdata.Codes;
 import com.dexolabs.cprogramming.appdata.Keys;
@@ -17,8 +18,8 @@ import com.dexolabs.cprogramming.utility.Transition;
 import com.dexolabs.cprogramming.utility.Utils;
 
 public class MoreFragment extends BaseFragment implements View.OnClickListener {
-    private Context      mContext;
-    private LinearLayout llDifferences, llPrecednece;
+    private Context  mContext;
+    private TextView tvDifferences, tvPrecedence;
     private Activity activity;
 
     public static MoreFragment newInstance() {
@@ -41,18 +42,18 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
     }
 
     private void initFragment(ViewGroup rootView) {
-        llDifferences = rootView.findViewById(R.id.llDifferences);
-        llPrecednece = rootView.findViewById(R.id.llPrecednece);
-        Utils.setOnClickListener(this, llDifferences, llPrecednece);
+        tvDifferences = rootView.findViewById(R.id.tvDifferences);
+        tvPrecedence = rootView.findViewById(R.id.tvPrecedence);
+        Utils.setOnClickListener(this, tvPrecedence, tvDifferences);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.llDifferences:
+            case R.id.tvDifferences:
                 openDifferenceScreen();
                 break;
-            case R.id.llPrecednece:
+            case R.id.tvPrecedence:
                 openPrecedenceScreen();
                 break;
         }
