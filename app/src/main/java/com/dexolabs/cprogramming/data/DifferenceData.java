@@ -8,6 +8,7 @@ public class DifferenceData {
         options.put("C v/s C++", "diff_1.html");
         options.put("C v/s Java", "diff_2.html");
         options.put("Procedure Oriented v/s Object Oriented Programming", "diff_3.html");
+        options.put("Structure v/s Union", "diff_4.html");
         return options;
     }
 }
