@@ -7,7 +7,7 @@ public class DifferenceData {
         LinkedHashMap<String, String> options = new LinkedHashMap<>();
         options.put("C v/s C++", "diff_1.html");
         options.put("C++ v/s Java", "diff_2.html");
-        options.put("C v/s Java", "diff_11.html");
+        options.put("Java v/s C", "diff_11.html");
         options.put("Procedure Oriented v/s Object Oriented Programming", "diff_3.html");
         options.put("Structure v/s Union", "diff_4.html");
         options.put("Array v/s Pointer", "diff_5.html");
