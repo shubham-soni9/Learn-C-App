@@ -26,109 +26,59 @@
         <thead>
         <tr>
             <th style="width: 2%; " bgcolor="#D3D3D3"><strong>Serial No.</strong></th>
-            <th style="width: 10%; " bgcolor="#D3D3D3"><strong>Basis of distinction</strong></th>
             <th style="width: 44%; " bgcolor="#D3D3D3"><strong>Array</strong></th>
             <th style="width: 44%; " bgcolor="#D3D3D3"><strong>Structure</strong></th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td><strong>1.</strong></td>
-            <td><strong>Basic</strong></td>
-            <td>An array is a collection of variables of same data type.</td>
-            <td>A structure is a collection of variables of different data type.
+            <th>No.</th>
+            <th>Object</th>
+            <th>Class</th>
+        </tr>
+        <tr>
+            <td><strong>1)</strong></td>
+            <td>Object is an <strong>instance</strong> of a class.</td>
+            <td>Class is a <strong>blueprint or template</strong> from which objects are created.
             </td>
         </tr>
         <tr>
-            <td><strong>2.</strong></td>
-            <td><strong>Syntax</strong></td>
-            <td>type array_name[size];</td>
-            <td>struct sruct_name{<br>
-                type element1;<br>
-                type element1;<br>
-                .<br>
-                .<br>
-                } variable1, variable2, . .;
+            <td><strong>2)</strong></td>
+            <td>Object is created through <strong>new keyword</strong> mainly e.g.<br> Student
+                s1=new Student();
             </td>
+            <td>Class is declared using <strong>class keyword</strong> e.g.<br> class Student{}</td>
+        </tr>
+        <tr>
+            <td><strong>3)</strong></td>
+            <td>Object <strong>allocates memory when it is created</strong>.</td>
+            <td>Class <strong>doesn't allocated memory when it is created</strong>.</td>
+        </tr>
+        <tr>
+            <td><strong>4)</strong></td>
+            <td>Object is a <strong>real world entity</strong> such as pen, laptop, mobile, bed,
+                keyboard, mouse, chair etc.
+            </td>
+            <td>Class is a <strong>group of similar objects</strong>.</td>
+        </tr>
+        <tr>
+            <td><strong>5)</strong></td>
+            <td>Object is a <strong>physical</strong> entity.</td>
+            <td>Class is a <strong>logical</strong> entity.</td>
         </tr>
 
         <tr>
-            <td><strong>3.</strong></td>
-            <td><strong>Access</strong></td>
-            <td>Array elements are accessed by their index number.</td>
-            <td>Structure elements are accessed by their names.</td>
+            <td><strong>6)</strong></td>
+            <td>Object is created <strong>many times</strong> as per requirement.</td>
+            <td>Class is declared <strong>once</strong>.</td>
         </tr>
+
         <tr>
-            <td><strong>4.</strong></td>
-            <td><strong>Operator</strong></td>
-            <td>Array declaration and element accessing operator is "[ ]" (square
-                bracket).
+            <td><strong>7)</strong></td>
+            <td>There are <strong>many ways to create object</strong> in java such as new keyword,
+                newInstance() method, clone() method, factory method and deserialization.
             </td>
-            <td>Structure element accessing operator is "." (Dot operator).</td>
-        </tr>
-        <tr>
-            <td><strong>5.</strong></td>
-            <td><strong>Pointer</strong></td>
-            <td>Array name points to the first element in that array so, array name
-                is a pointer.
-            </td>
-            <td>Structure name does not point to the first element in that
-                structure so, structure name is not a pointer.
-            </td>
-        </tr>
-        <tr>
-            <td><strong>6.</strong></td>
-            <td><strong>Objects</strong></td>
-            <td>Objects (instances) of an array can not be created.</td>
-            <td>Structure objects (instance or structure variable) can be
-                created.
-            </td>
-        </tr>
-        <tr>
-            <td><strong>7.</strong></td>
-            <td><strong>Size</strong></td>
-            <td>Every element in array is of same size.</td>
-            <td>Every element in a structure is of different data type.</td>
-        </tr>
-        <tr>
-            <td><strong>8.</strong></td>
-            <td><strong>Bit filed</strong></td>
-            <td>Bit filed can not be defined in an array.</td>
-            <td>Bit field can be defined in a structure.</td>
-        </tr>
-        <tr>
-            <td><strong>9.</strong></td>
-            <td><strong>Keyword</strong></td>
-            <td>There is no keyword to declare an array.</td>
-            <td>"struct" is a keyword used to declare the structure.</td>
-        </tr>
-        <tr>
-            <td><strong>10.</strong></td>
-            <td><strong>User-defined</strong></td>
-            <td>Arrays are not user-defined they are directly declared.</td>
-            <td>Structure is a user-defined datatype.</td>
-        </tr>
-        <tr>
-            <td><strong>11.</strong></td>
-            <td><strong>Accessing</strong></td>
-            <td>Accessing array element requires less time.</td>
-            <td>Accessing a structure elements require comparatively more time.
-            </td>
-        </tr>
-        <tr>
-            <td><strong>12.</strong></td>
-            <td><strong>Searching</strong></td>
-            <td>Searching an array element takes less time.</td>
-            <td>Searching a structure element takes comparatively more time than an
-                array element.
-            </td>
-        </tr>
-        <tr>
-            <td><strong>13.</strong></td>
-            <td><strong>Memory</strong></td>
-            <td>Array elements are stored in contiguous memory location.</td>
-            <td>Structure elements may not be stored in a contiguous memory
-                location.
+            <td>There is only <strong>one way to define class</strong> in java using class keyword.
             </td>
         </tr>
         </tbody>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="mt/fonts/material-icons.css" rel="stylesheet">
+    <title>Bootstrap Case</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bt/css/bootstrap.min.css">
+    <script src="bt/js/jquery-1.4.2.min.js"></script>
+    <script src="bt/js/bootstrap.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="mt/css/materialize.min.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script src="js/prism.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="mt/js/jquery-3.2.1.min.js"></script>
+<script src="mt/js/materialize.min.js"></script>
+
+<div>
+
+    <table class="striped table-bordered highlight">
+        <thead>
+        <tr>
+            <th style="width: 2%; " bgcolor="#D3D3D3"><strong>Serial No.</strong></th>
+            <th style="width: 10%; " bgcolor="#D3D3D3"><strong>Basis of distinction</strong></th>
+            <th style="width: 44%; " bgcolor="#D3D3D3"><strong>ARRAY</strong></th>
+            <th style="width: 44%; " bgcolor="#D3D3D3"><strong>POINTERS</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><strong>1.</strong></td>
+            <td><strong>Declaration</strong></td>
+            <td>//In C++<br>
+                type var_name[size];<br>
+                //In Java.<br>
+                type var-name[ ];<br>
+                var_name = new type[size];
+            </td>
+            <td>//In C++<br>
+                type * var_name;
+            </td>
+        </tr>
+        <tr>
+            <td><strong>2.</strong></td>
+            <td><strong>Working</strong></td>
+            <td>Stores the value of the variable of homogeneous datatype.</td>
+            <td>Store the address of the another variable of same datatype as the
+                pointer variable's datatype.
+            </td>
+        </tr>
+        <tr>
+            <td><strong>3.</strong></td>
+            <td><strong>Generation</strong></td>
+            <td>An array of pointers can be generated.</td>
+            <td>A pointer to an array can be generated.</td>
+        </tr>
+        <tr>
+            <td><strong>4.</strong></td>
+            <td><strong>Java Support</strong></td>
+            <td>Support the concept of array.</td>
+            <td>Does not support pointers.</td>
+        </tr>
+        <tr>
+            <td><strong>5.</strong></td>
+            <td><strong>Storage</strong></td>
+            <td>A normal array stores values of variable and pointer array stores
+                the address of variables.
+            </td>
+            <td>Pointers are specially designed to store the address of
+                variables.
+            </td>
+        </tr>
+        <tr>
+            <td><strong>6.</strong></td>
+            <td><strong>Capacity</strong></td>
+            <td>An array can store the number of elements, mentioned in the size of
+                array variable.
+            </td>
+            <td>A pointer variable can store the address of only one variable at a
+                time.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

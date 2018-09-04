@@ -25,100 +25,29 @@
         <thead>
         <tr>
             <th style="width: 2%; " bgcolor="#D3D3D3"><strong>Serial No.</strong></th>
-            <th style="width: 10%; " bgcolor="#D3D3D3"><strong>Basis of distinction</strong></th>
-            <th style="width: 44%; " bgcolor="#D3D3D3"><strong>Structure</strong></th>
-            <th style="width: 44%; " bgcolor="#D3D3D3"><strong>Union</strong>
+            <th style="width: 44%; " bgcolor="#D3D3D3"><strong>Call by value </strong></th>
+            <th style="width: 44%; " bgcolor="#D3D3D3"><strong>Call by reference</strong>
             </th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td><strong>1.</strong></td>
-            <td><strong>Memory Allocation</strong></td>
-            <td>Members of structure do not share memory. So A structure
-                need separate memory space for all its members i.e. all the members have unique
-                storage.
-            </td>
-            <td>A union shares the memory space among its members so no
-                need to allocate memory to all the members. Shared memory space is allocated i.e.
-                equivalent to the size of member having largest memory.
-            </td>
+            <td>A copy of value is passed to the function</td>
+            <td>An address of value is passed to the function</td>
         </tr>
         <tr>
             <td><strong>2.</strong></td>
-            <td><strong>Member Access</strong></td>
-            <td>Members of structure can be accessed individually at any
-                time.
-            </td>
-            <td>At a time, only one member of union can be accessed.</td>
+            <td>Changes made inside the function is not reflected on other functions</td>
+            <td>Changes made inside the function is reflected outside the function also</td>
         </tr>
         <tr>
             <td><strong>3.</strong></td>
-            <td><strong>Keyword</strong></td>
-            <td>To define Structure, ‘<strong>struct’</strong> keyword is used.</td>
-            <td>To define Union, ‘<strong>union’</strong> keyword is used.</td>
+            <td>Actual and formal arguments will be created in different memory location</td>
+            <td>Actual and formal arguments will be created in same memory location</td>
         </tr>
-        <tr>
-            <td><strong>4.</strong></td>
-            <td><strong>Initialization</strong></td>
-            <td><strong>All</strong> members of structure can be
-                initialized.
-            </td>
-            <td><strong>Only</strong> the <strong>first</strong> member of
-                Union can be initialized.
-            </td>
-        </tr>
-        <tr>
-            <td><strong>5.</strong></td>
-            <td><strong>Size</strong>
-            </td>
-            <td>Size of the structure is <strong><span
-                    style="text-decoration: underline;">&gt;</span>
-            </strong>to the sum of the each
-                member’s size.
-            </td>
-            <td>Size of union is equivalent to the size of the member
-                having <strong>largest</strong> size.
-            </td>
-        </tr>
-        <tr>
-            <td><strong>6.</strong></td>
-            <td>
-                <strong>Syntax</strong>
-            </td>
-            <td>struct struct_name<br>
-                {<br>
-                structure ele 1;<br>
-                structure ele 2;<br>
-                ———-<br>
-                ———-<br>
-                structure ele n;<br>
-                }struct_variable_name;
-            </td>
-            <td>union union_name<br>
-                {<br>
-                union ele 1;<br>
-                union ele 2;<br>
-                ———-<br>
-                ———-<br>
-                union ele n;<br>
-                }union_variable_name;
-            </td>
-        </tr>
-        <tr>
-            <td><strong>7.</strong></td>
-            <td>
-                <strong>Change in Value</strong>
-            </td>
-            <td>Change in the value of one member can not affect the other
-                in structure.
-            </td>
-            <td>Change in the value of one member can affect the value of
-                other member.
-            </td>
-        </tr>
-
         </tbody>
+
     </table>
 </div>
 
