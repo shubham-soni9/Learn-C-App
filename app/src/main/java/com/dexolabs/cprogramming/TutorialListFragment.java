@@ -54,7 +54,7 @@ public class TutorialListFragment extends BaseFragment {
     private void initFragment(ViewGroup rootView) {
         rvTutorialList = rootView.findViewById(R.id.rvTutorialList);
         rvTutorialList.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
-        tutorialListAdapter = new TutorialListAdapter(mContext, tutorialModel);
+        tutorialListAdapter = new TutorialListAdapter(mContext, tutorialModel.getTutorialOptions(),false);
         rvTutorialList.setAdapter(tutorialListAdapter);
     }
 }

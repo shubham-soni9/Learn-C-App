@@ -85,6 +85,12 @@ public class Transition {
         transit(fromContext, toClass, false, extras);
     }
 
+
+    public static void transitForResult(Activity fromContext, Class<?> toClass,
+                                        int requestCode) {
+        transitForResult(fromContext, toClass, requestCode, null);
+    }
+
     /**
      * Transit forward to an Activity with some data,leaving current one alive
      *

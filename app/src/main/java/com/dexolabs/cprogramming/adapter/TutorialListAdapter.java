@@ -14,7 +14,6 @@ import com.dexolabs.cprogramming.R;
 import com.dexolabs.cprogramming.WebViewActivity;
 import com.dexolabs.cprogramming.appdata.Codes;
 import com.dexolabs.cprogramming.appdata.Keys;
-import com.dexolabs.cprogramming.model.TutorialModel;
 import com.dexolabs.cprogramming.utility.Log;
 import com.dexolabs.cprogramming.utility.Transition;
 
@@ -25,10 +24,12 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
     private String[]                      tutorialTitleList;
     private String TAG = TutorialListAdapter.class.getName();
     private Context mContext;
+    private boolean showSerialNumber;
 
-    public TutorialListAdapter(Context mContext, TutorialModel tutorialModel) {
-        this.webUrlList = tutorialModel.getTutorialOptions();
+    public TutorialListAdapter(Context mContext, LinkedHashMap<String, String> webUrlList, boolean showSerialNumber) {
+        this.webUrlList = webUrlList;
         this.mContext = mContext;
+        this.showSerialNumber = showSerialNumber;
         tutorialTitleList = webUrlList.keySet().toArray(new String[webUrlList.size()]);
     }
 
@@ -49,6 +50,11 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
                 openWebView(webUrlList.get(tutorialTitleList[position]), tutorialTitleList[position]);
             }
         });
+
+        if (showSerialNumber) {
+            viewHolder.tvTutorialNumber.setText(String.valueOf(pos + 1));
+            viewHolder.tvTutorialNumber.append(".");
+        }
         Log.e(TAG, tutorialTitleList[pos]);
     }
 
@@ -59,10 +65,12 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tvTutorialTitle;
+        private TextView tvTutorialNumber;
 
         public ViewHolder(View itemView) {
             super(itemView);
             tvTutorialTitle = itemView.findViewById(R.id.tvTutorialTitle);
+            tvTutorialNumber = itemView.findViewById(R.id.tvTutorialNumber);
         }
     }
 

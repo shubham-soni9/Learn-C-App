@@ -1,5 +1,6 @@
 package com.dexolabs.cprogramming;
 
+import com.dexolabs.cprogramming.data.DifferenceData;
 import com.dexolabs.cprogramming.data.ProgramData;
 import com.dexolabs.cprogramming.data.QuestionData;
 import com.dexolabs.cprogramming.data.QuizData;
@@ -27,4 +28,9 @@ public class CommonData {
     public static LinkedHashMap<String, String> getQuestionData() {
         return QuestionData.getQuestionData();
     }
+
+    public static LinkedHashMap<String, String> getDifferenceData() {
+        return DifferenceData.getDifferencesData();
+    }
+
 }
