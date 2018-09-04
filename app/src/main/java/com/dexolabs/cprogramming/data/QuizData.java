@@ -1,6 +1,7 @@
 package com.dexolabs.cprogramming.data;
 
 import com.dexolabs.cprogramming.model.Question;
+import com.dexolabs.cprogramming.utility.Utils;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -158,19 +159,19 @@ public class QuizData {
         questionList = new ArrayList<>();
         questionList.add(getQuestion(21, "Which of the following correctly shows the hierarchy of arithmetic operations in C?\n" +
                 "\n", "/ + * -", "+ - / *", "* - / +", "/ * + -", 4, "<div id=\"divAnswer_118\" class=\"bix-div-answer mx-none\">\n" +
-                "<div class=\"bix-ans-description\">" +
-                "<p>Simply called as BODMAS (Bracket of Division, Multiplication, Addition and Subtraction).</p>\n" +
-                "<p>How Do I Remember ? BODMAS !</p>\n" +
-                "<p>&nbsp;</p>" +
-                "<ul>" +
-                "<li><strong>B</strong>&nbsp;- Brackets first</li>\n" +
-                "<li><strong>O</strong>&nbsp;- Orders (ie Powers and Square Roots, etc.)</li>\n" +
-                "<li><strong>DM</strong>&nbsp;- Division and Multiplication (left-to-right)</li>\n" +
-                "<li><strong>AS</strong>&nbsp;- Addition and Subtraction (left-to-right)</li>\n" +
-                "</ul>" +
-                "<p>&nbsp;</p>" +
-                "</div>" +
-                "</div>"));
+                                             "<div class=\"bix-ans-description\">" +
+                                             "<p>Simply called as BODMAS (Bracket of Division, Multiplication, Addition and Subtraction).</p>\n" +
+                                             "<p>How Do I Remember ? BODMAS !</p>\n" +
+                                             "<p>&nbsp;</p>" +
+                                             "<ul>" +
+                                             "<li><strong>B</strong>&nbsp;- Brackets first</li>\n" +
+                                             "<li><strong>O</strong>&nbsp;- Orders (ie Powers and Square Roots, etc.)</li>\n" +
+                                             "<li><strong>DM</strong>&nbsp;- Division and Multiplication (left-to-right)</li>\n" +
+                                             "<li><strong>AS</strong>&nbsp;- Addition and Subtraction (left-to-right)</li>\n" +
+                                             "</ul>" +
+                                             "<p>&nbsp;</p>" +
+                                             "</div>" +
+                                             "</div>"));
 
         questionList.add(getQuestion(22, "In which order do the following gets evaluated\n1.\tRelational\n" +
                 "2.\tArithmetic\n" +
@@ -324,16 +325,16 @@ public class QuizData {
                 "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
                 "}\n" +
                 "</pre></div>\n", "fff8", "ffff", "0", "Error", 1, "The integer value 2 is represented as 00000000 00000010 in binary system. \n" +
-                "\n" +
-                "Negative numbers are represented in 2's complement method. \n" +
-                "\n" +
-                "1's complement of 00000000 00000010 is 11111111 11111101 (Change all 0s to 1 and 1s to 0). \n" +
-                "\n" +
-                "2's complement of 00000000 00000010 is 11111111 11111110 (Add 1 to 1's complement to obtain the 2's complement value). \n" +
-                "\n" +
-                "Therefore, in binary we represent -2 as: 11111111 11111110. \n" +
-                "\n" +
-                "After left shifting it by 2 bits we obtain: 11111111 11111000, and it is equal to \"fff8\" in hexadecimal system."));
+                                             "\n" +
+                                             "Negative numbers are represented in 2's complement method. \n" +
+                                             "\n" +
+                                             "1's complement of 00000000 00000010 is 11111111 11111101 (Change all 0s to 1 and 1s to 0). \n" +
+                                             "\n" +
+                                             "2's complement of 00000000 00000010 is 11111111 11111110 (Add 1 to 1's complement to obtain the 2's complement value). \n" +
+                                             "\n" +
+                                             "Therefore, in binary we represent -2 as: 11111111 11111110. \n" +
+                                             "\n" +
+                                             "After left shifting it by 2 bits we obtain: 11111111 11111000, and it is equal to \"fff8\" in hexadecimal system."));
 
         questionList.add(getQuestion(39, "Are logical operator sequence points?", "False", "True", "Depends on the compiler", "Depends on the standard", 2, ""));
 
@@ -389,7 +390,7 @@ public class QuizData {
                 "</pre></div>\n"));
 
         questionList.add(getQuestion(44, "In mathematics and computer programming, which is the correct order of mathematical operators ?", "Addition, Subtraction, Multiplication, Division", "Multiplication, Addition, Division, Subtraction", "Addition, Division, Modulus, Subtraction", "Division, Multiplication, Addition, Subtraction\n", 4, "Simply called as BODMAS (Brackets, Order, Division, Multiplication, Addition and Subtraction).\n"
-                ));
+        ));
 
         questionList.add(getQuestion(45, "Which of the following cannot be checked in a switch-case statement?", "Character", "Integer", "Float", "enum", 3, "The switch/case statement in the c language is defined by the language specification to use an int value, so you can not use a float value."));
 
@@ -466,7 +467,7 @@ public class QuizData {
                 "            printf(<span style=\"color: #BA2121\">&quot;inside elseif</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
                 "    }\n" +
                 "</pre></div>", "inside elseif", "inside if" +
-                "    inside elseif", "inside if", "compile time error", 2, ""));
+                                             "    inside elseif", "inside if", "compile time error", 2, ""));
 
         questionList.add(getQuestion(52, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include &lt;stdio.h&gt;</span>\n" +
                 "    <span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
@@ -592,9 +593,9 @@ public class QuizData {
                 "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
                 "}\n" +
                 "</pre></div>", "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #A0A000\">Error:</span> No <span style=\"color: #008000; font-weight: bold\">case</span> statement specified\n" +
-                "</pre></div>", "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #A0A000\">Error:</span> No <span style=\"color: #008000; font-weight: bold\">default</span> specified\n" +
-                "</pre></div>", "No Error", "Error: infinite loop occurs", 3, "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">There can exist a <span style=\"color: #008000; font-weight: bold\">switch</span> statement, which has no <span style=\"color: #008000; font-weight: bold\">case</span>.\n" +
-                "</pre></div>"));
+                                             "</pre></div>", "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #A0A000\">Error:</span> No <span style=\"color: #008000; font-weight: bold\">default</span> specified\n" +
+                                             "</pre></div>", "No Error", "Error: infinite loop occurs", 3, "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">There can exist a <span style=\"color: #008000; font-weight: bold\">switch</span> statement, which has no <span style=\"color: #008000; font-weight: bold\">case</span>.\n" +
+                                             "</pre></div>"));
 
         options.put("Control Instructions - 2", questionList);
 
@@ -783,7 +784,7 @@ public class QuizData {
                 "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
                 "}\n" +
                 "</pre></div>", "Infinite times", "32767 times", "65535 times", "Till stack overflows", 4, "A stack overflow occurs when too much memory is used on the call stack.\n" +
-                "\n"));
+                                             "\n"));
 
         questionList.add(getQuestion(82, "The keyword used to transfer control from a function back to the calling function is", "goto", "switch", "return", "go back", 3, "<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">The keyword <span style=\"color: #008000; font-weight: bold\">return</span> is used to transfer control from a function back to the calling function.\n" +
                 "</pre></div>"));
@@ -876,7 +877,6 @@ public class QuizData {
         options.put("Functions", questionList);
 
 
-
         questionList = new ArrayList<>();
 
         questionList.add(getQuestion(91, "Property which allows to produce different executable for different platforms in C is called?", "Selective inclusion", "Conditional compilation", "Recursive macros", "File inclusion", 2, "Conditional compilation is the preprocessor facility to produce different executable."));
@@ -890,7 +890,7 @@ public class QuizData {
                 "<span style=\"color: #BC7A00\">#include&lt;stdio.h&gt; </span>\n" +
                 "gets replaced by the contents of the file stdio.h\n" +
                 "</pre></div>", "During linking", "During editing", "During execution", "During preprocessing", 4, "<!-- HTML generated using hilite.me --><div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">The preprocessor replaces the line <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span> with the system header file of that name. More precisely, the entire text of the file <span style=\"border: 1px solid #FF0000\">&#39;</span>stdio.h<span style=\"border: 1px solid #FF0000\">&#39;</span> replaces the <span style=\"border: 1px solid #FF0000\">#</span>include directive.\n" +
-                "</pre></div>"));
+                                             "</pre></div>"));
 
         questionList.add(getQuestion(95, "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
                 "<span style=\"color: #BC7A00\">#define CUBE(x) (x*x*x)</span>\n" +
@@ -996,7 +996,6 @@ public class QuizData {
         options.put("Storage Classes - 1", questionList);
 
 
-
         questionList = new ArrayList<>();
 
         questionList.add(getQuestion(111, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
@@ -1035,7 +1034,6 @@ public class QuizData {
         questionList.add(getQuestion(120, "Register variables reside in", "stack", "registers", "heap", "main memory", 2, ""));
 
         options.put("Storage Classes - 2", questionList);
-
 
 
         questionList = new ArrayList<>();
@@ -1106,7 +1104,7 @@ public class QuizData {
                 "</pre></div>", "ptr is an array of 15 integers", "ptr is an pointer to array", "ptr is array of pointers to 15 integers", "ptr is a pointer to an array of 15 integers", 4, ""));
 
         questionList.add(getQuestion(133,
-                "In C, if you pass an array as an argument to a function, what actually gets passed?", "First element of the array", "Base address of the array", "Address of the last element of array", "Value of elements in array", 2, "When we pass an array as a funtion argument, the base address of the array will be passed."));
+                                     "In C, if you pass an array as an argument to a function, what actually gets passed?", "First element of the array", "Base address of the array", "Address of the last element of array", "Value of elements in array", 2, "When we pass an array as a funtion argument, the base address of the array will be passed."));
 
         questionList.add(getQuestion(134, "What will be the output of the program ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
                 "\n" +
@@ -1171,7 +1169,6 @@ public class QuizData {
                 "</pre></div>", "1 2 3 4 5 junk", "1 2 3 4 5 5", "1 2 3 4 5 0", "Run time error", 3, ""));
 
         options.put("Arrays - 1", questionList);
-
 
 
         questionList = new ArrayList<>();
@@ -1286,7 +1283,7 @@ public class QuizData {
                 "        <span style=\"color: #008000; font-weight: bold\">struct</span> student s[<span style=\"color: #666666\">2</span>];\n" +
                 "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, <span style=\"color: #008000; font-weight: bold\">sizeof</span>(s));\n" +
                 "    }\n" +
-                "</pre></div>" , "0", "2", "4", "8", 1, ""));
+                "</pre></div>", "0", "2", "4", "8", 1, ""));
 
         questionList.add(getQuestion(160, "What type of array is generally generated in Command-line argument?", "Single dimension array", "Jagged Array", "2-Dimensional Square Array", "2-Dimensional Rectangular Array", 2, ""));
 
@@ -1357,35 +1354,97 @@ public class QuizData {
                 "}\n" +
                 "</pre></div>", "Nothing will print", "print \"r\" of SourceTree", "print \"7\"", "Error: in printf", 2, ""));
 
-        options.put("Pointers - 1", questionList);
+        options.put("Pointers", questionList);
 
 
-//
-//        questionList = new ArrayList<>();
-//
-//        questionList.add(getQuestion(171, "", "", "", "", "", 0, ""));
-//
-//        questionList.add(getQuestion(172, "", "", "", "", "", 0, ""));
-//
-//        questionList.add(getQuestion(173, "", "", "", "", "", 0, ""));
-//
-//        questionList.add(getQuestion(174, "", "", "", "", "", 0, ""));
-//
-//        questionList.add(getQuestion(175, "", "", "", "", "", 0, ""));
-//
-//        questionList.add(getQuestion(176, "", "", "", "", "", 0, ""));
-//
-//        questionList.add(getQuestion(177, "", "", "", "", "", 0, ""));
-//
-//        questionList.add(getQuestion(178, "", "", "", "", "", 0, ""));
-//
-//        questionList.add(getQuestion(179, "", "", "", "", "", 0, ""));
-//
-//        questionList.add(getQuestion(180, "", "", "", "", "", 0, ""));
-//
-//        options.put("Pointers - 2", questionList);
-//
-//
+        questionList = new ArrayList<>();
+
+        questionList.add(getQuestion(171, "How will you free the allocated memory ?", "free(var-name);", "remove(var-name);", "delete(var-name);", "dalloc(var-name);", 1, ""));
+
+        questionList.add(getQuestion(172, "What will be the output of the program ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">enum</span> days {MON<span style=\"color: #666666\">=-1</span>, TUE, WED<span style=\"color: #666666\">=6</span>, THU, FRI, SAT};\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d, %d, %d, %d, %d, %d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>, MON, TUE, WED, THU, FRI, SAT);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "-1, 0, 6, 7, 8, 9", "-1, 0, 1, 2, 3, 4", "-1, 2, 6, 3, 4, 5", "-1, 0, 6, 2, 3, 4", 1, ""));
+
+        questionList.add(getQuestion(173, "Which of the following are a collection of different data types?", "structures", "char", "string", "all", 1, ""));
+
+        questionList.add(getQuestion(174, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">struct</span> student\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> no;\n" +
+                "        <span style=\"color: #B00040\">char</span> name[<span style=\"color: #666666\">20</span>];\n" +
+                "    }\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">struct</span> student s;\n" +
+                "        s.no <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">8</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;hello&quot;</span>);\n" +
+                "    }\n" +
+                "</pre></div>", "Nothing", "hello", "Varies", "Compile time error", 4, ""));
+
+        questionList.add(getQuestion(175, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #B00040\">void</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">struct</span> teacher\n" +
+                "        {\n" +
+                "            <span style=\"color: #B00040\">int</span> no;\n" +
+                "            <span style=\"color: #B00040\">char</span> name[<span style=\"color: #666666\">20</span>];\n" +
+                "        };\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">struct</span> teacher s;\n" +
+                "        s.no <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">8</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, s.no);\n" +
+                "    }\n" +
+                "</pre></div>", "Nothing", "Compile time error", "Junk", "8", 4, ""));
+
+        questionList.add(getQuestion(176, "Size of a union is determined by size of the", "Sum of the sizes of all members", "First member in the union", "Last member in the union", "Biggest member in the union", 4, ""));
+
+        questionList.add(getQuestion(177, "What is the output of this C code?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include <span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">union</span> stu\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> ival;\n" +
+                "        <span style=\"color: #B00040\">float</span> fval;\n" +
+                "    };\n" +
+                "    <span style=\"color: #B00040\">void</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">union</span> stu r;\n" +
+                "        r.ival <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">5</span>;\n" +
+                "        printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, r.ival);\n" +
+                "    }\n" +
+                "</pre></div>", "9", "15", "16", "5", 4, ""));
+
+        questionList.add(getQuestion(178, "What will be the output of the program given below in 16-bit platform ?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">enum</span> value{VAL1<span style=\"color: #666666\">=0</span>, VAL2, VAL3, VAL4, VAL5} var;\n" +
+                "    printf(<span style=\"color: #BA2121\">&quot;%d&quot;</span>, <span style=\"color: #008000; font-weight: bold\">sizeof</span>(var));\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "1", "2", "4", "10", 2, ""));
+
+        questionList.add(getQuestion(179, "Point out the error in the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #008000; font-weight: bold\">struct</span> emp\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> ecode;\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">struct</span> emp <span style=\"color: #666666\">*</span>e;\n" +
+                "};\n" +
+                "</pre></div>", "Error: in structure declaration", "Linker Error", "No Error", "None of above", 3, ""));
+
+        questionList.add(getQuestion(180, " The number of distinct nodes the following struct declaration can point to is\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"color: #008000; font-weight: bold\">struct</span> node\n" +
+                "    {\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">struct</span> node <span style=\"color: #666666\">*</span>left;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">struct</span> node <span style=\"color: #666666\">*</span>centre;\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">struct</span> node <span style=\"color: #666666\">*</span>right;\n" +
+                "    };\n" +
+                "</pre></div>", "1", "2", "3", "all", 4, ""));
+
+        options.put("Structures, Unions, Enums", questionList);
+
+
 //        questionList = new ArrayList<>();
 //        questionList.add(getQuestion(181, "", "", "", "", "", 0, ""));
 //        questionList.add(getQuestion(182, "", "", "", "", "", 0, ""));
@@ -1833,7 +1892,7 @@ public class QuizData {
 //        questionList.add(getQuestion(500, "", "", "", "", "", 0, ""));
 //        options.put("", questionList);
 
-
+        Utils.logRequestBody(options);
         return options;
     }
 
