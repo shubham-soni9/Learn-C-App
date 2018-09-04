@@ -24,4 +24,25 @@
             android:layout_height="@dimen/_1dp"
             android:background="@color/black_10" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPrecednece"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_normal"
+            android:text="@string/operator_precedence"
+            android:textAppearance="@style/CustomTextAppearance.Regular"
+            android:textColor="@color/app_text_color"
+            android:textSize="@dimen/text_size_large" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1dp"
+            android:background="@color/black_10" />
+    </LinearLayout>
 </LinearLayout>

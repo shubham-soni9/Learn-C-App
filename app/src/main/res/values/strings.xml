@@ -23,4 +23,5 @@
     <string name="not_available">Not Avaialble</string>
     <string name="do_you_want_to_finish_the_test">Do you want to finish the test?</string>
     <string name="important_differences">Important Differences</string>
+    <string name="operator_precedence">Operator Precedence</string>
 </resources>

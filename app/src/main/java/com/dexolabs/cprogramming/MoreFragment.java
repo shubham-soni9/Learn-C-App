@@ -11,14 +11,15 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.dexolabs.cprogramming.appdata.Codes;
+import com.dexolabs.cprogramming.appdata.Keys;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 import com.dexolabs.cprogramming.utility.Transition;
 import com.dexolabs.cprogramming.utility.Utils;
 
 public class MoreFragment extends BaseFragment implements View.OnClickListener {
     private Context      mContext;
-    private LinearLayout llDifferences;
-    private Activity     activity;
+    private LinearLayout llDifferences, llPrecednece;
+    private Activity activity;
 
     public static MoreFragment newInstance() {
         return new MoreFragment();
@@ -41,7 +42,8 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
 
     private void initFragment(ViewGroup rootView) {
         llDifferences = rootView.findViewById(R.id.llDifferences);
-        Utils.setOnClickListener(this, llDifferences);
+        llPrecednece = rootView.findViewById(R.id.llPrecednece);
+        Utils.setOnClickListener(this, llDifferences, llPrecednece);
     }
 
     @Override
@@ -50,10 +52,25 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
             case R.id.llDifferences:
                 openDifferenceScreen();
                 break;
+            case R.id.llPrecednece:
+                openPrecedenceScreen();
+                break;
         }
     }
 
+    private void openPrecedenceScreen() {
+        openWebView("operator_precedence.html", getString(R.string.operator_precedence));
+    }
+
     private void openDifferenceScreen() {
-        Transition.transitForResult(activity, DifferenceActivity.class, Codes.RequestCode.OPEN_DIFFERENCE_ACTIVITY);
+        Transition.startActivity(activity, DifferenceActivity.class);
+    }
+
+
+    private void openWebView(String webUrl, String title) {
+        Bundle bundle = new Bundle();
+        bundle.putString(Keys.Extras.WEB_TITLE, title);
+        bundle.putString(Keys.Extras.WEB_URL, webUrl);
+        Transition.transitForResult((Activity) mContext, WebViewActivity.class, Codes.RequestCode.OPEN_WEB_VIEW, bundle);
     }
 }
