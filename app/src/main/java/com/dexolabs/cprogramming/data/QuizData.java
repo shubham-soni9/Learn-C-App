@@ -1538,18 +1538,98 @@ public class QuizData {
         options.put("Library Functions", questionList);
 
 
-//        questionList = new ArrayList<>();
-//        questionList.add(getQuestion(191, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(192, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(193, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(194, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(195, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(196, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(197, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(198, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(199, "", "", "", "", "", 0, ""));
-//        questionList.add(getQuestion(200, "", "", "", "", "", 0, ""));
-//        options.put("", questionList);
+
+        questionList = new ArrayList<>();
+
+        questionList.add(getQuestion(191, "Header file to use functions like malloc() and calloc()?", "string.h", "dos.h", "memory.h", "stdlib.h", 4, ""));
+
+        questionList.add(getQuestion(192, "What is the output of this program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">   <span style=\"border: 1px solid #FF0000\">#</span>include<span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                " \n" +
+                "   <span style=\"color: #B00040\">int</span> main()\n" +
+                "   {\n" +
+                "       <span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>ptr;\n" +
+                "       ptr <span style=\"color: #666666\">=</span> (<span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>)calloc(<span style=\"color: #666666\">1</span>,<span style=\"color: #008000; font-weight: bold\">sizeof</span>(<span style=\"color: #B00040\">int</span>));\n" +
+                "       <span style=\"color: #666666\">*</span>ptr <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">10</span>;\n" +
+                "       printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>,<span style=\"color: #666666\">*</span>ptr);\n" +
+                "       <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "   }\n" +
+                "</pre></div>", "1", "0", "-1", "none", 4, "This program will give an error because calloc() requires the header file stdlib.h."));
+
+        questionList.add(getQuestion(193, "In this program the allocated memory block can store\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include<span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"border: 1px solid #FF0000\">#</span>include<span style=\"color: #666666\">&lt;</span>stdlib.h<span style=\"color: #666666\">&gt;</span>\n" +
+                " \n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>ptr;\n" +
+                "        ptr <span style=\"color: #666666\">=</span> malloc(<span style=\"color: #666666\">10</span>);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "    }\n" +
+                "</pre></div>", "char", "float", "int", "all of the mentioned", 4, "When the malloc() is used without typecasting the default type is void*."));
+
+        questionList.add(getQuestion(194, "In which condition this prgram will print the string “Google”?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">   <span style=\"border: 1px solid #FF0000\">#</span>include<span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "   <span style=\"border: 1px solid #FF0000\">#</span>include<span style=\"color: #666666\">&lt;</span>stdlib.h<span style=\"color: #666666\">&gt;</span>\n" +
+                " \n" +
+                "   <span style=\"color: #B00040\">int</span> main()\n" +
+                "   {\n" +
+                "       <span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>ptr;\n" +
+                "       ptr <span style=\"color: #666666\">=</span> (<span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>)malloc(<span style=\"color: #008000; font-weight: bold\">sizeof</span>(<span style=\"color: #B00040\">int</span>)<span style=\"color: #666666\">*10</span>);\n" +
+                "       <span style=\"color: #008000; font-weight: bold\">if</span> (ptr <span style=\"color: #666666\">==</span> <span style=\"color: #008000\">NULL</span>)\n" +
+                "           printf(<span style=\"color: #BA2121\">&quot;Google</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>);\n" +
+                "       <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "   }\n" +
+                "</pre></div>", "if the memory has been allocated to the pointer “ptr” successfully", "it will never print", "none of the mentioned", "if the memory could not be allocated to the pointer “ptr”", 4, "The malloc() returns NULL when the memory is not allocated."));
+
+        questionList.add(getQuestion(195, "In this program the allocated memory block can store\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">    <span style=\"border: 1px solid #FF0000\">#</span>include<span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "    <span style=\"border: 1px solid #FF0000\">#</span>include<span style=\"color: #666666\">&lt;</span>stdlib.h<span style=\"color: #666666\">&gt;</span>\n" +
+                " \n" +
+                "    <span style=\"color: #B00040\">int</span> main()\n" +
+                "    {\n" +
+                "        <span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>ptr;\n" +
+                "        ptr <span style=\"color: #666666\">=</span> malloc(<span style=\"color: #666666\">10</span>);\n" +
+                "        <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "    }\n" +
+                "</pre></div>", "float", "char", "int", "all", 4, ""));
+
+        questionList.add(getQuestion(196, "What is the output of this program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">   <span style=\"border: 1px solid #FF0000\">#</span>include<span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "   <span style=\"border: 1px solid #FF0000\">#</span>include<span style=\"color: #666666\">&lt;</span>stdlib.h<span style=\"color: #666666\">&gt;</span>\n" +
+                " \n" +
+                "   <span style=\"color: #B00040\">int</span> main()\n" +
+                "   {\n" +
+                "\t   <span style=\"color: #B00040\">char</span> <span style=\"color: #666666\">*</span>ptr;\n" +
+                "       free(ptr);\n" +
+                "       <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>\t   \n" +
+                "   }\n" +
+                "</pre></div>", "this program will print nothing after execution", "Aborted (core dumped)", "segmentation fault", "none of the above", 2, ""));
+
+        questionList.add(getQuestion(197, "What is the output of this program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\">   <span style=\"border: 1px solid #FF0000\">#</span>include<span style=\"color: #666666\">&lt;</span>stdio.h<span style=\"color: #666666\">&gt;</span>\n" +
+                "   <span style=\"border: 1px solid #FF0000\">#</span>inlcude<span style=\"color: #666666\">&lt;</span>stdlib.h<span style=\"color: #666666\">&gt;</span>\n" +
+                " \n" +
+                "   <span style=\"color: #B00040\">int</span> main()\n" +
+                "   {\n" +
+                "       <span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>ptr;\n" +
+                "       <span style=\"color: #B00040\">double</span> <span style=\"color: #666666\">*</span>ptr;\n" +
+                "       printf(<span style=\"color: #BA2121\">&quot;%d</span><span style=\"color: #BB6622; font-weight: bold\">\\n</span><span style=\"color: #BA2121\">&quot;</span>,<span style=\"color: #008000; font-weight: bold\">sizeof</span>(ptr));\n" +
+                "       <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\t   \n" +
+                "   }\n" +
+                "</pre></div>", "8", "4", "Compiler Error", "segmentaion fault", 3, ""));
+
+        questionList.add(getQuestion(198, "What function should be used to free the memory allocated by calloc() ?", "dealloc();", "free();", "malloc(variable_name, 0)", "memalloc(variable_name, 0)", 2, ""));
+
+        questionList.add(getQuestion(199, "Point out the error in the following program.\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                "<span style=\"color: #BC7A00\">#include&lt;stdlib.h&gt;</span>\n" +
+                "\n" +
+                "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                "{\n" +
+                "    <span style=\"color: #B00040\">int</span> <span style=\"color: #666666\">*</span>a[<span style=\"color: #666666\">3</span>];\n" +
+                "    a <span style=\"color: #666666\">=</span> (<span style=\"color: #B00040\">int</span><span style=\"color: #666666\">*</span>) malloc(<span style=\"color: #008000; font-weight: bold\">sizeof</span>(<span style=\"color: #B00040\">int</span>)<span style=\"color: #666666\">*3</span>);\n" +
+                "    free(a);\n" +
+                "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                "}\n" +
+                "</pre></div>", "Error: We cannot store address of allocated memory in a", "Error: unable to allocate memory", "Error: unable to free memory", "No error", 1, "Store the address in a[i]"));
+
+        questionList.add(getQuestion(200, "Specify the 2 library functions to dynamically allocate memory?", "alloc() and memalloc()", "malloc() and calloc()", "memalloc() and faralloc()", "malloc() and memalloc()", 2, ""));
+
+        options.put("Memory Allocation", questionList);
 
 
 //        questionList = new ArrayList<>();
