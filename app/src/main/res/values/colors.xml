@@ -504,4 +504,6 @@
     <color name="translucent_white">#8FFF</color>
     <color name="app_text_color">#000000</color>
 
+    <color name="snackbar_bg_color_success">#e666d02a</color>
+    <color name="snackbar_bg_color_error">#e6e2574c</color>
 </resources>

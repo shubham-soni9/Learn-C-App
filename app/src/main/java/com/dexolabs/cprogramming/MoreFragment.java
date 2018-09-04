@@ -8,10 +8,10 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.dexolabs.cprogramming.appdata.Codes;
+import com.dexolabs.cprogramming.appdata.Constant;
 import com.dexolabs.cprogramming.appdata.Keys;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 import com.dexolabs.cprogramming.utility.Transition;
@@ -19,7 +19,7 @@ import com.dexolabs.cprogramming.utility.Utils;
 
 public class MoreFragment extends BaseFragment implements View.OnClickListener {
     private Context  mContext;
-    private TextView tvDifferences, tvPrecedence;
+    private TextView tvDifferences, tvPrecedence, tvReportBug, tvSuggestion;
     private Activity activity;
 
     public static MoreFragment newInstance() {
@@ -44,7 +44,9 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
     private void initFragment(ViewGroup rootView) {
         tvDifferences = rootView.findViewById(R.id.tvDifferences);
         tvPrecedence = rootView.findViewById(R.id.tvPrecedence);
-        Utils.setOnClickListener(this, tvPrecedence, tvDifferences);
+        tvReportBug = rootView.findViewById(R.id.tvReportBug);
+        tvSuggestion = rootView.findViewById(R.id.tvSuggestion);
+        Utils.setOnClickListener(this, tvPrecedence, tvDifferences, tvReportBug, tvSuggestion);
     }
 
     @Override
@@ -56,7 +58,23 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
             case R.id.tvPrecedence:
                 openPrecedenceScreen();
                 break;
+            case R.id.tvReportBug:
+                reportBug();
+                break;
+            case R.id.tvSuggestion:
+                giveSuggestions();
+                break;
         }
+    }
+
+    private void giveSuggestions() {
+        String subject = getString(R.string.application_name) + " : " + getString(R.string.suggestions);
+        Utils.openEmailApp(activity, subject, Constant.EMAIL, "");
+    }
+
+    private void reportBug() {
+        String subject = getString(R.string.application_name) + " : " + getString(R.string.report_a_bug);
+        Utils.openEmailApp(activity, subject, Constant.EMAIL, "");
     }
 
     private void openPrecedenceScreen() {

@@ -7,108 +7,56 @@
 
     <TextView
         android:id="@+id/tvDifferences"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/spacing_normal"
-        android:text="@string/important_differences"
-        android:textAppearance="@style/CustomTextAppearance.Regular"
-        android:textColor="@color/app_text_color"
-        android:textSize="@dimen/text_size_large" />
+        style="@style/more_options_textview"
+        android:text="@string/important_differences" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:background="@color/black_10" />
+    <View style="@style/more_options_seperator" />
 
     <TextView
         android:id="@+id/tvPrecedence"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/spacing_normal"
-        android:text="@string/operator_precedence"
-        android:textAppearance="@style/CustomTextAppearance.Regular"
-        android:textColor="@color/app_text_color"
-        android:textSize="@dimen/text_size_large" />
+        style="@style/more_options_textview"
+        android:text="@string/operator_precedence" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:background="@color/black_10" />
+    <View style="@style/more_options_seperator" />
+
 
     <TextView
         android:id="@+id/tvThemes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/spacing_normal"
-        android:text="@string/themes"
-        android:textAppearance="@style/CustomTextAppearance.Regular"
-        android:textColor="@color/app_text_color"
-        android:textSize="@dimen/text_size_large" />
+        style="@style/more_options_textview"
+        android:text="@string/themes" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:background="@color/black_10" />
+    <View style="@style/more_options_seperator" />
+
 
     <TextView
         android:id="@+id/tvReferences"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/spacing_normal"
-        android:text="@string/references"
-        android:textAppearance="@style/CustomTextAppearance.Regular"
-        android:textColor="@color/app_text_color"
-        android:textSize="@dimen/text_size_large" />
+        style="@style/more_options_textview"
+        android:text="@string/references" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:background="@color/black_10" />
+    <View style="@style/more_options_seperator" />
 
     <TextView
         android:id="@+id/tvReportBug"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/spacing_normal"
-        android:text="@string/report_a_bug"
-        android:textAppearance="@style/CustomTextAppearance.Regular"
-        android:textColor="@color/app_text_color"
-        android:textSize="@dimen/text_size_large" />
+        style="@style/more_options_textview"
+        android:text="@string/report_a_bug" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:background="@color/black_10" />
+    <View style="@style/more_options_seperator" />
 
 
     <TextView
         android:id="@+id/tvSuggestion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/spacing_normal"
-        android:text="@string/email_your_suggestions"
-        android:textAppearance="@style/CustomTextAppearance.Regular"
-        android:textColor="@color/app_text_color"
-        android:textSize="@dimen/text_size_large" />
+        style="@style/more_options_textview"
+        android:text="@string/email_your_suggestions" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:background="@color/black_10" />
+    <View style="@style/more_options_seperator" />
+
 
     <TextView
         android:id="@+id/tvAbout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/spacing_normal"
-        android:text="@string/about"
-        android:textAppearance="@style/CustomTextAppearance.Regular"
-        android:textColor="@color/app_text_color"
-        android:textSize="@dimen/text_size_large" />
+        style="@style/more_options_textview"
+        android:text="@string/about" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:background="@color/black_10" />
+    <View style="@style/more_options_seperator" />
+
 
 </LinearLayout>

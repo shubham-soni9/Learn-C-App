@@ -1,18 +1,30 @@
 package com.dexolabs.cprogramming.utility;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.net.Uri;
+import android.os.Build;
+import android.os.IBinder;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.text.Html;
 import android.text.Spanned;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
 
+import com.dexolabs.cprogramming.R;
+import com.dexolabs.cprogramming.appdata.Codes;
 import com.google.gson.Gson;
 
 import java.lang.reflect.Field;
@@ -149,4 +161,103 @@ public class Utils {
         string = string.replace("  ", "&nbsp;&nbsp;");
         return string;
     }
+
+
+    /**
+     * Method used to hide keyboard if outside touched.
+     *
+     * @param activity
+     */
+
+    public static void hideSoftKeyboard(Activity activity) {
+
+        View focusedView = activity.getCurrentFocus();
+        if (focusedView == null) return;
+
+        IBinder windowToken = focusedView.getWindowToken();
+        if (windowToken == null) return;
+
+        InputMethodManager inputMethodManager = (InputMethodManager) activity
+                .getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(windowToken, 0);
+    }
+
+    /**
+     * Method to open the Email Activity
+     *
+     * @param context
+     * @param subject
+     * @param receivers
+     * @param message
+     */
+    public static void openEmailApp(Activity context, String subject, String receivers, String message) {
+        try {
+            Utils.hideSoftKeyboard(context);
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+            emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            String uriText = "mailto:" + Uri.encode(receivers) +
+                    "?subject=" + Uri.encode(subject) +
+                    "&body=" + Uri.encode(message);
+            emailIntent.setData(Uri.parse(uriText));
+            context.startActivity(Intent.createChooser(emailIntent, "Send mail using..."));
+        } catch (Exception e) {
+            Utils.snackBar(context, context.getString(R.string.no_app_found_to_open_the_link));
+            e.printStackTrace();
+        }
+    }
+
+    public static void snackBar(Activity activity, String message) {
+        try {
+            snackBar(activity, message, Codes.SnackBarType.ERROR);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void snackBar(Activity activity, String message, int type) {
+        try {
+            snackBar(activity, message, activity.getWindow().getDecorView().findViewById(android.R.id.content), type);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Method to init toast to the User
+     *
+     * @param activity
+     * @param message
+     */
+    public static void snackBar(final Activity activity, final String message, final View view, final int type) {
+
+        if (activity == null) return;
+
+        activity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+
+                try {
+                    Snackbar snackbar = Snackbar.make(view, message, Snackbar.LENGTH_LONG).setDuration(2500);
+                    View view = snackbar.getView();
+                    TextView tv = view.findViewById(android.support.design.R.id.snackbar_text);
+                    tv.setMaxLines(3);
+                    tv.setGravity(Gravity.CENTER_HORIZONTAL);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                        tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    }
+                    tv.setTextAppearance(activity, R.style.CustomTextAppearance_Regular);
+                    tv.setTextColor(ContextCompat.getColor(activity, R.color.white));
+                    view.setBackgroundColor(ContextCompat.getColor(activity, type == Codes.SnackBarType.SUCCESS ? R.color.snackbar_bg_color_success : R.color.snackbar_bg_color_error));
+                    snackbar.show();
+
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        });
+    }
+
 }
