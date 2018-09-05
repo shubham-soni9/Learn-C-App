@@ -42,7 +42,6 @@
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
             android:text="@string/tab_1"
-            android:textAppearance="@style/CustomTextAppearance.Regular"
             android:textColor="@color/white_100"
             android:textSize="@dimen/text_size_extra_large" />
     </RelativeLayout>

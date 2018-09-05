@@ -16,7 +16,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="15dp"
-        android:textAppearance="@style/CustomTextAppearance.Regular"
         android:textColor="@android:color/darker_gray"
         android:textSize="@dimen/text_size_medium"
         android:textStyle="bold"

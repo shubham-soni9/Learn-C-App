@@ -12,7 +12,6 @@
         android:layout_centerInParent="true"
         android:text="Learn C"
         android:textAllCaps="true"
-        android:textAppearance="@style/CustomTextAppearance.Bold"
         android:textColor="#FFF"
         android:textSize="50sp"
         android:textStyle="italic" />
@@ -34,7 +33,6 @@
         android:letterSpacing="0.40"
         android:text="Programming"
         android:textAllCaps="true"
-        android:textAppearance="@style/CustomTextAppearance.Regular"
         android:textColor="#FFF"
         android:textSize="20sp"
         android:textStyle="normal"

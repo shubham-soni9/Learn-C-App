@@ -96,7 +96,6 @@ public class AlertDialog {
 
             if (title != null) {
                 tvTitle.setText(title);
-                tvTitle.setTextAppearance(activity, R.style.CustomTextAppearance_Bold);
                 tvTitle.setVisibility(View.VISIBLE);
             }
             tvMessage.setHtml(message);

@@ -28,6 +28,7 @@
             android:name=".TestActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".DifferenceActivity" />
+        <activity android:name=".ReferenceActivity" />
     </application>
 
 </manifest>

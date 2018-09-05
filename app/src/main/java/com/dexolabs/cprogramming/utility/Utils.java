@@ -245,7 +245,6 @@ public class Utils {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                         tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                     }
-                    tv.setTextAppearance(activity, R.style.CustomTextAppearance_Regular);
                     tv.setTextColor(ContextCompat.getColor(activity, R.color.white));
                     view.setBackgroundColor(ContextCompat.getColor(activity, type == Codes.SnackBarType.SUCCESS ? R.color.snackbar_bg_color_success : R.color.snackbar_bg_color_error));
                     snackbar.show();
