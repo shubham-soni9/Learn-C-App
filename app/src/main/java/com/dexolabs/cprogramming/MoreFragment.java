@@ -19,7 +19,7 @@ import com.dexolabs.cprogramming.utility.Utils;
 
 public class MoreFragment extends BaseFragment implements View.OnClickListener {
     private Context  mContext;
-    private TextView tvDifferences, tvPrecedence, tvReportBug, tvSuggestion;
+    private TextView tvDifferences, tvPrecedence, tvReportBug, tvSuggestion, tvReferences;
     private Activity activity;
 
     public static MoreFragment newInstance() {
@@ -46,7 +46,8 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
         tvPrecedence = rootView.findViewById(R.id.tvPrecedence);
         tvReportBug = rootView.findViewById(R.id.tvReportBug);
         tvSuggestion = rootView.findViewById(R.id.tvSuggestion);
-        Utils.setOnClickListener(this, tvPrecedence, tvDifferences, tvReportBug, tvSuggestion);
+        tvReferences = rootView.findViewById(R.id.tvReferences);
+        Utils.setOnClickListener(this, tvPrecedence, tvDifferences, tvReportBug, tvSuggestion, tvReferences);
     }
 
     @Override
@@ -63,6 +64,9 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.tvSuggestion:
                 giveSuggestions();
+                break;
+            case R.id.tvReferences:
+                Transition.startActivity(activity, ReferenceActivity.class);
                 break;
         }
     }

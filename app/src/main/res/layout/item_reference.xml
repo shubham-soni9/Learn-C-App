@@ -20,16 +20,16 @@
             android:id="@+id/tvReferenceName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
             tools:text="www.sanfoundry.com" />
 
         <TextView
             android:id="@+id/tvReferenceDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="@dimen/text_size_large"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal"
             tools:text="This is a website" />
 
     </LinearLayout>

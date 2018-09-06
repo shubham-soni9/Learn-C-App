@@ -4,6 +4,7 @@ import com.dexolabs.cprogramming.data.DifferenceData;
 import com.dexolabs.cprogramming.data.ProgramData;
 import com.dexolabs.cprogramming.data.QuestionData;
 import com.dexolabs.cprogramming.data.QuizData;
+import com.dexolabs.cprogramming.data.ReferenceData;
 import com.dexolabs.cprogramming.data.TutorialData;
 import com.dexolabs.cprogramming.model.Question;
 import com.dexolabs.cprogramming.model.TutorialModel;
@@ -33,4 +34,6 @@ public class CommonData {
         return DifferenceData.getDifferencesData();
     }
 
-}
+    public static LinkedHashMap<String, String> getReferenceData() {
+        return ReferenceData.getReferenceData();
+    }}
