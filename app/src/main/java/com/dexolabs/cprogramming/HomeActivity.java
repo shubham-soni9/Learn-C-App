@@ -14,12 +14,13 @@ import android.widget.ProgressBar;
 
 import com.dexolabs.cprogramming.data.Dependencies;
 
+import static com.dexolabs.cprogramming.appdata.Keys.Extras.NAVIGATION_ID;
+
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     private BottomNavigationView bottomNavigationView;
     private ProgressBar          pbFragmentLoader;
     private FrameLayout          frameHome;
     private AppCompatTextView    tvHomeHeader;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,19 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         initID();
         setData();
         setColors();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt(NAVIGATION_ID, bottomNavigationView.getSelectedItemId());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        int resID = savedInstanceState.getInt(NAVIGATION_ID);
+        onNavigationItemClick(resID);
     }
 
     private void setColors() {

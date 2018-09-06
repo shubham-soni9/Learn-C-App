@@ -10,6 +10,7 @@ public interface Keys {
         String MCQ_Question     = "mcq_question";
         String QUESTION_TITLE   = "question_title";
         String QUESTION_MESSAGE = "question_message";
+        String NAVIGATION_ID    = "navigation_id";
     }
 
     /**
@@ -19,6 +20,8 @@ public interface Keys {
      */
     interface Prefs {
         String THEME_COLOR = "theme_color";
+
     }
+
 
 }
