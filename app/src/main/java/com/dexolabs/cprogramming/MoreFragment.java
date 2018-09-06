@@ -28,7 +28,7 @@ import java.util.ArrayList;
 
 public class MoreFragment extends BaseFragment implements View.OnClickListener {
     private Context  mContext;
-    private TextView tvDifferences, tvPrecedence, tvReportBug, tvSuggestion, tvReferences, tvThemes;
+    private TextView tvDifferences, tvPrecedence, tvReportBug, tvSuggestion, tvReferences, tvThemes, tvExit;
     private Activity activity;
 
     public static MoreFragment newInstance() {
@@ -57,7 +57,8 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
         tvSuggestion = rootView.findViewById(R.id.tvSuggestion);
         tvReferences = rootView.findViewById(R.id.tvReferences);
         tvThemes = rootView.findViewById(R.id.tvThemes);
-        Utils.setOnClickListener(this, tvPrecedence, tvDifferences, tvReportBug, tvSuggestion, tvReferences, tvThemes);
+        tvExit = rootView.findViewById(R.id.tvExit);
+        Utils.setOnClickListener(this, tvPrecedence, tvDifferences, tvReportBug, tvSuggestion, tvReferences, tvThemes,tvExit);
     }
 
     @Override
@@ -80,6 +81,9 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.tvThemes:
                 openThemeColorChooser();
+                break;
+            case R.id.tvExit:
+                activity.finishAffinity();
                 break;
         }
     }

@@ -58,5 +58,12 @@
 
     <View style="@style/more_options_seperator" />
 
+    <TextView
+        android:id="@+id/tvExit"
+        style="@style/more_options_textview"
+        android:text="@string/exit" />
+
+    <View style="@style/more_options_seperator" />
+
 
 </LinearLayout>
