@@ -3,6 +3,7 @@ package com.dexolabs.cprogramming;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -129,7 +130,11 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
     }
 
     private void applyThemeColor() {
-        activity.recreate();
+        Intent intent = activity.getIntent();
+        activity.finish();
+        activity.overridePendingTransition(0, 0);
+        activity.startActivity(intent);
+        activity.overridePendingTransition(0, 0);
     }
 
     private void giveSuggestions() {

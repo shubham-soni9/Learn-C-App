@@ -37,4 +37,5 @@
     <string name="background_toolbar">Header(Toolbar) Background</string>
     <string name="choose_color">Choose Color</string>
     <string name="exit">Exit</string>
+    <string name="text_size">Text Size</string>
 </resources>

@@ -39,6 +39,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
     private void setData() {
         tvHomeHeader.setText(R.string.start_learning);
+        bottomNavigationView.setSelectedItemId(R.id.action_tutorial);
         onNavigationItemClick(bottomNavigationView.getSelectedItemId());
     }
 
