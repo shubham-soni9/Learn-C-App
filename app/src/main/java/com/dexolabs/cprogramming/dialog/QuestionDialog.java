@@ -2,7 +2,6 @@ package com.dexolabs.cprogramming.dialog;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.View;
@@ -13,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.dexolabs.cprogramming.R;
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.utility.Utils;
 
 import org.sufficientlysecure.htmltextview.HtmlTextView;
@@ -98,6 +98,8 @@ public class QuestionDialog {
             ibClose = optionsDialog.findViewById(R.id.ibClose);
             btnOk.setText(positiveButton);
             btnCancel.setText(negativeButton);
+            btnOk.setTextColor(Dependencies.getThemeColor(activity));
+            btnCancel.setTextColor(Dependencies.getThemeColor(activity));
             updateData();
             ibClose.setOnClickListener(new View.OnClickListener() {
                 @Override

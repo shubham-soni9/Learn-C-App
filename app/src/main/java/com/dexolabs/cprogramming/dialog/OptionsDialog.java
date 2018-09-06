@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.dexolabs.cprogramming.R;
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.utility.Utils;
 
 
@@ -87,7 +88,8 @@ public class OptionsDialog {
 
             btnOk.setText(positiveButton);
             btnCancel.setText(negativeButton);
-
+            btnOk.setTextColor(Dependencies.getThemeColor(activity));
+            btnCancel.setTextColor(Dependencies.getThemeColor(activity));
 
             btnOk.setOnClickListener(new View.OnClickListener() {
                 @Override

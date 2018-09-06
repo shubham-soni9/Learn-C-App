@@ -79,12 +79,12 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
                 Transition.startActivity(activity, ReferenceActivity.class);
                 break;
             case R.id.tvThemes:
-                changeColorOptions();
+                openThemeColorChooser();
                 break;
         }
     }
 
-    private void openThemeColorChooser(final int position) {
+    private void openThemeColorChooser() {
         ColorPickerDialogBuilder
                 .with(activity)
                 .setTitle("Choose color")
@@ -99,11 +99,7 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
                 .setPositiveButton(R.string.save, new ColorPickerClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int selectedColor, Integer[] allColors) {
-                        switch (position) {
-                            case 0:
-                                Dependencies.saveThemeColor(activity, selectedColor);
-                                break;
-                        }
+                        Dependencies.saveThemeColor(activity, selectedColor);
                         applyThemeColor();
                     }
                 })
@@ -123,12 +119,13 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
                                                  optionList, new CommonDialogWithList.OnListItemClickListener() {
                     @Override
                     public void onListItemSelected(final int pos, final String item) {
-                        openThemeColorChooser(pos);
+                        openThemeColorChooser();
                     }
                 });
     }
 
     private void applyThemeColor() {
+        activity.recreate();
     }
 
     private void giveSuggestions() {

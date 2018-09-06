@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.dexolabs.cprogramming.R;
 import com.dexolabs.cprogramming.adapter.DialogListAdapter;
+import com.dexolabs.cprogramming.data.Dependencies;
 
 import java.util.ArrayList;
 
@@ -61,6 +62,7 @@ public class CommonDialogWithList {
             } else {
                 textMessage.setText(header);
             }
+            textMessage.setBackgroundColor(Dependencies.getThemeColor(activity));
 
             (dialog.findViewById(R.id.rv)).setOnClickListener(new View.OnClickListener() {
                 @Override

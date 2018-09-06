@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.dexolabs.cprogramming.R;
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.model.Question;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
@@ -107,6 +108,7 @@ public class PieAnswerDialog {
 
             Button btnAction = alertDialog.findViewById(R.id.btnAction);
             btnAction.setText(actionButton);
+            btnAction.setTextColor(Dependencies.getThemeColor(activity));
             btnAction.setOnClickListener(new View.OnClickListener() {
 
                 @Override

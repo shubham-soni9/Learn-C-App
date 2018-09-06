@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.dexolabs.cprogramming.R;
+import com.dexolabs.cprogramming.data.Dependencies;
 
 import org.sufficientlysecure.htmltextview.HtmlTextView;
 
@@ -100,6 +101,7 @@ public class AlertDialog {
             }
             tvMessage.setHtml(message);
             btnAction.setText(actionButton);
+            btnAction.setTextColor(Dependencies.getThemeColor(activity));
             btnAction.setOnClickListener(new View.OnClickListener() {
 
                 @Override

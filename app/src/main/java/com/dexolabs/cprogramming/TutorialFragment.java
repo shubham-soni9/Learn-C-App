@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,6 +52,7 @@ public class TutorialFragment extends Fragment {
 
     private void setColors() {
         tabLayout.setBackgroundColor(Dependencies.getThemeColor(mContext));
+        tabLayout.setSelectedTabIndicatorColor(ContextCompat.getColor(mContext, R.color.black));
     }
 
     private void getBundle() {
