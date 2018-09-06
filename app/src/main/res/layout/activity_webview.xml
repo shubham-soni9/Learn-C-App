@@ -2,14 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/white_100"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/rlActionBar"
         android:layout_width="match_parent"
-        android:layout_height="56dp">
+        android:layout_height="56dp"
+        android:background="@color/colorPrimaryDark">
 
 
         <LinearLayout
@@ -38,9 +39,9 @@
             android:layout_toEndOf="@+id/llBack"
             android:layout_toRightOf="@+id/llBack"
             android:animateLayoutChanges="true"
-            android:singleLine="true"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
             android:text="@string/tab_1"
             android:textColor="@color/white_100"
             android:textSize="@dimen/text_size_extra_large" />

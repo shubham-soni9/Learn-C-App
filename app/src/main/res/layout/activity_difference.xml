@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <include
-        android:id="@+id/toolbar"
+        android:id="@+id/llParentToolbar"
         layout="@layout/header_common" />
 
 

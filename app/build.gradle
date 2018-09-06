@@ -28,5 +28,6 @@ dependencies {
     implementation 'org.sufficientlysecure:html-textview:3.6'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
     implementation 'com.google.code.gson:gson:2.8.2'
+    compile 'com.github.QuadFlask:colorpicker:0.0.13'
 
 }

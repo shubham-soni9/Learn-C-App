@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.dexolabs.cprogramming.adapter.ReferenceAdapter;
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.structure.BaseActivity;
 import com.dexolabs.cprogramming.utility.Transition;
 
@@ -28,6 +29,11 @@ public class ReferenceActivity extends BaseActivity {
                 onBackPressed();
             }
         });
+        setColors();
+    }
+
+    private void setColors() {
+        findViewById(R.id.llParentToolbar).setBackgroundColor(Dependencies.getThemeColor(this));
     }
 
     @Override

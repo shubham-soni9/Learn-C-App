@@ -7,6 +7,7 @@ import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 import com.dexolabs.cprogramming.appdata.Keys;
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.structure.BaseActivity;
 import com.dexolabs.cprogramming.utility.Transition;
 import com.dexolabs.cprogramming.utility.Utils;
@@ -37,6 +38,11 @@ public class WebViewActivity extends BaseActivity implements View.OnClickListene
         TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText(title);
         tvTitle.setSelected(true);
+        setColors();
+    }
+
+    private void setColors() {
+        findViewById(R.id.rlActionBar).setBackgroundColor(Dependencies.getThemeColor(this));
     }
 
     @Override

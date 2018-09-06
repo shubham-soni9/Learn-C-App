@@ -12,4 +12,13 @@ public interface Keys {
         String QUESTION_MESSAGE = "question_message";
     }
 
+    /**
+     * Keys inside the {PREFS} should be used to set the values
+     * for Storing the values to the SharedPreferences and
+     * retrieving them in a similar way.
+     */
+    interface Prefs {
+        String THEME_COLOR = "theme_color";
+    }
+
 }

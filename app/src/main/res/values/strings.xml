@@ -24,12 +24,16 @@
     <string name="do_you_want_to_finish_the_test">Do you want to finish the test?</string>
     <string name="important_differences">Important Differences</string>
     <string name="operator_precedence">Operator Precedence</string>
-    <string name="themes">Themes</string>
+    <string name="themes">Theme Color</string>
     <string name="references">References</string>
     <string name="report_a_bug">Report a bug</string>
     <string name="about">About</string>
     <string name="email_your_suggestions">Email your suggestions</string>
     <string name="no_app_found_to_open_the_link">No app found to open the link</string>
     <string name="suggestions">Suggestion</string>
-
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="select_type">Select Type</string>
+    <string name="background_toolbar">Header(Toolbar) Background</string>
+    <string name="choose_color">Choose Color</string>
 </resources>

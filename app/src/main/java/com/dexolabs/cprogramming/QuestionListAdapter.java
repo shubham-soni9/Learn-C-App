@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.dialog.QuestionDialog;
 import com.dexolabs.cprogramming.utility.Log;
 
@@ -21,6 +22,7 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
     private String TAG = TestListAdapter.class.getName();
     private Activity        mContext;
     private FragmentManager fragmentManager;
+    private int             themeColor;
 
 
     public QuestionListAdapter(FragmentManager fragmentManager, LinkedHashMap<String, String> questionList, Activity mContext) {
@@ -28,6 +30,7 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
         this.mContext = mContext;
         this.fragmentManager = fragmentManager;
         questionTitleList = questionList.keySet().toArray(new String[questionList.size()]);
+        themeColor = Dependencies.getThemeColor(mContext);
     }
 
     @NonNull
@@ -43,6 +46,7 @@ public class QuestionListAdapter extends RecyclerView.Adapter<QuestionListAdapte
         viewHolder.tvQuestionTitle.setText(questionTitleList[position].trim());
         viewHolder.tvQuestionNumber.setText(String.valueOf(pos + 1));
         viewHolder.tvQuestionNumber.append(".");
+        viewHolder.tvQuestionNumber.setTextColor(themeColor);
         Log.e(TAG, questionTitleList[pos]);
 
         viewHolder.llParent.setOnClickListener(new View.OnClickListener() {

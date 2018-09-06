@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dexolabs.cprogramming.adapter.TutorialPagerAdapter;
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.model.TutorialModel;
 
 import java.util.ArrayList;
@@ -44,7 +45,12 @@ public class TutorialFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_tutorial, container, false);
         initFragment(rootView);
         getBundle();
+        setColors();
         return rootView;
+    }
+
+    private void setColors() {
+        tabLayout.setBackgroundColor(Dependencies.getThemeColor(mContext));
     }
 
     private void getBundle() {

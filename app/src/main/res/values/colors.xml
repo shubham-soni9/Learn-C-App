@@ -506,4 +506,6 @@
 
     <color name="snackbar_bg_color_success">#e666d02a</color>
     <color name="snackbar_bg_color_error">#e6e2574c</color>
+
+    <color name="default_theme_color">#8BC34A</color>
 </resources>

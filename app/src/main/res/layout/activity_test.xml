@@ -6,14 +6,14 @@
     android:orientation="vertical">
 
     <include
-        android:id="@+id/toolbar"
+        android:id="@+id/llParentToolbar"
         layout="@layout/header_common" />
 
     <android.support.v7.widget.CardView
         android:id="@+id/cvQuestions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
+        android:layout_below="@+id/llParentToolbar"
         app:cardElevation="@dimen/_5dp">
 
         <android.support.v7.widget.RecyclerView

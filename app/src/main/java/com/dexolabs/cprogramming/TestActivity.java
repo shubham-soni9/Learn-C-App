@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.dexolabs.cprogramming.adapter.QuestionPagerAdapter;
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.dialog.OptionsDialog;
 import com.dexolabs.cprogramming.dialog.PieAnswerDialog;
 import com.dexolabs.cprogramming.listener.OnQuestionListener;
@@ -43,6 +44,11 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
         setContentView(R.layout.activity_test);
         init();
         setData();
+        setColors();
+    }
+
+    private void setColors() {
+        findViewById(R.id.llParentToolbar).setBackgroundColor(Dependencies.getThemeColor(this));
     }
 
     private void setData() {

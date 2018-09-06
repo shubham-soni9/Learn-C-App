@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.dexolabs.cprogramming.adapter.TutorialListAdapter;
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.structure.BaseActivity;
 import com.dexolabs.cprogramming.utility.Transition;
 import com.dexolabs.cprogramming.utility.Utils;
@@ -29,6 +30,7 @@ public class DifferenceActivity extends BaseActivity implements View.OnClickList
         rvDifferences.setAdapter(tutorialListAdapter);
         ibBack.setVisibility(View.VISIBLE);
         Utils.setOnClickListener(this, ibBack);
+        setColors();
     }
 
     @Override
@@ -38,6 +40,9 @@ public class DifferenceActivity extends BaseActivity implements View.OnClickList
                 onBackPressed();
                 break;
         }
+    }
+    private void setColors() {
+        findViewById(R.id.llParentToolbar).setBackgroundColor(Dependencies.getThemeColor(this));
     }
 
     @Override

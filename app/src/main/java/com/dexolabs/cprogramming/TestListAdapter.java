@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.dexolabs.cprogramming.appdata.Keys;
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.model.Question;
 import com.dexolabs.cprogramming.utility.Log;
 import com.dexolabs.cprogramming.utility.Transition;
@@ -22,12 +23,14 @@ public class TestListAdapter extends RecyclerView.Adapter<TestListAdapter.ViewHo
     private String[]                                   tutorialTitleList;
     private String TAG = TestListAdapter.class.getName();
     private Activity activity;
+    private int      themeColor;
 
 
     public TestListAdapter(Activity activity, LinkedHashMap<String, ArrayList<Question>> tutorialList) {
         this.tutorialList = tutorialList;
         this.activity = activity;
         tutorialTitleList = tutorialList.keySet().toArray(new String[tutorialList.size()]);
+        themeColor = Dependencies.getThemeColor(activity);
     }
 
     @NonNull
@@ -43,6 +46,7 @@ public class TestListAdapter extends RecyclerView.Adapter<TestListAdapter.ViewHo
         viewHolder.tvTutorialTitle.setText(tutorialTitleList[position]);
         viewHolder.tvTutorialNumber.setText(String.valueOf(pos + 1));
         viewHolder.tvTutorialNumber.append(".");
+        viewHolder.tvTutorialNumber.setTextColor(themeColor);
         Log.e(TAG, tutorialTitleList[pos]);
         viewHolder.tvTutorialTitle.setOnClickListener(new View.OnClickListener() {
             @Override

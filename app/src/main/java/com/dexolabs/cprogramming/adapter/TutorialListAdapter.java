@@ -14,6 +14,7 @@ import com.dexolabs.cprogramming.R;
 import com.dexolabs.cprogramming.WebViewActivity;
 import com.dexolabs.cprogramming.appdata.Codes;
 import com.dexolabs.cprogramming.appdata.Keys;
+import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.utility.Log;
 import com.dexolabs.cprogramming.utility.Transition;
 
@@ -25,12 +26,14 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
     private String TAG = TutorialListAdapter.class.getName();
     private Context mContext;
     private boolean showSerialNumber;
+    private int     themeColor;
 
     public TutorialListAdapter(Context mContext, LinkedHashMap<String, String> webUrlList, boolean showSerialNumber) {
         this.webUrlList = webUrlList;
         this.mContext = mContext;
         this.showSerialNumber = showSerialNumber;
         tutorialTitleList = webUrlList.keySet().toArray(new String[webUrlList.size()]);
+        themeColor = Dependencies.getThemeColor(mContext);
     }
 
     @NonNull
@@ -54,6 +57,7 @@ public class TutorialListAdapter extends RecyclerView.Adapter<TutorialListAdapte
         if (showSerialNumber) {
             viewHolder.tvTutorialNumber.setText(String.valueOf(pos + 1));
             viewHolder.tvTutorialNumber.append(".");
+            viewHolder.tvTutorialNumber.setTextColor(themeColor);
         }
         Log.e(TAG, tutorialTitleList[pos]);
     }

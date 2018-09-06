@@ -1,14 +1,18 @@
 package com.dexolabs.cprogramming;
 
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
+
+import com.dexolabs.cprogramming.data.Dependencies;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     private BottomNavigationView bottomNavigationView;
@@ -23,6 +27,14 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_home);
         initID();
         setData();
+        setColors();
+    }
+
+    private void setColors() {
+        findViewById(R.id.llParentToolbar).setBackgroundColor(Dependencies.getThemeColor(this));
+        ColorStateList colorStateList = getNavigationIconSelector(Dependencies.getThemeColor(this));
+        bottomNavigationView.setItemIconTintList(colorStateList);
+        bottomNavigationView.setItemTextColor(colorStateList);
     }
 
     private void setData() {
@@ -79,6 +91,21 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
                 .beginTransaction()
                 .replace(R.id.frame_home_layout, fragment)
                 .commit();
+    }
+
+    private ColorStateList getNavigationIconSelector(int checkedColor) {
+
+        int[][] states = new int[][]{
+                new int[]{android.R.attr.state_checked}, // enabled
+                new int[]{-android.R.attr.state_checked}, // disabled
+        };
+
+        int[] colors = new int[]{
+                checkedColor,
+                ContextCompat.getColor(this, R.color.black)
+        };
+
+        return new ColorStateList(states, colors);
     }
 
 }

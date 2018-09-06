@@ -2,6 +2,7 @@ package com.dexolabs.cprogramming;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,13 +14,21 @@ import android.widget.TextView;
 import com.dexolabs.cprogramming.appdata.Codes;
 import com.dexolabs.cprogramming.appdata.Constant;
 import com.dexolabs.cprogramming.appdata.Keys;
+import com.dexolabs.cprogramming.data.Dependencies;
+import com.dexolabs.cprogramming.dialog.CommonDialogWithList;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 import com.dexolabs.cprogramming.utility.Transition;
 import com.dexolabs.cprogramming.utility.Utils;
+import com.flask.colorpicker.ColorPickerView;
+import com.flask.colorpicker.OnColorSelectedListener;
+import com.flask.colorpicker.builder.ColorPickerClickListener;
+import com.flask.colorpicker.builder.ColorPickerDialogBuilder;
+
+import java.util.ArrayList;
 
 public class MoreFragment extends BaseFragment implements View.OnClickListener {
     private Context  mContext;
-    private TextView tvDifferences, tvPrecedence, tvReportBug, tvSuggestion, tvReferences;
+    private TextView tvDifferences, tvPrecedence, tvReportBug, tvSuggestion, tvReferences, tvThemes;
     private Activity activity;
 
     public static MoreFragment newInstance() {
@@ -47,7 +56,8 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
         tvReportBug = rootView.findViewById(R.id.tvReportBug);
         tvSuggestion = rootView.findViewById(R.id.tvSuggestion);
         tvReferences = rootView.findViewById(R.id.tvReferences);
-        Utils.setOnClickListener(this, tvPrecedence, tvDifferences, tvReportBug, tvSuggestion, tvReferences);
+        tvThemes = rootView.findViewById(R.id.tvThemes);
+        Utils.setOnClickListener(this, tvPrecedence, tvDifferences, tvReportBug, tvSuggestion, tvReferences, tvThemes);
     }
 
     @Override
@@ -68,7 +78,57 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
             case R.id.tvReferences:
                 Transition.startActivity(activity, ReferenceActivity.class);
                 break;
+            case R.id.tvThemes:
+                changeColorOptions();
+                break;
         }
+    }
+
+    private void openThemeColorChooser(final int position) {
+        ColorPickerDialogBuilder
+                .with(activity)
+                .setTitle("Choose color")
+                .initialColor(Dependencies.getThemeColor(activity))
+                .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
+                .density(12)
+                .setOnColorSelectedListener(new OnColorSelectedListener() {
+                    @Override
+                    public void onColorSelected(int selectedColor) {
+                    }
+                })
+                .setPositiveButton(R.string.save, new ColorPickerClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int selectedColor, Integer[] allColors) {
+                        switch (position) {
+                            case 0:
+                                Dependencies.saveThemeColor(activity, selectedColor);
+                                break;
+                        }
+                        applyThemeColor();
+                    }
+                })
+                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .build()
+                .show();
+    }
+
+    private void changeColorOptions() {
+        ArrayList<String> optionList = new ArrayList<>();
+        optionList.add(getString(R.string.background_toolbar));
+        CommonDialogWithList.with(activity).show(getString(R.string.select_type),
+                                                 optionList, new CommonDialogWithList.OnListItemClickListener() {
+                    @Override
+                    public void onListItemSelected(final int pos, final String item) {
+                        openThemeColorChooser(pos);
+                    }
+                });
+    }
+
+    private void applyThemeColor() {
     }
 
     private void giveSuggestions() {
