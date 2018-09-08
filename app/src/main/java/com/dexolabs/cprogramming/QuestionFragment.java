@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dexolabs.cprogramming.adapter.QuestionListAdapter;
 import com.dexolabs.cprogramming.structure.BaseFragment;
 
 import java.util.LinkedHashMap;

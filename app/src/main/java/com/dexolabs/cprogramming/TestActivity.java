@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.dexolabs.cprogramming.adapter.QuestionNumberAdapter;
 import com.dexolabs.cprogramming.adapter.QuestionPagerAdapter;
 import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.dialog.OptionsDialog;
@@ -172,7 +173,7 @@ public class TestActivity extends BaseActivity implements OnQuestionTabListener,
         }).build().show();
     }
 
-    private void showAnswerChart(){
+    private void showAnswerChart() {
         new PieAnswerDialog.Builder(TestActivity.this)
                 .button(R.string.finish)
                 .setQuestionList(questionList)

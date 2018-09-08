@@ -1,4 +1,4 @@
-package com.dexolabs.cprogramming;
+package com.dexolabs.cprogramming.adapter;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.dexolabs.cprogramming.R;
+import com.dexolabs.cprogramming.TestActivity;
 import com.dexolabs.cprogramming.appdata.Keys;
 import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.model.Question;

@@ -26,7 +26,7 @@ public class DifferenceActivity extends BaseActivity implements View.OnClickList
         rvDifferences = findViewById(R.id.rvDifferences);
         ibBack = findViewById(R.id.ibBack);
         rvDifferences.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        tutorialListAdapter = new TutorialListAdapter(this, CommonData.getDifferenceData(),true);
+        tutorialListAdapter = new TutorialListAdapter(this, CommonData.getDifferenceData(), true);
         rvDifferences.setAdapter(tutorialListAdapter);
         ibBack.setVisibility(View.VISIBLE);
         Utils.setOnClickListener(this, ibBack);
@@ -41,6 +41,7 @@ public class DifferenceActivity extends BaseActivity implements View.OnClickList
                 break;
         }
     }
+
     private void setColors() {
         findViewById(R.id.llParentToolbar).setBackgroundColor(Dependencies.getThemeColor(this));
     }

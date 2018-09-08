@@ -1445,7 +1445,6 @@ public class QuizData {
         options.put("Structures, Unions, Enums", questionList);
 
 
-
         questionList = new ArrayList<>();
 
         questionList.add(getQuestion(181, "Function rewind() will?", "Reposition the file pointer stream to end of file.", "Reposition the file pointer to a character reverse.", "Reposition the file pointer to begining of that line.", "Reposition the file pointer to begining of file.", 4, ""));
@@ -1466,16 +1465,16 @@ public class QuizData {
                 "</pre></div>", "sizeof(i)=2", "sizeof(i)=1", "Compiler Error", "None of These", 2, ""));
 
         questionList.add(getQuestion(186,
-                "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
-                        "<span style=\"color: #BC7A00\">#include&lt;math.h&gt;</span>\n" +
-                        "\n" +
-                        "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
-                        "{\n" +
-                        "    <span style=\"color: #B00040\">float</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">2.5</span>;\n" +
-                        "    printf(<span style=\"color: #BA2121\">&quot;%f, %d&quot;</span>, floor(i), ceil(i));\n" +
-                        "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
-                        "}\n" +
-                        "</pre></div>", "2, 3", "2.000000, 3", "2.000000, 0", "2, 0", 3, "Both ceil() and floor() return the integer found as a double.\n" +
+                                     "What will be the output of the program?\n<div style=\"background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;\"><pre style=\"margin: 0; line-height: 125%\"><span style=\"color: #BC7A00\">#include&lt;stdio.h&gt;</span>\n" +
+                                             "<span style=\"color: #BC7A00\">#include&lt;math.h&gt;</span>\n" +
+                                             "\n" +
+                                             "<span style=\"color: #B00040\">int</span> <span style=\"color: #0000FF\">main</span>()\n" +
+                                             "{\n" +
+                                             "    <span style=\"color: #B00040\">float</span> i <span style=\"color: #666666\">=</span> <span style=\"color: #666666\">2.5</span>;\n" +
+                                             "    printf(<span style=\"color: #BA2121\">&quot;%f, %d&quot;</span>, floor(i), ceil(i));\n" +
+                                             "    <span style=\"color: #008000; font-weight: bold\">return</span> <span style=\"color: #666666\">0</span>;\n" +
+                                             "}\n" +
+                                             "</pre></div>", "2, 3", "2.000000, 3", "2.000000, 0", "2, 0", 3, "Both ceil() and floor() return the integer found as a double.\n" +
                                              "\n" +
                                              "floor(2.5) returns the largest integral value(round down) that is not greater than 2.5. So output is 2.000000.\n" +
                                              "\n" +
@@ -1536,7 +1535,6 @@ public class QuizData {
                 "</pre></div>", "55, 55.555", "65, 66.666000", "55, 55", "66, 66.666600", 4, ""));
 
         options.put("Library Functions", questionList);
-
 
 
         questionList = new ArrayList<>();

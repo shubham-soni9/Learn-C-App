@@ -36,4 +36,5 @@ public class CommonData {
 
     public static LinkedHashMap<String, String> getReferenceData() {
         return ReferenceData.getReferenceData();
-    }}
+    }
+}

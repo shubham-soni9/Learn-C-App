@@ -1,4 +1,4 @@
-package com.dexolabs.cprogramming;
+package com.dexolabs.cprogramming.adapter;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.dexolabs.cprogramming.R;
 import com.dexolabs.cprogramming.data.Dependencies;
 import com.dexolabs.cprogramming.dialog.QuestionDialog;
 import com.dexolabs.cprogramming.utility.Log;

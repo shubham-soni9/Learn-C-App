@@ -59,7 +59,7 @@ public class MoreFragment extends BaseFragment implements View.OnClickListener {
         tvReferences = rootView.findViewById(R.id.tvReferences);
         tvThemes = rootView.findViewById(R.id.tvThemes);
         tvExit = rootView.findViewById(R.id.tvExit);
-        Utils.setOnClickListener(this, tvPrecedence, tvDifferences, tvReportBug, tvSuggestion, tvReferences, tvThemes,tvExit);
+        Utils.setOnClickListener(this, tvPrecedence, tvDifferences, tvReportBug, tvSuggestion, tvReferences, tvThemes, tvExit);
     }
 
     @Override

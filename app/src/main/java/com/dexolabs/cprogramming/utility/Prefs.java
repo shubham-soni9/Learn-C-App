@@ -83,7 +83,7 @@ public class Prefs {
                 return GSON.fromJson(gson, a);
             } catch (Exception e) {
                 throw new IllegalArgumentException("Object stored with key "
-                        + key + " is instanceof other class");
+                                                           + key + " is instanceof other class");
             }
         }
     }
