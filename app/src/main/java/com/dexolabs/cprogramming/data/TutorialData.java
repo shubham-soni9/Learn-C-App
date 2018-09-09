@@ -11,12 +11,12 @@ public class TutorialData {
         ArrayList<TutorialModel> tutorialModelList = new ArrayList<>();
         LinkedHashMap<String, String> options = new LinkedHashMap<>();
 
-        options.put("Introduction", "http://www.facebook.com");
-        options.put("Problem Solving", "http://www.yahoo.com");
-        options.put("Algorithm", "http://www.youtube.com");
-        options.put("Flowcharts", "http://www.alphabet.com");
+        options.put("Introduction", "tutorial_1.html");
+        options.put("Advantages of C", "");
+        options.put("The First C Program", "http://www.youtube.com");
+        options.put("Compilation and Execution", "http://www.alphabet.com");
         options.put("Before C", "");
-        tutorialModelList.add(new TutorialModel("Introduction", options));
+        tutorialModelList.add(new TutorialModel("Overview", options));
 
 
         options = new LinkedHashMap<>();
