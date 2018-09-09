@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="mt/fonts/material-icons.css" rel="stylesheet">
+    <title>Bootstrap Case</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bt/css/bootstrap.min.css">
+    <script src="bt/js/jquery-1.4.2.min.js"></script>
+    <script src="bt/js/bootstrap.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="mt/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/tutorial.css">
+    <link rel="stylesheet" href="tutorial.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script src="js/prism.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="mt/js/jquery-3.2.1.min.js"></script>
+<script src="mt/js/materialize.min.js"></script>
+<div class="card">
+    <div>
+        <h5 class="subheading">First C Program and its Structure</h5>
+        <p class="text-content">Lets see how to write a simple and most basic C program:</p>
+        <div>
+               <pre style="margin: 0; line-height: 125%"><span style="color: #BC7A00">#include &lt;stdio.h&gt;</span>
+<span style="color: #B00040">int</span> <span style="color: #0000FF">main</span>()
+{
+ printf(<span style="color: #BA2121">&quot;Hello,World&quot;</span>);  <span
+                           style="color: #408080; font-style: italic">//single line comment</span>
+ <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">0</span>;
+<span style="color: #666666">/*</span>
+    multi
+    line
+    comments
+<span style="color: #666666">/*</span>
+}
+</pre>
+        </div>
+    </div>
+    <div>
+        <h3 class="subheading">Different parts of C program</h3>
+        <ol class="text-content">
+            <li>Pre-processor</li>
+            <li>Header file</li>
+            <li>Function</li>
+            <li>Variables</li>
+            <li>Statements &amp; expressions</li>
+            <li>Comments</li>
+        </ol>
+    </div>
+
+    <div>
+        <h3 class="subheading">1. Pre-processor</h3>
+        <p class="text-content">#include is the first word of any C program. It is also known as a
+            pre-processor.</p>
+        <p class="text-content"> The task of a pre-processor is to initialize the environment of the
+            program, i.e to link the program with the header files required.</p>
+    </div>
+
+    <div>
+        <h3 class="subheading">2. Header file</h3>
+        <p class="text-content">A Header file is a collection of built-in functions, which we can
+            directly use in our program. </p>
+    </div>
+
+    <div>
+        <h3 class="subheading">3. main() function</h3>
+        <p class="text-content">main() function is a function that must be there in every C program.
+            Everything inside this function in a C program will be executed.
+        </p>
+        <p class="text-content">In the above example,
+            int written before the main() function is the return type of main() function.</p>
+    </div>
+
+    <div>
+        <h3 class="subheading">4. Comments</h3>
+        <p class="text-content">These comments are ignored by the compiler and are not executed.</p>
+
+        <p class="text-content">To add a single line comment, start it by adding two forward
+            slashses // followed by the
+            comment.</p>
+
+        <p class="text-content">To add multiline comment, enclode it between /* .... */, just like
+            in the program
+            above</p>
+    </div>
+
+    <div>
+        <h3 class="subheading">5. Return statement - return 0;</h3>
+        <p class="text-content">A return statement is just meant to define the end of any C
+            program.</p>
+    </div>
+</div>
+</body>
+</html>

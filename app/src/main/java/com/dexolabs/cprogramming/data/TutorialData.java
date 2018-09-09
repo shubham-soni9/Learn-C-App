@@ -12,7 +12,6 @@ public class TutorialData {
         LinkedHashMap<String, String> options = new LinkedHashMap<>();
 
         options.put("Introduction", "tutorial_1.html");
-        options.put("Advantages of C", "");
         options.put("The First C Program", "http://www.youtube.com");
         options.put("Compilation and Execution", "http://www.alphabet.com");
         options.put("Before C", "");
