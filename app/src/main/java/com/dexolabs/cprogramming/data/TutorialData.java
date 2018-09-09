@@ -13,10 +13,8 @@ public class TutorialData {
 
         options.put("Introduction", "tutorial_1.html");
         options.put("The First C Program", "tutorial_2.html");
-        options.put("Compilation and Execution", "http://www.alphabet.com");
-        options.put("Before C", "");
+        options.put("Compile and Run C Program", "tutorial_3.html");
         tutorialModelList.add(new TutorialModel("Overview", options));
-
 
         options = new LinkedHashMap<>();
         options.put("What is C?", "");
